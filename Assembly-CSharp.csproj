@@ -57,6 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CameraController.cs" />
+    <Compile Include="Assets\Scripts\ItemInteraction.cs" />
+    <Compile Include="Assets\Scripts\WorldInteraction.cs" />
+    <Compile Include="Assets\Scripts\ItemCombinations.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Inventory System\Scripts\InventorySlotController.cs" />
+    <Compile Include="Assets\Inventory System\Scripts\ItemDatabaseInstance.cs" />
+    <Compile Include="Assets\Inventory System\Scripts\CollectableItem.cs" />
+    <Compile Include="Assets\Inventory System\Scripts\ItemDatabase.cs" />
+    <Compile Include="Assets\Inventory System\Scripts\ItemInstance.cs" />
+    <Compile Include="Assets\Inventory System\Scripts\Item.cs" />
+    <Compile Include="Assets\Inventory System\Scripts\Inventory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
