@@ -4,48 +4,52 @@ using UnityEngine;
 
 public class ItemInteraction : MonoBehaviour
 {
-
-    private Inventory inventory;
-    private  Item lastUsed;
+    private static Item lastUsed;
    
     #region Utility
-    public void setLastUsed(Item item)
+    public static void setLastUsed(Item item)
     {
         lastUsed = item;
     }
 
-    public Item getLastUsed()
+    public static Item getLastUsed()
     {
         return lastUsed;
     }
 
-    public void resetLastUsed()
+    public static void resetLastUsed()
     {
         lastUsed = null;
     }
     #endregion
 
-    public void inspectItem(Item item)
+    public static void inspectItem(Item item)
     {
         Debug.Log(item.description);
     }
 
-    public void useItem(Item item)
+    public static void useItem(Item item)
     {
         //do something
     }
 
-    public void combineItems(Item item)
+    public static void combineItems(Item item)
     {
-        Debug.Log("combine: " + lastUsed.name + "+" + item.itemName);
+        if(item.combinableWith == lastUsed || lastUsed == item.combinableWith)
+        {
+            Debug.Log("combine: " + lastUsed.name + "+" + item.itemName);
+            Item combinedItem = ItemDatabaseInstance.getItemByName(item.combineResult.name);
+            Inventory.instance.removeItem(item);
+            Inventory.instance.removeItem(lastUsed);
+            Inventory.instance.addItem(combinedItem);
+            Debug.Log(lastUsed.name);
+            resetLastUsed();
 
-       
-        Item result = ItemCombinations.checkForValidCombination(lastUsed, item);
-        Debug.Log(result.itemName + "" + result.description);
-        Inventory.instance.removeItem(item);
-        Inventory.instance.removeItem(lastUsed);
-        Inventory.instance.addItem(result);
-        Debug.Log(lastUsed.name);
-        resetLastUsed(); 
+        }
+        else
+        {
+            resetLastUsed();
+            //return funny line
+        }
     }
 }

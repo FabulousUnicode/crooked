@@ -26,6 +26,7 @@ public class WorldInteraction : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            ItemInteraction.setLastUsed(null);
             mousePos = Input.mousePosition;
             mousePosWorld = mainCam.ScreenToWorldPoint(mousePos);
 

@@ -4,45 +4,120 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class InventorySlotController : MonoBehaviour, IPointerClickHandler
+public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
 {
     public Item item;
-    public ItemInteraction interaction;
-    public Inventory inventory;
+    public Color standardColor = Color.black;
+    public Color onHoverColor = Color.green;
+    public Color onUseColor = Color.blue;
+    public Color currentSelectedColor = Color.yellow;
+    
+    public static GameObject currentSelected;
 
-    public void OnPointerClick(PointerEventData pointerEventData)
+    public void resetCurrentSelected()
     {
-        if (pointerEventData.button == PointerEventData.InputButton.Right)
-        {
-            Debug.Log(item.itemName + " Game Object Right Clicked!");
-            if(interaction.getLastUsed() != null)
-            {
-                interaction.combineItems(item);
-            }
-            else
-            {
-                interaction.setLastUsed(item);
-            }
-        }
+        currentSelected = null;
+    }
 
+    public void Awake()
+    {
+        gameObject.GetComponent<Image>().color = standardColor;
+    }
+
+    #region SlotInteractionHandler
+
+    public void OnPointerDown(PointerEventData pointerEventData)
+    {
+        //event on left mouseclick
         if (pointerEventData.button == PointerEventData.InputButton.Left)
         {
-            if(item != null)
+            gameObject.GetComponent<Image>().color = onUseColor;
+
+            if (item != null)
             {
                 Debug.Log(item.itemName + " Game Object Left Clicked!");
-                interaction.inspectItem(item);
+                ItemInteraction.inspectItem(item);
+                ItemInteraction.setLastUsed(null);
             }
         }
 
+        /*
+        //event on middle mouseclick
         if (pointerEventData.button == PointerEventData.InputButton.Middle)
         {
             if (item != null)
             {
                 Debug.Log(item.itemName + " Game Object Middle Clicked!");
-                inventory.removeItem(item);
+                Inventory.instance.removeItem(item);
+                ItemInteraction.setLastUsed(null);
+            }
+        }
+        */
+
+        //event on right mouseclick to select item
+        if (pointerEventData.button == PointerEventData.InputButton.Right)
+        {
+            gameObject.GetComponent<Image>().color = currentSelectedColor;
+
+            if(currentSelected == null)
+            {
+                currentSelected = gameObject;
+            }
+
+            if(gameObject != currentSelected)
+            {
+                currentSelected.GetComponent<Image>().color = standardColor;
+                currentSelected = gameObject;
+
+            }
+
+            if (ItemInteraction.getLastUsed() != null)
+            {
+                currentSelected.GetComponent<Image>().color = standardColor;
+                currentSelected = null;
+                ItemInteraction.combineItems(item);
+                Debug.Log(item.itemName + " Game Object Right Clicked!");
+            }
+            else
+            {
+                ItemInteraction.setLastUsed(item);
             }
         }
     }
+
+    public void OnPointerUp(PointerEventData pointerEventData)
+    {
+        if(gameObject == currentSelected)
+        {
+            gameObject.GetComponent<Image>().color = currentSelectedColor;
+        }
+        else
+        {
+            gameObject.GetComponent<Image>().color = onHoverColor;
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        gameObject.GetComponent<Image>().color = onHoverColor;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (gameObject == currentSelected)
+        {
+            gameObject.GetComponent<Image>().color = currentSelectedColor;
+        }
+        else
+        {
+            gameObject.GetComponent<Image>().color = standardColor;
+        }
+
+       
+    }
+    #endregion
+
+    #region UI Updates
 
     public void UpdateUI()
     {
@@ -56,15 +131,13 @@ public class InventorySlotController : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            displaySprite.color = Color.clear;
             displaySprite.sprite = null;
+            displaySprite.color = Color.clear;
         }
     }
 
     public void removeItemFromSlot() {
         item = null;
     }
-
-
-
+    #endregion
 }

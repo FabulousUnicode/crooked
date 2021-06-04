@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private GameObject inventoryButton;
 
     public static Inventory instance;
 
@@ -18,6 +19,7 @@ public class Inventory : MonoBehaviour
     { 
         instance = this;
         updateInventorySlots();
+        toggleInventory();
     }
 
     public void updateInventorySlots()
@@ -25,38 +27,41 @@ public class Inventory : MonoBehaviour
         int index = 0;
         foreach (Transform child in inventoryPanel.transform)
         {
-            InventorySlotController slot = child.GetComponent<InventorySlotController>();
 
-            if(index < inventoryList.Count)
+            InventorySlotController slot = child.GetComponent<InventorySlotController>();
+            slot.item = null;
+
+            if(index < Inventory.instance.inventoryList.Count)
             {
-                slot.item = inventoryList[index];
+                slot.item = Inventory.instance.inventoryList[index];
             }
             slot.UpdateUI();
             index++;
         }
     }
 
+    public void toggleInventory()
+    {
+        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+        if(CameraController.getInventoryOpen() == false)
+        {
+            CameraController.setInventoryOpen(true);
+        }
+        else
+        {
+            CameraController.setInventoryOpen(false);
+        }
+    }
+
     public void addItem(Item item)
     {
-        inventoryList.Add(item);
+        Inventory.instance.inventoryList.Add(item);
         updateInventorySlots();
     }
 
     public void removeItem(Item item)
     {
-        inventoryList.Remove(item);
-        Debug.Log(item.itemName + "removed");
-
-        foreach (Transform child in inventoryPanel.transform)
-        {
-            InventorySlotController slot = child.GetComponent<InventorySlotController>();
-
-            if (slot.item == item)
-            {
-                slot.removeItemFromSlot();
-            }
-
-        }
+        Inventory.instance.inventoryList.Remove(item);
         updateInventorySlots();
     }
 }

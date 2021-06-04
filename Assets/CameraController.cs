@@ -2,26 +2,43 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    public static CameraController camController;
 
     [SerializeField] private float cameraSpeed = 10.0f;
     [SerializeField] private float scrollingZone = 10.0f; //Width of the scrolling zone in percent (relative to screen size)
 
+    private static bool inventoryOpen = false;
+
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
-
-        if (Input.mousePosition.x <= Screen.width * (scrollingZone / 100.0f)) 
+        if (!inventoryOpen)
         {
-            pos.x -= cameraSpeed * Time.deltaTime * 100;
+            Vector3 pos = transform.position;
+
+            if (Input.mousePosition.x <= Screen.width * (scrollingZone / 100.0f))
+            {
+                pos.x -= cameraSpeed * Time.deltaTime * 100;
+            }
+
+            if (Input.mousePosition.x >= Screen.width - Screen.width * (scrollingZone / 100.0f))
+            {
+                pos.x += cameraSpeed * Time.deltaTime * 100;
+            }
+
+            transform.position = pos;
         }
+    }
 
-        if (Input.mousePosition.x >= Screen.width - Screen.width * (scrollingZone / 100.0f))
-        {
-            pos.x += cameraSpeed * Time.deltaTime * 100;
-        }
+    public static void setInventoryOpen(bool invOpen)
+    {
+        inventoryOpen = invOpen;
+    }
 
-        transform.position = pos;
-
+    public static bool getInventoryOpen()
+    {
+        return inventoryOpen;
     }
 }
+
+
