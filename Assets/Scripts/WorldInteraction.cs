@@ -36,8 +36,16 @@ public class WorldInteraction : MonoBehaviour
             {
                 print(hit.collider.name);
                 CollectableItem item = hit.collider.GetComponent<CollectableItem>();
-                inventory.addItem(item.item);
-                Destroy(hit.collider.gameObject);
+                if(item == null)
+                {
+                    hit.collider.GetComponent<DialogueTrigger>().TriggerDia();
+                }
+                else
+                {
+                    inventory.addItem(item.item);
+                    Destroy(hit.collider.gameObject);
+                }
+                
 
             }
         }

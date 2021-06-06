@@ -64,4 +64,13 @@ public class Inventory : MonoBehaviour
         Inventory.instance.inventoryList.Remove(item);
         updateInventorySlots();
     }
+
+    public bool searchItem(string item)
+    {
+        if(Inventory.instance.inventoryList.Find(x=>x.itemName.Contains(item)) != null)
+        {
+            return true;
+        }
+        return false;
+    }
 }
