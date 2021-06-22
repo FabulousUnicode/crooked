@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.0f1 (c7b5465681fb) revision 13088070'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'de' Physical Memory: 8023 MB
+OS: 'Windows 10 Home; OS build 19042.1052; Version 2009; 64bit' Language: 'de' Physical Memory: 16316 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,193 +11,233 @@ C:\Program Files\Unity\Hub\Editor\2020.3.0f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/FabulousUnicorn/crooked
+C:/Users/chris/crooked
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54162
-Successfully changed project path to: C:/Users/FabulousUnicorn/crooked
-C:/Users/FabulousUnicorn/crooked
+62949
+Successfully changed project path to: C:/Users/chris/crooked
+C:/Users/chris/crooked
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 41.80 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 30.38 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/FabulousUnicorn/crooked/Assets
+[Subsystems] Discovering subsystems at path C:/Users/chris/crooked/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
+    Renderer: NVIDIA GeForce RTX 2080 SUPER (ID=0x1e81)
     Vendor:   
-    VRAM:     4011 MB
-    Driver:   22.20.16.4836
+    VRAM:     8010 MB
+    Driver:   27.21.14.6627
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56076
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56556
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002861 seconds.
+Registered in 0.001493 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 39.34 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 31.96 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.379 seconds
+- Completed reload, in  0.862 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001454 seconds.
+Registered in 0.000707 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 40.29 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 32.99 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.086 seconds
+- Completed reload, in  0.769 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.28 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1937 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 88.5 MB.
-System memory in use after: 88.5 MB.
+System memory in use before: 88.6 MB.
+System memory in use after: 88.6 MB.
 
 Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2381.
-Total: 4.002800 ms (FindLiveObjects: 0.539000 ms CreateObjectMapping: 0.202000 ms MarkObjects: 3.047100 ms  DeleteObjects: 0.212100 ms)
+Total: 1.663900 ms (FindLiveObjects: 0.165700 ms CreateObjectMapping: 0.077700 ms MarkObjects: 1.319000 ms  DeleteObjects: 0.100800 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Randy's Hut.unity
-  artifactKey: Guid(acd2c8e67605f894b9569eb92919e698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Randy's Hut.unity using Guid(acd2c8e67605f894b9569eb92919e698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f688d56ef9a2fed8fe2fedc6ad883fdf') in 0.019256 seconds
-  Import took 0.022611 seconds .
+  path: Assets/resources/Player
+  artifactKey: Guid(9b0e73af83e371447ba1274bffb94b49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/resources/Player using Guid(9b0e73af83e371447ba1274bffb94b49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00f2671c1ba02eaa4e659bf6797d1ba8') in 0.006445 seconds
+  Import took 0.008729 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 70.727861 seconds.
-  path: Assets/Scenes/Field.unity
-  artifactKey: Guid(1010ba80e2cd0f84f952a34b1d1a354a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Field.unity using Guid(1010ba80e2cd0f84f952a34b1d1a354a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58972e9cf72c6fdd0e26f9205f3d4b8d') in 0.005422 seconds
-  Import took 0.010096 seconds .
+  Time since last request: 18.952942 seconds.
+  path: Assets/resources/Player/wide_putin.png
+  artifactKey: Guid(4dc43b69bfb721a42ac056edb54bea29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/resources/Player/wide_putin.png using Guid(4dc43b69bfb721a42ac056edb54bea29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958f0c274891fb6cc891106e2fa965fe') in 0.115295 seconds
+  Import took 0.117814 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 32.475173 seconds.
+  Time since last request: 67.490134 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split Bones@4x.png
+  artifactKey: Guid(518ded92e5dbf494e8f76a74d752272e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split Bones@4x.png using Guid(518ded92e5dbf494e8f76a74d752272e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01b901f7c0cd1fb025ed9e43df363614') in 0.016289 seconds
+  Import took 0.018917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Split_Edge@3x.png
+  artifactKey: Guid(4d2d8fb4fc2041441980b4ec253532b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Split_Edge@3x.png using Guid(4d2d8fb4fc2041441980b4ec253532b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b8be87dd1181fccc0e1c898e69e180b') in 0.015545 seconds
+  Import took 0.018052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Split_Edge@2x.png
+  artifactKey: Guid(3c84cd9c7ddd51c4b959d02c41aced07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Split_Edge@2x.png using Guid(3c84cd9c7ddd51c4b959d02c41aced07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b84da0a0b404d22cf95939d6a52321e4') in 0.014243 seconds
+  Import took 0.016683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Split Bones@4x.png
+  artifactKey: Guid(e530623cd53f3ea46ac09b786f0c49ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Split Bones@4x.png using Guid(e530623cd53f3ea46ac09b786f0c49ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7fd836a2e11b1c09fcdde1457bc67c3') in 0.011264 seconds
+  Import took 0.013609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split_Edge@2x.png
+  artifactKey: Guid(2f12c9758dad4e34ea8bc886f1fdb0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split_Edge@2x.png using Guid(2f12c9758dad4e34ea8bc886f1fdb0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '994f7b692682757746a77e9ff6e6aa2c') in 0.011634 seconds
+  Import took 0.013955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split Bones@4x.png
+  artifactKey: Guid(518ded92e5dbf494e8f76a74d752272e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split Bones@4x.png using Guid(518ded92e5dbf494e8f76a74d752272e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01b901f7c0cd1fb025ed9e43df363614') in 0.005392 seconds
+  Import took 0.007770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split_Edge.png
+  artifactKey: Guid(8800032f7e7cdd544b74849c80ce05d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split_Edge.png using Guid(8800032f7e7cdd544b74849c80ce05d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8796d998250dcf840b17db42c2b2369') in 0.012892 seconds
+  Import took 0.015393 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split_Edge@3x.png
+  artifactKey: Guid(7764b2bf79a49894e8ea10f3d661a4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split_Edge@3x.png using Guid(7764b2bf79a49894e8ea10f3d661a4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2977d7d83703a101099e9547c5cfd9a3') in 0.011585 seconds
+  Import took 0.014115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Split_Edge.png
+  artifactKey: Guid(900065f34a33d2e478bf93a0191f68de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Split_Edge.png using Guid(900065f34a33d2e478bf93a0191f68de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26086e22c21cc263d8582d3e8ef91aff') in 0.012305 seconds
+  Import took 0.014737 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Split_Edge@4x.png
+  artifactKey: Guid(21d43e7114c758c49886cb9fc604dd66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Split_Edge@4x.png using Guid(21d43e7114c758c49886cb9fc604dd66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b7627c4eb71d494a0c5bf42855fb0ef') in 0.013298 seconds
+  Import took 0.015675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split_Edge@4x.png
+  artifactKey: Guid(8272ea7c59da847458432e7c88bf7766) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Split_Edge@4x.png using Guid(8272ea7c59da847458432e7c88bf7766) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fe40a44a3b3cb731adc2cb3fa4ff7ed') in 0.011034 seconds
+  Import took 0.013437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.195234 seconds.
+  path: Assets/resources/gfx/bg/bg_cornfield.png
+  artifactKey: Guid(24e95948cf5ced94c9f3dd46d29171b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/resources/gfx/bg/bg_cornfield.png using Guid(24e95948cf5ced94c9f3dd46d29171b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6fd355e19baf6a07e6e066f5b7a1bef') in 0.041813 seconds
+  Import took 0.046146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
   path: Assets/resources/gfx/randy_test.png
   artifactKey: Guid(5e9cf558139dc6d46a42d035eb2619ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/gfx/randy_test.png using Guid(5e9cf558139dc6d46a42d035eb2619ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08764fa68a880837da5a54e5e5029e60') in 0.115341 seconds
-  Import took 0.119046 seconds .
+Start importing Assets/resources/gfx/randy_test.png using Guid(5e9cf558139dc6d46a42d035eb2619ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26dd9f2f087d575e1aa222ce3bf57fc2') in 0.023166 seconds
+  Import took 0.025838 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.527387 seconds.
-  path: Assets/resources/gfx/bg
-  artifactKey: Guid(5c922a1787c36494c898b2b17dda96ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/gfx/bg using Guid(5c922a1787c36494c898b2b17dda96ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0079255b9ebf9d22084cfe9a6cdd3346') in 0.005183 seconds
-  Import took 0.009900 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.663548 seconds.
+  Time since last request: 0.000200 seconds.
   path: Assets/resources/gfx/bg/bg_cornfield.png
   artifactKey: Guid(24e95948cf5ced94c9f3dd46d29171b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/gfx/bg/bg_cornfield.png using Guid(24e95948cf5ced94c9f3dd46d29171b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c4d6b5130ec2455635aaa201fef9403') in 0.015211 seconds
-  Import took 0.019157 seconds .
+Start importing Assets/resources/gfx/bg/bg_cornfield.png using Guid(24e95948cf5ced94c9f3dd46d29171b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6fd355e19baf6a07e6e066f5b7a1bef') in 0.013529 seconds
+  Import took 0.016254 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000355 seconds.
+  Time since last request: 0.000240 seconds.
   path: Assets/resources/gfx/bg/bg_farm.jpg
   artifactKey: Guid(c35f8cc1ba56cee43aa85bac771a6405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/gfx/bg/bg_farm.jpg using Guid(c35f8cc1ba56cee43aa85bac771a6405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '772f7ff6017ec46a0edeb943eec7c2da') in 0.019395 seconds
-  Import took 0.023734 seconds .
+Start importing Assets/resources/gfx/bg/bg_farm.jpg using Guid(c35f8cc1ba56cee43aa85bac771a6405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbfbfab2a7fd96c90d04166f0d317137') in 0.015525 seconds
+  Import took 0.018066 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000292 seconds.
+  Time since last request: 0.000150 seconds.
   path: Assets/resources/gfx/bg/bg_woods.png
   artifactKey: Guid(a7677722c41b06d42b14014de774f1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/gfx/bg/bg_woods.png using Guid(a7677722c41b06d42b14014de774f1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c07a5b1d293380fd8d242625feeaef0') in 0.018355 seconds
-  Import took 0.021574 seconds .
+Start importing Assets/resources/gfx/bg/bg_woods.png using Guid(a7677722c41b06d42b14014de774f1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62daa9599bf31c4b9ffec62fc8daf5b2') in 0.012044 seconds
+  Import took 0.014830 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 32.440351 seconds.
-  path: Assets/resources/gfx/bg/bg_cornfield.png
-  artifactKey: Guid(24e95948cf5ced94c9f3dd46d29171b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/gfx/bg/bg_cornfield.png using Guid(24e95948cf5ced94c9f3dd46d29171b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fed498132a483a10e37ee478c9a9592') in 0.026357 seconds
-  Import took 0.030510 seconds .
+  Time since last request: 75.787635 seconds.
+  path: Assets/resources/Player/955EbKL.png
+  artifactKey: Guid(21f1b54816b27b044aa0c27e56e32e68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/resources/Player/955EbKL.png using Guid(21f1b54816b27b044aa0c27e56e32e68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dad0d7a724ffba9537297cefcf9f73bb') in 0.015089 seconds
+  Import took 0.018269 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000413 seconds.
-  path: Assets/resources/gfx/bg/bg_farm.jpg
-  artifactKey: Guid(c35f8cc1ba56cee43aa85bac771a6405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/gfx/bg/bg_farm.jpg using Guid(c35f8cc1ba56cee43aa85bac771a6405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73ac4b66479a2e99df3853799f713666') in 0.022368 seconds
-  Import took 0.026108 seconds .
+  Time since last request: 86.437671 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '481900d5d2af58deb36a36eb46c53df8') in 0.007576 seconds
+  Import took 0.009968 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/resources/gfx/bg/bg_cornfield.png
-  artifactKey: Guid(24e95948cf5ced94c9f3dd46d29171b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/gfx/bg/bg_cornfield.png using Guid(24e95948cf5ced94c9f3dd46d29171b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fed498132a483a10e37ee478c9a9592') in 0.020360 seconds
-  Import took 0.025009 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000317 seconds.
-  path: Assets/resources/gfx/bg/bg_woods.png
-  artifactKey: Guid(a7677722c41b06d42b14014de774f1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/gfx/bg/bg_woods.png using Guid(a7677722c41b06d42b14014de774f1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb716ceb576e2a4543cbe6ed5c398723') in 0.021137 seconds
-  Import took 0.024535 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 37.257660 seconds.
-  path: Assets/Scenes/Field.unity
-  artifactKey: Guid(1010ba80e2cd0f84f952a34b1d1a354a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Field.unity using Guid(1010ba80e2cd0f84f952a34b1d1a354a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf357209bca7171519bafd2231c07530') in 0.003399 seconds
-  Import took 0.008290 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.913909 seconds.
-  path: Assets/resources/Dialogue/DialogueBox.png
-  artifactKey: Guid(4e9cfca675d52514784e86a73e97f654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/Dialogue/DialogueBox.png using Guid(4e9cfca675d52514784e86a73e97f654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21603dd9667ff2fd122bb991b61c4a17') in 0.028148 seconds
-  Import took 0.032816 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006547 seconds.
-  path: Assets/resources/Dialogue/DialogueBox.png
-  artifactKey: Guid(4e9cfca675d52514784e86a73e97f654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/resources/Dialogue/DialogueBox.png using Guid(4e9cfca675d52514784e86a73e97f654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21603dd9667ff2fd122bb991b61c4a17') in 0.021305 seconds
-  Import took 0.025373 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 46.760016 seconds.
-  path: Assets/Scenes/Woods.unity
-  artifactKey: Guid(774791726b7f101429eb537d76881c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Woods.unity using Guid(774791726b7f101429eb537d76881c94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '842152c8edeb42b3c7fc89a57bfdeda1') in 0.005833 seconds
-  Import took 0.009763 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 48.606491 seconds.
-  path: Assets/Scenes/Farm.unity
-  artifactKey: Guid(7ccba0206e7717e4392815fa0b9324cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Farm.unity using Guid(7ccba0206e7717e4392815fa0b9324cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9cf0bcd347fdd4e3da9d0aa05c02a5e') in 0.005308 seconds
-  Import took 0.009628 seconds .
+  Time since last request: 0.002207 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '481900d5d2af58deb36a36eb46c53df8') in 0.001708 seconds
+  Import took 0.004122 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
