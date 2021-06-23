@@ -32,6 +32,8 @@ public class WorldInteraction : MonoBehaviour
 
             hit = Physics2D.Raycast(new Vector2(mousePosWorld.x, mousePosWorld.y), new Vector2(0,0));
 
+            Player.agent.SetDestination(hit.point);
+
             if (hit.collider != null)
             {
                 print(hit.collider.name);
