@@ -48,10 +48,17 @@ public class WorldInteraction : MonoBehaviour
             GameObject gObject = hit.collider.gameObject;
             //print(hit.collider.name);
             
-
-            hText.SetActive(true);
-            hText.transform.GetChild(0).GetComponent<Text>().text = gObject.name;
-            hText.transform.position = mousePosWorld + new Vector3(0, 30, 1);
+            if(gObject.name != "bg_randysHut")
+            {
+                hText.SetActive(true);
+                hText.transform.GetChild(0).GetComponent<Text>().text = gObject.name;
+                hText.transform.position = mousePosWorld + new Vector3(0, 30, 1);
+            }
+            else
+            {
+                hText.SetActive(false);
+            }
+            
 
 
 
