@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Piece of Paper
   icon: {fileID: 21300000, guid: d9ae07b66663e1c4b89b81ee78501072, type: 3}
-  description: 
+  description: Piece of Paper
   combinable: 1
   combinableWith: {fileID: 11400000, guid: a9ff9b9437c6ae8439d9cf5fe3ce95c9, type: 2}
   combineResult: {fileID: 11400000, guid: 50975bfd3f2092d419594dd41d18e193, type: 2}

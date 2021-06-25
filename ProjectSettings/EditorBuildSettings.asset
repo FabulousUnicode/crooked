@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Randy's Hut.unity
+    guid: acd2c8e67605f894b9569eb92919e698
+  - enabled: 1
+    path: Assets/Scenes/Farm.unity
+    guid: 7ccba0206e7717e4392815fa0b9324cd
   m_configObjects: {}
