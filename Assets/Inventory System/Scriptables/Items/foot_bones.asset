@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
+  m_Name: foot_bones
+  m_EditorClassIdentifier: 
+  itemName: "Fu\xDFknochen"
+  icon: {fileID: 21300000, guid: cfee16386b4b4274699f239faa8e66ee, type: 3}
+  description: 
+  combinable: 1
+  combinableWith: {fileID: 11400000, guid: 70fd15957f219274d87569ab44bf0d99, type: 2}
+  combineResult: {fileID: 11400000, guid: 8feaa56faccf43944a5ce35c71dac3b3, type: 2}
