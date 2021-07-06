@@ -26,6 +26,7 @@ public class WorldInteraction : MonoBehaviour
     {
         kommentartext = kommentar.transform.GetChild(0).GetComponent<Text>();
         kommentartext.text = "Hallo";
+
     }
 
     // Update is called once per frame
@@ -43,16 +44,40 @@ public class WorldInteraction : MonoBehaviour
         
 
 
+
         if (hit)
         {
             GameObject gObject = hit.collider.gameObject;
             //print(hit.collider.name);
+
             
-            if(gObject.name != "bg_randysHut")
+            if(gObject.name != "Background")
             {
+                string text123 = "";
+
+                if (gObject.HasComponent<CollectableItem>()) 
+                {
+                    text123 = gObject.GetComponent<CollectableItem>().item.itemName;
+                }
+                else if(gObject.HasComponent<CharacterInfo>())
+                {
+                    text123 = gObject.GetComponent<CharacterInfo>().character.cName;
+                }
+                else if(gObject.HasComponent<ScenenChange>())
+                {
+                    text123 = gObject.GetComponent<ScenenChange>().destinationName;
+                }
+                else
+                {
+                    text123 = gObject.name;
+                }
+
+
+
+
                 hText.SetActive(true);
-                hText.transform.GetChild(0).GetComponent<Text>().text = gObject.name;
-                hText.transform.position = mousePosWorld + new Vector3(0, 30, 1);
+                hText.transform.GetChild(0).GetComponent<Text>().text = text123;
+                hText.transform.position = mousePosWorld + new Vector3(960, 580, 0);
             }
             else
             {
@@ -60,38 +85,14 @@ public class WorldInteraction : MonoBehaviour
             }
             
 
-
-
-
             //linke Taste
             if (Input.GetMouseButtonUp(0))
             {
-                if (gObject.HasComponent<CollectableItem>())
-                {
-                    CollectableItem item = hit.collider.GetComponent<CollectableItem>();
-                    inventory.addItem(item.item);
-
-                    kommentartext.text = item.item.description;
-                    kanima.SetBool("IsOpen", true);
-                    StartCoroutine("kommanima");
-                    
-
-
-                    Destroy(hit.collider.gameObject);
-                }
-                else if(gObject.HasComponent<DialogueTrigger>())
-                {
-                    hit.collider.GetComponent<DialogueTrigger>().TriggerDia();
-                }
-                else if(gObject.HasComponent<ScenenChange>())
-                {
-                    hit.collider.GetComponent<ScenenChange>().wechsel();
-                }
-                else
-                {
-                	Player.agent.SetDestination(hit.point);
-                }
+                Player.agent.ResetPath();
+                Player.agent.SetDestination(hit.point);
+                StartCoroutine("waitt", gObject);
             }
+
             //rechte Taste
             else if(Input.GetMouseButtonUp(1))
             {
@@ -122,12 +123,60 @@ public class WorldInteraction : MonoBehaviour
 
     }
 
+    private void left(GameObject gObject)
+    {
+        if (gObject.HasComponent<CollectableItem>())
+        {
+            CollectableItem item = gObject.GetComponent<CollectableItem>();
+            if (inventory.searchItem(item.name)) { return; }
+            inventory.addItem(item.item);
+
+            kommentartext.text = item.item.description;
+            kanima.SetBool("IsOpen", true);
+            StartCoroutine("kommanima");
+
+
+
+            Destroy(gObject.gameObject);
+
+            ScenenChange.remove += (item.item.name + ",");
+
+            //print(ScenenChange.remove);
+
+        }
+        else if (gObject.HasComponent<CharacterInfo>())
+        {
+            FindObjectOfType<Dialogue>().StartDialogue(gObject.GetComponent<CharacterInfo>().character.inkFile, gObject.GetComponent<CharacterInfo>().character);
+        }
+        else if (gObject.HasComponent<ScenenChange>())
+        {
+            gObject.GetComponent<ScenenChange>().wechsel();
+        }
+        else
+        {
+
+        }
+    }
+
     IEnumerator kommanima()
     {
         yield return new WaitForSeconds(3.0f);
         kanima.SetBool("IsOpen", false);
     }
-    
+
+    IEnumerator waitt(GameObject obj)
+    {
+        Debug.Log(Player.agent.remainingDistance);
+        yield return new WaitUntil(() => Player.agent.pathPending == false);
+        yield return new WaitUntil(() => Player.agent.remainingDistance <= 10);
+
+        if (obj != null && Player.agent.hasPath)
+        {
+            left(obj);
+        }
+        
+    }
+
 }
 
 

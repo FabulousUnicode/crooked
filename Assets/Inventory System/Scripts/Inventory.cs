@@ -11,12 +11,12 @@ public class Inventory : MonoBehaviour
 
     public static Inventory instance;
 
-    [SerializeField] private List<Item> inventoryList = new List<Item>();
+    [SerializeField] private static List<Item> inventoryList = new List<Item>();
     [SerializeField] private List<InventorySlotController> slotList = new List<InventorySlotController>();
 
-
     public void Start()
-    { 
+    {
+        
         instance = this;
         updateInventorySlots();
         toggleInventory();
@@ -25,15 +25,19 @@ public class Inventory : MonoBehaviour
     public void updateInventorySlots()
     {
         int index = 0;
+        if (inventoryPanel == null)
+        {
+            inventoryPanel = GameObject.Find("InventoryPanel");
+        }
         foreach (Transform child in inventoryPanel.transform)
         {
-
+            //print("CP1");
             InventorySlotController slot = child.GetComponent<InventorySlotController>();
             slot.item = null;
 
-            if(index < Inventory.instance.inventoryList.Count)
+            if(index < Inventory.inventoryList.Count)
             {
-                slot.item = Inventory.instance.inventoryList[index];
+                slot.item = Inventory.inventoryList[index];
             }
             slot.UpdateUI();
             index++;
@@ -55,19 +59,22 @@ public class Inventory : MonoBehaviour
 
     public void addItem(Item item)
     {
-        Inventory.instance.inventoryList.Add(item);
+        Inventory.inventoryList.Add(item);
         updateInventorySlots();
+        
     }
 
     public void removeItem(Item item)
     {
-        Inventory.instance.inventoryList.Remove(item);
+        Inventory.inventoryList.Remove(item);
         updateInventorySlots();
+
+
     }
 
     public bool searchItem(string item)
     {
-        if(Inventory.instance.inventoryList.Find(x=>x.itemName.Contains(item)) != null)
+        if(Inventory.inventoryList.Find(x=>x.name.Equals(item)) != null)
         {
             return true;
         }

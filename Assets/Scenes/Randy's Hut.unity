@@ -1118,6 +1118,7 @@ GameObject:
   - component: {fileID: 167789783}
   - component: {fileID: 167789786}
   - component: {fileID: 167789785}
+  - component: {fileID: 167789787}
   m_Layer: 0
   m_Name: randy_test
   m_TagString: Untagged
@@ -1432,6 +1433,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkFile: {fileID: 4900000, guid: b7fc339234ef1544bbe0de70113b6ddd, type: 3}
+--- !u!114 &167789787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167789782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0146af904e5a44ea868adaa7e4240e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: a654d8e618b99dd408e7520740c5c8df, type: 2}
 --- !u!1 &179115843
 GameObject:
   m_ObjectHideFlags: 0

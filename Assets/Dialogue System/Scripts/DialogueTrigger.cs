@@ -10,6 +10,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDia()
     {
-        FindObjectOfType<Dialogue>().StartDialogue(inkFile);
+        //FindObjectOfType<Dialogue>().StartDialogue(inkFile);
     }
 }

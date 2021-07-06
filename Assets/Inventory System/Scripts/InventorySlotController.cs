@@ -11,6 +11,7 @@ public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPoin
     public Color onHoverColor = Color.green;
     public Color onUseColor = Color.blue;
     public Color currentSelectedColor = Color.yellow;
+    public GameObject hText;
     
     public static GameObject currentSelected;
 
@@ -76,7 +77,7 @@ public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPoin
                 currentSelected.GetComponent<Image>().color = standardColor;
                 currentSelected = null;
                 ItemInteraction.combineItems(item);
-                Debug.Log(item.itemName + " Game Object Right Clicked!");
+                //Debug.Log(item.itemName + " Game Object Right Clicked!");
             }
             else
             {
@@ -100,6 +101,14 @@ public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPoin
     public void OnPointerEnter(PointerEventData eventData)
     {
         gameObject.GetComponent<Image>().color = onHoverColor;
+
+        if(item != null)
+        {
+            hText.SetActive(true);
+            hText.transform.GetChild(0).GetComponent<Text>().text = item.itemName;
+            hText.transform.position = gameObject.transform.position + new Vector3(0, 100, 0);
+        }
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -113,7 +122,7 @@ public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPoin
             gameObject.GetComponent<Image>().color = standardColor;
         }
 
-       
+        hText.SetActive(false);
     }
     #endregion
 

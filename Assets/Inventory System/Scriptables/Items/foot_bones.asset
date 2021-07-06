@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "Fu\xDFknochen"
   icon: {fileID: 21300000, guid: cfee16386b4b4274699f239faa8e66ee, type: 3}
-  description: 
+  description: "Wem die wohl mal geh\xF6rt haben."
   combinable: 1
   combinableWith: {fileID: 11400000, guid: 70fd15957f219274d87569ab44bf0d99, type: 2}
   combineResult: {fileID: 11400000, guid: 8feaa56faccf43944a5ce35c71dac3b3, type: 2}

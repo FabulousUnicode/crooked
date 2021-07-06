@@ -12,6 +12,7 @@ public class Dialogue : MonoBehaviour
 
     bool m_isTalking;
     bool m_isDeciding;
+    Characters m_character;
 
     Text m_name;
     Text m_message;
@@ -36,16 +37,27 @@ public class Dialogue : MonoBehaviour
 
     }
 
-    public void StartDialogue(TextAsset inkFile)
+    public void StartDialogue(TextAsset inkFile, Characters character)
     {
         if(!m_isTalking)
         {
+            m_character = character;
+
+            
+
             //Erstellen Storyobjekt aus Ink-File
             m_story = new Story(inkFile.text);
 
             //Auslesen und verarbeiten globaler Tags
             m_tags = m_story.globalTags;
             ParseGlobalTags();
+
+            if(m_character.combine)
+            {
+                m_story.BindExternalFunction("Combine", (string remove) =>{
+                    Combine(remove);
+                });
+            }
 
             //Dialogue Feld zeigen
             m_dialogueBox.SetActive(true);
@@ -202,5 +214,25 @@ public class Dialogue : MonoBehaviour
 
         m_selectedChoice = null;
         AdvanceDialogue();
+    }
+
+
+    private void Combine(string remove)
+    {
+        GameObject.Find("Inventory").GetComponent<Inventory>().addItem(m_character.list[0]);
+
+
+        GameObject player = GameObject.Find("Inventory");
+        for (int i = 0; i < remove.Split(',').Length; i++)
+        {
+            string variable = remove.Split(',')[i];
+            bool vorhanden = player.GetComponent<Inventory>().searchItem(variable);
+            if(vorhanden)
+            {
+                Item item = ItemDatabaseInstance.getItemByName(variable);
+                GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(item);
+            }
+        }
+
     }
 }
