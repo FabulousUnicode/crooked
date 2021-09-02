@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Randy's Shack.unity
+- path: Assets/Scenes/Shipwreck.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

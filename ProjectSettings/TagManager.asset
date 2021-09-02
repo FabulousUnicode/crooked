@@ -45,6 +45,9 @@ TagManager:
   - name: background
     uniqueID: 836465889
     locked: 0
+  - name: lighting
+    uniqueID: 3928271015
+    locked: 0
   - name: items
     uniqueID: 1646676519
     locked: 0
