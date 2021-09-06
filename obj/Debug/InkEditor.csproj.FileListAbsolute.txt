@@ -1,0 +1,2 @@
+C:\Users\chris\crooked\obj\Debug\InkEditor.csprojAssemblyReference.cache
+C:\Users\chris\crooked\obj\Debug\InkEditor.csproj.CoreCompileInputs.cache
