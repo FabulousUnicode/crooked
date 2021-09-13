@@ -13,21 +13,8 @@ public class WorldInteraction : MonoBehaviour
     //public ItemInstance itemInstance;
     public Inventory inventory;
     public RaycastHit2D hit;
-    public GameObject kommentar;
-    public Animator kanima;
-    Text kommentartext;
 
     public GameObject hText;
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        kommentartext = kommentar.transform.GetChild(0).GetComponent<Text>();
-        kommentartext.text = "Hallo";
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -42,7 +29,7 @@ public class WorldInteraction : MonoBehaviour
         hit = Physics2D.Raycast(new Vector2(mousePosWorld.x, mousePosWorld.y), new Vector2(0,0));
 
         
-
+        
 
 
         if (hit)
@@ -83,7 +70,12 @@ public class WorldInteraction : MonoBehaviour
             {
                 hText.SetActive(false);
             }
-            
+
+            if (FindObjectOfType<Dialog>().talkingStatus())
+            {
+               return;
+            }
+
 
             //linke Taste
             if (Input.GetMouseButtonUp(0))
@@ -131,11 +123,11 @@ public class WorldInteraction : MonoBehaviour
             if (inventory.searchItem(item.name)) { return; }
             inventory.addItem(item.item);
 
-            kommentartext.text = item.item.description;
-            kanima.SetBool("IsOpen", true);
-            StartCoroutine("kommanima");
-
-
+            //kommentartext.text = item.item.description;
+            //kanima.SetBool("IsOpen", true);
+            //StartCoroutine("kommanima");
+            print("hallo");
+            FindObjectOfType<Dialog>().showText(item.item.description);
 
             Destroy(gObject.gameObject);
 
@@ -146,10 +138,11 @@ public class WorldInteraction : MonoBehaviour
         }
         else if (gObject.HasComponent<CharacterInfo>())
         {
-            FindObjectOfType<Dialogue>().StartDialogue(gObject.GetComponent<CharacterInfo>().character.inkFile, gObject.GetComponent<CharacterInfo>().character);
+            FindObjectOfType<Dialog>().StartDialogue(gObject.GetComponent<CharacterInfo>().character.inkFile, gObject.GetComponent<CharacterInfo>().character);
         }
         else if (gObject.HasComponent<ScenenChange>())
         {
+            FindObjectOfType<Dialog>().showBannerText(gObject.GetComponent<ScenenChange>().scene);
             gObject.GetComponent<ScenenChange>().wechsel();
         }
         else
@@ -158,11 +151,11 @@ public class WorldInteraction : MonoBehaviour
         }
     }
 
-    IEnumerator kommanima()
+    /*IEnumerator kommanima()
     {
         yield return new WaitForSeconds(3.0f);
         kanima.SetBool("IsOpen", false);
-    }
+    }*/
 
     IEnumerator waitt(GameObject obj)
     {

@@ -7,6 +7,6 @@ public class Selectable : MonoBehaviour
     public object element;
     public void Decide()
     {
-        Dialogue.SetDecision(element);
+        Dialog.SetDecision(element);
     }
 }
