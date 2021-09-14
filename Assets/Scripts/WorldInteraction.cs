@@ -135,9 +135,10 @@ public class WorldInteraction : MonoBehaviour
                 if (inventory.searchItem(item.name)) { return; }
                 inventory.addItem(item.item);
 
-                kommentartext.text = item.item.description;
-                kanima.SetBool("IsOpen", true);
-                StartCoroutine("kommanima");
+                // kommentartext.text = item.item.description;
+                //kanima.SetBool("IsOpen", true);
+                //StartCoroutine("kommanima");
+                FindObjectOfType<Dialog>().showText(item.item.description);
                 Destroy(gObject.gameObject);
                 ScenenChange.remove += (item.item.name + ",");
             }
@@ -155,7 +156,7 @@ public class WorldInteraction : MonoBehaviour
         }
         else if (gObject.HasComponent<CharacterInfo>())
         {
-            FindObjectOfType<Dialogue>().StartDialogue(gObject.GetComponent<CharacterInfo>().character.inkFile, gObject.GetComponent<CharacterInfo>().character);
+            FindObjectOfType<Dialog>().StartDialogue(gObject.GetComponent<CharacterInfo>().character.inkFile, gObject.GetComponent<CharacterInfo>().character);
         }
         else if (gObject.HasComponent<ScenenChange>())
         {
