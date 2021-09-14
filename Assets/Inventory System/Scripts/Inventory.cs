@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private GameObject player;

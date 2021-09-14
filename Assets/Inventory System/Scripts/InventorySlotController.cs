@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
 {
     public Item item;
-    public Color standardColor = Color.black;
+    public static Color standardColor = Color.black;
     public Color onHoverColor = Color.green;
     public Color onUseColor = Color.blue;
     public Color currentSelectedColor = Color.yellow;
@@ -15,10 +15,18 @@ public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPoin
     
     public static GameObject currentSelected;
 
-    public void resetCurrentSelected()
+    public static void resetCurrentSelected()
     {
-        currentSelected = null;
+        if(currentSelected != null)
+        {
+            currentSelected.GetComponent<Image>().color = standardColor;
+            currentSelected = null;
+        }
+
+       
     }
+
+   
 
     public void Awake()
     {

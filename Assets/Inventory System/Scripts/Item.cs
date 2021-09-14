@@ -12,4 +12,5 @@ public class Item : ScriptableObject
     public bool combinable;
     public Item combinableWith;
     public Item combineResult;
+    public bool collectable;
 }

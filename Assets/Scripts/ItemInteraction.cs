@@ -10,6 +10,7 @@ public class ItemInteraction : MonoBehaviour
     public static void setLastUsed(Item item)
     {
         lastUsed = item;
+        Debug.Log(lastUsed);
     }
 
     public static Item getLastUsed()
@@ -30,7 +31,15 @@ public class ItemInteraction : MonoBehaviour
 
     public static void useItem(Item item)
     {
-        //do something
+        
+    }
+
+    public static void useItemWithSelected(InteractableItem item)
+    {
+        if(item.item.itemName == "mouth" || item.item.itemName == "eyes")
+        {
+            BossHandler.handleInteraction(item.item, lastUsed); 
+        }
     }
 
     public static void combineItems(Item item)

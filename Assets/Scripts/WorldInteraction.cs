@@ -13,8 +13,21 @@ public class WorldInteraction : MonoBehaviour
     //public ItemInstance itemInstance;
     public Inventory inventory;
     public RaycastHit2D hit;
+    public GameObject kommentar;
+    public Animator kanima;
+    Text kommentartext;
 
     public GameObject hText;
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        kommentartext = kommentar.transform.GetChild(0).GetComponent<Text>();
+        kommentartext.text = "Hallo";
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -22,14 +35,14 @@ public class WorldInteraction : MonoBehaviour
         //Pr�ft ob Canvas dr�ber liegt
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        ItemInteraction.setLastUsed(null);
+        //ItemInteraction.setLastUsed(null);
         mousePos = Input.mousePosition;
         mousePosWorld = mainCam.ScreenToWorldPoint(mousePos);
 
         hit = Physics2D.Raycast(new Vector2(mousePosWorld.x, mousePosWorld.y), new Vector2(0,0));
 
         
-        
+
 
 
         if (hit)
@@ -42,9 +55,9 @@ public class WorldInteraction : MonoBehaviour
             {
                 string text123 = "";
 
-                if (gObject.HasComponent<CollectableItem>()) 
+                if (gObject.HasComponent<InteractableItem>()) 
                 {
-                    text123 = gObject.GetComponent<CollectableItem>().item.itemName;
+                    text123 = gObject.GetComponent<InteractableItem>().item.itemName;
                 }
                 else if(gObject.HasComponent<CharacterInfo>())
                 {
@@ -70,12 +83,7 @@ public class WorldInteraction : MonoBehaviour
             {
                 hText.SetActive(false);
             }
-
-            if (FindObjectOfType<Dialog>().talkingStatus())
-            {
-               return;
-            }
-
+            
 
             //linke Taste
             if (Input.GetMouseButtonUp(0))
@@ -117,49 +125,60 @@ public class WorldInteraction : MonoBehaviour
 
     private void left(GameObject gObject)
     {
-        if (gObject.HasComponent<CollectableItem>())
+        if (gObject.HasComponent<InteractableItem>())
         {
-            CollectableItem item = gObject.GetComponent<CollectableItem>();
-            if (inventory.searchItem(item.name)) { return; }
-            inventory.addItem(item.item);
 
-            //kommentartext.text = item.item.description;
-            //kanima.SetBool("IsOpen", true);
-            //StartCoroutine("kommanima");
-            print("hallo");
-            FindObjectOfType<Dialog>().showText(item.item.description);
+            
+            InteractableItem item = gObject.GetComponent<InteractableItem>();
+            if (item.item.collectable == true)
+            {
+                if (inventory.searchItem(item.name)) { return; }
+                inventory.addItem(item.item);
 
-            Destroy(gObject.gameObject);
+                kommentartext.text = item.item.description;
+                kanima.SetBool("IsOpen", true);
+                StartCoroutine("kommanima");
+                Destroy(gObject.gameObject);
+                ScenenChange.remove += (item.item.name + ",");
+            }
 
-            ScenenChange.remove += (item.item.name + ",");
+            if(item.item.collectable == false)
+            {
+                Debug.Log("item clicked: " +  item.item.name);
+                ItemInteraction.useItemWithSelected(item);
+                
+            }
 
+            
             //print(ScenenChange.remove);
 
         }
         else if (gObject.HasComponent<CharacterInfo>())
         {
-            FindObjectOfType<Dialog>().StartDialogue(gObject.GetComponent<CharacterInfo>().character.inkFile, gObject.GetComponent<CharacterInfo>().character);
+            FindObjectOfType<Dialogue>().StartDialogue(gObject.GetComponent<CharacterInfo>().character.inkFile, gObject.GetComponent<CharacterInfo>().character);
         }
         else if (gObject.HasComponent<ScenenChange>())
         {
-            FindObjectOfType<Dialog>().showBannerText(gObject.GetComponent<ScenenChange>().scene);
             gObject.GetComponent<ScenenChange>().wechsel();
         }
         else
         {
 
         }
+
+        ItemInteraction.resetLastUsed();
+        InventorySlotController.resetCurrentSelected();
     }
 
-    /*IEnumerator kommanima()
+    IEnumerator kommanima()
     {
         yield return new WaitForSeconds(3.0f);
         kanima.SetBool("IsOpen", false);
-    }*/
+    }
 
     IEnumerator waitt(GameObject obj)
     {
-        Debug.Log(Player.agent.remainingDistance);
+        //Debug.Log(Player.agent.remainingDistance);
         yield return new WaitUntil(() => Player.agent.pathPending == false);
         yield return new WaitUntil(() => Player.agent.remainingDistance <= 10);
 
