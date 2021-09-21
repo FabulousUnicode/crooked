@@ -15,7 +15,8 @@ public class WorldInteraction : MonoBehaviour
     public RaycastHit2D hit;
     public GameObject kommentar;
     public Animator kanima;
-    Text kommentartext;
+    //Text kommentartext;
+    public ContextMenuHandler contextMenu;
 
     public GameObject hText;
 
@@ -24,8 +25,9 @@ public class WorldInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         kommentartext = kommentar.transform.GetChild(0).GetComponent<Text>();
-        kommentartext.text = "Hallo";
+        kommentartext.text = "Hallo"; */
 
     }
 
@@ -41,10 +43,6 @@ public class WorldInteraction : MonoBehaviour
 
         hit = Physics2D.Raycast(new Vector2(mousePosWorld.x, mousePosWorld.y), new Vector2(0,0));
 
-        
-
-
-
         if (hit)
         {
             GameObject gObject = hit.collider.gameObject;
@@ -53,30 +51,30 @@ public class WorldInteraction : MonoBehaviour
             
             if(gObject.name != "Background")
             {
-                string text123 = "";
+                string hoverInfo = "";
 
                 if (gObject.HasComponent<InteractableItem>()) 
                 {
-                    text123 = gObject.GetComponent<InteractableItem>().item.itemName;
+                    hoverInfo = gObject.GetComponent<InteractableItem>().item.itemName;
                 }
                 else if(gObject.HasComponent<CharacterInfo>())
                 {
-                    text123 = gObject.GetComponent<CharacterInfo>().character.cName;
+                    hoverInfo = gObject.GetComponent<CharacterInfo>().character.cName;
                 }
                 else if(gObject.HasComponent<ScenenChange>())
                 {
-                    text123 = gObject.GetComponent<ScenenChange>().destinationName;
+                    hoverInfo = gObject.GetComponent<ScenenChange>().destinationName;
                 }
                 else
                 {
-                    text123 = gObject.name;
+                    hoverInfo = gObject.name;
                 }
 
 
 
 
                 hText.SetActive(true);
-                hText.transform.GetChild(0).GetComponent<Text>().text = text123;
+                hText.transform.GetChild(0).GetComponent<Text>().text = hoverInfo;
                 hText.transform.position = mousePosWorld + new Vector3(960, 580, 0);
             }
             else
@@ -88,6 +86,10 @@ public class WorldInteraction : MonoBehaviour
             //linke Taste
             if (Input.GetMouseButtonUp(0))
             {
+                if (contextMenu.isActive())
+                {
+                    contextMenu.setStatus(false);
+                }
                 Player.agent.ResetPath();
                 Player.agent.SetDestination(hit.point);
                 StartCoroutine("waitt", gObject);
@@ -96,10 +98,17 @@ public class WorldInteraction : MonoBehaviour
             //rechte Taste
             else if(Input.GetMouseButtonUp(1))
             {
+                if (gObject.HasComponent<InteractableItem>())
+                {
+                    contextMenu.handleMenu(mousePos, gObject.GetComponent<InteractableItem>(), gObject, hit);
+                }
+
+
+                /*
                 if(gObject.HasComponent<Anschauen>())
                 {
                     gObject.GetComponent<Anschauen>().AnschauenStart();
-                }
+                }*/
             }
             //mittlere Taste
             else if(Input.GetMouseButtonUp(2))
@@ -123,12 +132,19 @@ public class WorldInteraction : MonoBehaviour
 
     }
 
-    private void left(GameObject gObject)
+
+    public void setDestination(GameObject gameObject, RaycastHit2D hit)
+    {
+        Player.agent.ResetPath();
+        Player.agent.SetDestination(hit.point);
+        StartCoroutine("waitt", gameObject);
+    }
+
+
+    public void left(GameObject gObject)
     {
         if (gObject.HasComponent<InteractableItem>())
         {
-
-            
             InteractableItem item = gObject.GetComponent<InteractableItem>();
             if (item.item.collectable == true)
             {
