@@ -178,6 +178,11 @@ public class WorldInteraction : MonoBehaviour
         {
             gObject.GetComponent<ScenenChange>().wechsel();
         }
+        else if (gObject.HasComponent<Licht>())
+        {
+            gObject.GetComponent<Licht>().aktivieren();
+            
+        }
         else
         {
 

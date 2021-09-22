@@ -8,15 +8,38 @@ public class Licht : MonoBehaviour
     public Sprite aktiv;
     public int nummer;
 
+    public Item item;
+    public string lampName;
+
     private SpriteRenderer spriteRenderer;
 
     public void aktivieren()
     {
-        //if (!LichterAnschalten.lampen[nummer])
+        if (!LichtAnschalten.lampen[nummer])
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = aktiv;
-            //LichterAnschalten.lampen[nummer] = true;
+            GameObject inven = GameObject.Find("Inventory");
+
+            if(inven.GetComponent<Inventory>().searchItem(item.name))
+            {
+                spriteRenderer = GetComponent<SpriteRenderer>();
+                spriteRenderer.sprite = aktiv;
+                LichtAnschalten.lampen[nummer] = true;
+
+                inven.GetComponent<Inventory>().removeItem(item);
+
+                FindObjectOfType<Dialog>().showText("Ok das scheint zu passen.");
+
+                LichtAnschalten.lichter++;
+            }
+            else
+            {
+                FindObjectOfType<Dialog>().showText("Hier scheinen " + lampName + " zu fehlen.");
+            }
+
+        }
+        else
+        {
+            print("bereits aktiviert");
         }
            
     }
@@ -27,14 +50,19 @@ public class Licht : MonoBehaviour
         {
             GameObject asd = gameObject.transform.GetChild(0).gameObject;
 
-              asd.SetActive(true);
+            asd.SetActive(true);
 
-              spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.sprite = aktiv; 
         }
-        //if (LichterAnschalten.lampen[nummer])
+        else if (LichtAnschalten.lampen[nummer])
         {
-            
+            //GameObject asd = gameObject.transform.GetChild(0).gameObject;
+
+            //asd.SetActive(true);
+
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = aktiv;
         }
     }
 }

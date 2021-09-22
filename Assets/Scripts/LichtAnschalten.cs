@@ -7,14 +7,14 @@ public class LichtAnschalten : MonoBehaviour
     public static int lichter = 0;
     public static bool aktiviert = false;
 
-    public static bool[] lampen;
+    public static bool[] lampen = new bool[4] {false, false, false, false};
 
 
     public void anschalten()
     {
         if (!aktiviert)
         {
-            if (lichter >= 2)
+            if (lichter >= 3)
             {
                 ScenenChange.add += ("lantern" + ",");
                 GameObject asd = GameObject.Find("Laterne").transform.GetChild(0).gameObject;
@@ -22,6 +22,9 @@ public class LichtAnschalten : MonoBehaviour
                 asd.SetActive(true);
 
                 aktiviert = true;
+                print("Lichter an");
+
+                ScenenChange.add += ("mottenkugel" + ",");
             }
         }
         else
@@ -42,6 +45,11 @@ public class LichtAnschalten : MonoBehaviour
             GameObject.Find("Laterne").GetComponent<Licht>().aktivieren();
         }
         
+    }
+
+    void Update()
+    {
+        print (lichter);
     }
         
 }
