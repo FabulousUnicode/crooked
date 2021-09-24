@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: hacksaw
   m_EditorClassIdentifier: 
   itemName: "S\xE4ge"
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 579cdbd0ad8022d4cafcf4826553668f, type: 3}
   description: 
   combinable: 0
   combinableWith: {fileID: 0}

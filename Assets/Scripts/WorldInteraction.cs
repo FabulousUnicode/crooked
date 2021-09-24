@@ -70,9 +70,6 @@ public class WorldInteraction : MonoBehaviour
                     hoverInfo = gObject.name;
                 }
 
-
-
-
                 hText.SetActive(true);
                 hText.transform.GetChild(0).GetComponent<Text>().text = hoverInfo;
                 hText.transform.position = mousePosWorld + new Vector3(960, 580, 0);
@@ -180,8 +177,7 @@ public class WorldInteraction : MonoBehaviour
         }
         else if (gObject.HasComponent<Licht>())
         {
-            gObject.GetComponent<Licht>().aktivieren();
-            
+            gObject.GetComponent<Licht>().aktivieren();  
         }
         else
         {
@@ -212,8 +208,6 @@ public class WorldInteraction : MonoBehaviour
     }
 
 }
-
-
 
 
 public static class hasComponent

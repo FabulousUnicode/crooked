@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\ContextMenuHandler.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\ScenenChange.cs" />
+    <Compile Include="Assets\Scripts\BushHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

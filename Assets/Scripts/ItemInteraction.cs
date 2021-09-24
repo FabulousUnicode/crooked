@@ -40,6 +40,10 @@ public class ItemInteraction : MonoBehaviour
         {
             BossHandler.handleInteraction(item.item, lastUsed); 
         }
+        if(item.item.itemName == "Busch")
+        {
+            BushHandler.handleInteraction(item.item);
+        }
     }
 
     public static void combineItems(Item item)

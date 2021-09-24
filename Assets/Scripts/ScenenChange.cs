@@ -43,7 +43,6 @@ public class ScenenChange : MonoBehaviour
 
     }
 
-
     public void wechsel()
     {
         GameObject.Find("DialogFeld").transform.GetChild(1).gameObject.SetActive(false);
