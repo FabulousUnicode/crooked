@@ -95,7 +95,7 @@ public class WorldInteraction : MonoBehaviour
             //rechte Taste
             else if(Input.GetMouseButtonUp(1))
             {
-                if (gObject.HasComponent<InteractableItem>())
+                //if (gObject.HasComponent<InteractableItem>())
                 {
                     contextMenu.handleMenu(mousePos, gObject.GetComponent<InteractableItem>(), gObject, hit);
                 }

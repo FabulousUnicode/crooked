@@ -18,4 +18,4 @@ MonoBehaviour:
   combinable: 1
   combinableWith: {fileID: 11400000, guid: 70fd15957f219274d87569ab44bf0d99, type: 2}
   combineResult: {fileID: 0}
-  collectable: 0
+  collectable: 1

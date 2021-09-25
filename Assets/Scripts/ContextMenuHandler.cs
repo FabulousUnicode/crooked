@@ -30,7 +30,7 @@ public class ContextMenuHandler : MonoBehaviour, IPointerDownHandler, IPointerEn
     public void handleMenu(Vector3 pos, InteractableItem interactableItem, GameObject gObj, RaycastHit2D hitArg)
     {
         contextMenu.transform.position = new Vector3(pos.x + 150, pos.y - 80, 0);
-        setSelectedItem(interactableItem);
+        //setSelectedItem(interactableItem);
         gObject = gObj;
         hit = hitArg;
         contextMenu.SetActive(true);
@@ -53,7 +53,14 @@ public class ContextMenuHandler : MonoBehaviour, IPointerDownHandler, IPointerEn
         }
         if(eventData.pointerCurrentRaycast.gameObject.name == "Use")
         {
-            //use item with something
+            if(gObject.name == "flavia")
+            {
+                gObject.GetComponent<Flavia>().flavia_combine(ItemInteraction.getLastUsed());
+            }
+            else if (gObject.name == "mary")
+            {
+                gObject.GetComponent<Mary>().itemsAnbieten(ItemInteraction.getLastUsed());
+            }
         }
         if (eventData.pointerCurrentRaycast.gameObject.name == "PickUp")
         {

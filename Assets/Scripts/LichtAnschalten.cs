@@ -49,7 +49,7 @@ public class LichtAnschalten : MonoBehaviour
 
     void Update()
     {
-        print (lichter);
+        //print (lichter);
     }
         
 }

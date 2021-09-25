@@ -58,6 +58,15 @@ public class Dialogue : MonoBehaviour
                     Combine(remove);
                 });
             }
+           
+            m_story.BindExternalFunction("BeineAnbringen", (string remove) => {
+                BeineAnbringen(remove);
+            });
+            m_story.BindExternalFunction("WalkAway", (string st) => {
+                WalkAway(st);
+            });
+
+
 
             //Dialogue Feld zeigen
             m_dialogueBox.SetActive(true);
@@ -233,6 +242,28 @@ public class Dialogue : MonoBehaviour
                 GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(item);
             }
         }
+
+    }
+
+    private void BeineAnbringen(string remove)
+    {
+        GameObject.Find("Inventory").GetComponent<Inventory>().addItem(m_character.list[0]);
+
+        GameObject player = GameObject.Find("Inventory");
+        for (int i = 0; i < remove.Split(',').Length; i++)
+        {
+            string variable = remove.Split(',')[i];
+            bool vorhanden = player.GetComponent<Inventory>().searchItem(variable);
+            if (vorhanden)
+            {
+                Item item = ItemDatabaseInstance.getItemByName(variable);
+                GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(item);
+            }
+        }
+    }
+
+    private void WalkAway(string st)
+    {
 
     }
 }

@@ -8,7 +8,6 @@ public class ScenenChange : MonoBehaviour
     public string scene;
     public static string remove;
     public string destinationName;
-
     public static string add;
 
 

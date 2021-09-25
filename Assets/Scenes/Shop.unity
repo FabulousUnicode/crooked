@@ -1016,6 +1016,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225164832}
   m_CullTransparentMesh: 1
+--- !u!1 &236792586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 236792587}
+  - component: {fileID: 236792589}
+  - component: {fileID: 236792588}
+  m_Layer: 0
+  m_Name: Wald
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &236792587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236792586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &236792588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236792586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2485c224ec58313499209fd5dcd64064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Woods
+  destinationName: '>>Wald<<'
+--- !u!60 &236792589
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236792586}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -674.48016, y: -399.92487}
+      - {x: -442.40262, y: -399.1685}
+      - {x: -207.56346, y: -452.39227}
+      - {x: -205.46774, y: -518.02747}
+      - {x: -271.52005, y: -539.2352}
+      - {x: -721.2926, y: -542.4593}
 --- !u!1 &287884944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1197,9 @@ GameObject:
   m_Component:
   - component: {fileID: 352413646}
   - component: {fileID: 352413645}
+  - component: {fileID: 352413647}
+  - component: {fileID: 352413648}
+  - component: {fileID: 352413649}
   m_Layer: 0
   m_Name: flavia
   m_TagString: Untagged
@@ -1186,12 +1266,117 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352413644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 239, y: -88, z: 0}
+  m_LocalPosition: {x: 239, y: -88, z: -0.1}
   m_LocalScale: {x: 2.8051915, y: 2.838756, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &352413647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352413644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0146af904e5a44ea868adaa7e4240e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: cadeddb4f49863e4d953e946b07214e8, type: 2}
+--- !u!60 &352413648
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352413644}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 156, y: 263}
+    newSize: {x: 156, y: 263}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 8, y: -107.5}
+      - {x: 6, y: -105.5}
+      - {x: 8, y: -106.5}
+      - {x: 8, y: -110.5}
+      - {x: 10, y: -112.5}
+      - {x: 21, y: -121.5}
+      - {x: 32, y: -119.5}
+      - {x: 34, y: -114.5}
+      - {x: 58, y: -106.5}
+      - {x: 68, y: -109.5}
+      - {x: 77, y: -107.5}
+      - {x: 77, y: -102.5}
+      - {x: 67, y: -81.5}
+      - {x: 65, y: -39.5}
+      - {x: 57, y: -30.5}
+      - {x: 47, y: 13.5}
+      - {x: 37, y: 21.5}
+      - {x: 35, y: 46.5}
+      - {x: 37, y: 70.5}
+      - {x: 45, y: 73.5}
+      - {x: 54, y: 81.5}
+      - {x: 63, y: 90.5}
+      - {x: 62, y: 94.5}
+      - {x: 59, y: 95.5}
+      - {x: 40, y: 90.5}
+      - {x: 28, y: 93.5}
+      - {x: 19, y: 108.5}
+      - {x: 13, y: 108.5}
+      - {x: -11, y: 95.5}
+      - {x: -24, y: 93.5}
+      - {x: -37, y: 75.5}
+      - {x: -38, y: 60.5}
+      - {x: -46, y: 49.5}
+      - {x: -47, y: 41.5}
+      - {x: -42, y: 28.5}
+      - {x: -55, y: 15.5}
+      - {x: -56, y: 5.5}
+      - {x: -56, y: -6.5}
+      - {x: -65, y: -57.5}
+      - {x: -67, y: -81.5}
+      - {x: -73, y: -88.5}
+      - {x: -73, y: -105.5}
+      - {x: -72, y: -112.5}
+      - {x: -66, y: -115.5}
+      - {x: -51, y: -122.5}
+      - {x: -29, y: -127.5}
+      - {x: -4, y: -127.5}
+      - {x: 8, y: -123.5}
+      - {x: 6, y: -117.5}
+      - {x: 8, y: -108.5}
+--- !u!114 &352413649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352413644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef756d3497321bc448797f722b893ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: 8feaa56faccf43944a5ce35c71dac3b3, type: 2}
+  - {fileID: 11400000, guid: d33e7b82d4eb0164a8ea2097cbcf3b78, type: 2}
+  - {fileID: 11400000, guid: 697d486b208ae2244a11fce7b6a1ac2a, type: 2}
+  bone: {fileID: 11400000, guid: 685a2f6d5b17d6e47a58c6eaa7345962, type: 2}
 --- !u!1 &390641963
 GameObject:
   m_ObjectHideFlags: 0
@@ -10350,7 +10535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1717661598
 Grid:
   m_ObjectHideFlags: 0
