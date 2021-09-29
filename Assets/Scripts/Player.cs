@@ -9,10 +9,9 @@ public class Player : MonoBehaviour
     public static NavMeshAgent agent;
     private Animator animator;
 
-
     public void Start()
     {
-
+        
 
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
@@ -23,9 +22,9 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
-
+        
         //idle
-        if(agent.velocity.x == 0)
+        if (agent.velocity.x == 0)
         {
             animator.SetInteger("direction", 0);
         }

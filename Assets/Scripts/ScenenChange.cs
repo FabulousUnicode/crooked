@@ -10,6 +10,9 @@ public class ScenenChange : MonoBehaviour
     public string destinationName;
     public static string add;
 
+    public string currentScene;
+
+
 
     public void Start()
     {
@@ -44,6 +47,11 @@ public class ScenenChange : MonoBehaviour
 
     public void wechsel()
     {
+        if(currentScene != null)
+        {
+            General.setPreviousScene(currentScene);
+        }
+        
         GameObject.Find("DialogFeld").transform.GetChild(1).gameObject.SetActive(false);
         SceneManager.LoadScene(scene);
     }

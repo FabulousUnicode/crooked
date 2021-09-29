@@ -9,7 +9,6 @@ public class BushHandler : MonoBehaviour
 
     public static void handleInteraction(Item item)
     {
-        Debug.Log("dwaa");
         active = false;
     }
 

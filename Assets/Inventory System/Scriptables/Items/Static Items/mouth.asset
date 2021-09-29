@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
   m_Name: mouth
   m_EditorClassIdentifier: 
-  itemName: mouth
+  itemName: Mund
   icon: {fileID: 0}
   description: 
   combinable: 1

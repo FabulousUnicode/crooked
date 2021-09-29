@@ -5,89 +5,102 @@ using UnityEngine;
 
 public class BossHandler : MonoBehaviour
 {
-    public static bool mouthOpen;
-    public static bool eyesOpen;
-    public static bool pupilWidened;
+    public GameObject bossEye;
+    public GameObject bossPupil;
+    public GameObject bossMouth;
+    public GameObject bossCross;
 
-    public static bool crossed;
 
-    public GameObject eyes;
-    public static SpriteRenderer eyesSprite;
+    public static bool eyeActive;
+    public static bool pupilActive;
+    public static bool mouthActive;
+    public static bool crossActive;
 
-    public GameObject mouth;
-    public static SpriteRenderer mouthSprite;    
+    public static bool fedCorn;
 
-    public Sprite eyesOpenSprite;
-    public Sprite eyesClosedSprite;
-    public Sprite pupilWidenedSprite;
-
-    public Sprite eyesOpenWCrossSprite;
-    public Sprite eyesClosedWCrossSprite;
-    public Sprite pupilWidenedWCrossSprite;
-
-    public Sprite mouthOpenSprite;
-    public Sprite mouthClosedSprite;
-
-    
-
+    // Update is called once per frame
+    void Update()
+    {
+        bossEye.SetActive(eyeActive);
+        bossPupil.SetActive(pupilActive);
+        bossCross.SetActive(crossActive);
+        bossMouth.SetActive(mouthActive);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        mouthOpen = false;
-        eyesOpen = true;
-        pupilWidened = false;
-
-        crossed = false;
-
-        eyesSprite = eyes.GetComponent<SpriteRenderer>();
-        mouthSprite = mouth.GetComponent<SpriteRenderer>();
-        
+        eyeActive = true;
+        mouthActive = true;
     }
 
 
     public static void handleInteraction(Item bodyPart, Item usedItem) 
     {
-        if(usedItem == null && bodyPart.itemName == "mouth")
+        if (bodyPart.itemName == "Auge")
         {
-            mouthOpen = true;
-            eyesOpen = true;
+            if (usedItem == null && crossActive)
+            {
+                Inventory.instance.addItem(ItemDatabaseInstance.getItemByName("cross"));
+                eyeActive = true;
+                crossActive = false;
+            }
+            else
+            {
+                if (usedItem.itemName == "Sense" && crossActive == false)
+                {
+                    eyeActive = false;
+                    pupilActive = false;
+                }
+                if (usedItem.itemName == "Kreuz" && eyeActive)
+                {
+                    Inventory.instance.removeItem(usedItem);
+                    crossActive = true;
+                }
+                if (usedItem.itemName == "Kamera")
+                {
+                    if(eyeActive && crossActive && pupilActive)
+                    {
+                        defeated();
+                    }
+                    if(eyeActive && pupilActive && crossActive == false)
+                    {
+                        eyeActive = false;
+                    }
+                    else
+                    {
+                        //donNothing
+                    }
+                }
+            }
         }
-        else if(usedItem == null && crossed == true)
+
+        if(bodyPart.itemName == "Mund")
         {
-            crossed = false;
+            if(usedItem == null)
+            {
+                // trigger dialog
+                mouthActive = true;
+                eyeActive = true;
+                if (fedCorn)
+                {
+                    pupilActive = true;
+                }
+            }
+
+            if(usedItem.itemName == "Mutterkorn" && mouthActive && !eyeActive)
+            {
+                eyeActive = true;
+                pupilActive = true;
+                fedCorn = true;
+                Inventory.instance.removeItem(usedItem);
+            }
+            else
+            {
+                mouthActive = false;
+            }
         }
-        else
-        {
-            if (bodyPart.itemName == "eyes" && usedItem.itemName == "scythe")
-            {
-                eyesOpen = false;
-            }
-
-            if(bodyPart.itemName == "eyes" && usedItem.itemName == "cross")
-            {
-                crossed = true;
-            }
-
-            if(bodyPart.itemName == "mouth" && usedItem.itemName == "corn" && mouthOpen == true && eyesOpen == false)
-            {
-                eyesOpen = true;
-                pupilWidened = true;
-            }
-            if (bodyPart.itemName == "mouth" && usedItem.itemName == "corn" && mouthOpen == true && eyesOpen == true)
-            {
-                mouthOpen = true;
-            }
-
-            if (bodyPart.itemName == "eyes" && usedItem.itemName == "camera" && eyesOpen == true && crossed == true && pupilWidened == true)
-            {
-                defeated();
-            }
-
-        }
-
         ItemInteraction.resetLastUsed();
-        
     }
 
     private static void defeated()
@@ -95,53 +108,5 @@ public class BossHandler : MonoBehaviour
         Debug.Log("Yeah Baby");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
 
-        if(eyesOpen == true && crossed == false)
-        {
-            eyesSprite.sprite = eyesOpenSprite;
-        }
-
-        if (eyesOpen == true && crossed == true)
-        {
-            eyesSprite.sprite = eyesOpenWCrossSprite;
-        }
-
-        if(eyesOpen == true && pupilWidened == true)
-        {
-            eyesSprite.sprite = pupilWidenedSprite;
-        }
-
-        if (eyesOpen == true && pupilWidened == true && crossed == true)
-        {
-            eyesSprite.sprite = pupilWidenedWCrossSprite;
-        }
-
-
-        if (eyesOpen == false && crossed == false)
-        {
-            eyesSprite.sprite = eyesClosedSprite;
-        }
-
-        if (eyesOpen == false && crossed == true)
-        {
-            eyesSprite.sprite = eyesClosedWCrossSprite;
-        }
-
-
-
-        if (mouthOpen == true)
-        {
-            mouthSprite.sprite = mouthOpenSprite;
-        }
-        if(mouthOpen == false)
-        {
-            mouthSprite.sprite = mouthClosedSprite;
-        }
-
-       
-    }
 }

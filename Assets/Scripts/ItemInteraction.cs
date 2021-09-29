@@ -34,15 +34,24 @@ public class ItemInteraction : MonoBehaviour
         
     }
 
+
     public static void useItemWithSelected(InteractableItem item)
     {
-        if(item.item.itemName == "mouth" || item.item.itemName == "eyes")
+        if(item.item.itemName == "Mund" || item.item.itemName == "Auge")
         {
             BossHandler.handleInteraction(item.item, lastUsed); 
         }
         if(item.item.itemName == "Busch")
         {
             BushHandler.handleInteraction(item.item);
+        }
+        if(item.item.itemName == "Vorsprung")
+        {
+            HookHandler.handleInteraction(item.item, lastUsed);
+        }
+        if(item.item.itemName == "Seil")
+        {
+            RopeHandler.handleInteraction(item.item);
         }
     }
 
