@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
-  m_Name: bush
+  m_Name: string
   m_EditorClassIdentifier: 
-  itemName: Busch
+  itemName: 
   icon: {fileID: 0}
-  description: "Da ist etwas zu erkennen. Ich hoffe es ist nichts b\xF6ses im Busch."
+  description: 
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}

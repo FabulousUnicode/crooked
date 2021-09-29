@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\ScenenChange.cs" />
     <Compile Include="Assets\Scripts\AutomatHandler.cs" />
     <Compile Include="Assets\Scripts\PianoHandler.cs" />
+    <Compile Include="Assets\Scripts\SpinwheelHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

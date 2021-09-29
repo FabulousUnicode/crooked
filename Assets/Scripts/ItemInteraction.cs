@@ -60,6 +60,10 @@ public class ItemInteraction : MonoBehaviour
         {
             PianoHandler.handleInteraction(item.item, lastUsed);
         }
+        if(item.item.itemName == "Spinnrad")
+        {
+            SpinwheelHandler.handleInteraction(item.item, lastUsed);
+        }
     }
 
     public static void combineItems(Item item)
