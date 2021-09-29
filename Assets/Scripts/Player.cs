@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
     public void Start()
     {
         
-
         agent = GetComponent<NavMeshAgent>();
+        Debug.Log(agent);
         animator = GetComponentInChildren<Animator>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;

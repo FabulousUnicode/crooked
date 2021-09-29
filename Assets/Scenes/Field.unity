@@ -2824,6 +2824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Farm
   destinationName: '>>Farm<<'
+  currentScene: 
 --- !u!1 &467499151
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,7 +3575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587299234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 132, y: -346, z: 0}
+  m_LocalPosition: {x: 78, y: -457, z: 0}
   m_LocalScale: {x: 21.86179, y: -18.69083, z: 1}
   m_Children:
   - {fileID: 1276063927}
@@ -4619,6 +4620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Thorns
   destinationName: '>>Kirchturm<<'
+  currentScene: 
 --- !u!4 &748237007
 Transform:
   m_ObjectHideFlags: 0
@@ -9424,6 +9426,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401349187}
   m_CullTransparentMesh: 1
+--- !u!1 &1427434728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1427434730}
+  - component: {fileID: 1427434729}
+  m_Layer: 0
+  m_Name: CameraHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1427434729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427434728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29575d2ff922f4b4fb992eead970b83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 587299236}
+--- !u!4 &1427434730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427434728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 237.25246, y: -47.10177, z: -446.70773}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1430426698
 GameObject:
   m_ObjectHideFlags: 0
@@ -9755,6 +9801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Shipwreck
   destinationName: '>>Schiffswrack<<'
+  currentScene: 
 --- !u!60 &1478189452
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10414,6 +10461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Path
   destinationName: '>>Weggabelung<<'
+  currentScene: Field
 --- !u!60 &1630608502
 PolygonCollider2D:
   m_ObjectHideFlags: 0

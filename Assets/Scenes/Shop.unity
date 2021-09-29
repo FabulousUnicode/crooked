@@ -1062,6 +1062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Woods
   destinationName: '>>Wald<<'
+  currentScene: Shop
 --- !u!60 &236792589
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10724,8 +10725,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794438937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -324, y: -446, z: 0}
-  m_LocalScale: {x: 21.86179, y: -18.69083, z: 1}
+  m_LocalPosition: {x: -316, y: -421, z: 0}
+  m_LocalScale: {x: 46.704628, y: -39.8272, z: 1}
   m_Children:
   - {fileID: 1525317895}
   m_Father: {fileID: 0}
