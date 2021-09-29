@@ -10,7 +10,6 @@ public class ItemInteraction : MonoBehaviour
     public static void setLastUsed(Item item)
     {
         lastUsed = item;
-        Debug.Log(lastUsed);
     }
 
     public static Item getLastUsed()
@@ -26,7 +25,7 @@ public class ItemInteraction : MonoBehaviour
 
     public static void inspectItem(Item item)
     {
-        Debug.Log(item.description);
+        FindObjectOfType<Dialog>().showText(item.description);
     }
 
     public static void useItem(Item item)
@@ -52,6 +51,14 @@ public class ItemInteraction : MonoBehaviour
         if(item.item.itemName == "Seil")
         {
             RopeHandler.handleInteraction(item.item);
+        }
+        if(item.item.itemName == "Ablass-O-Mat")
+        {
+            AutomatHandler.handleInteraction(item.item, lastUsed);
+        }
+        if(item.item.itemName == "Klavier")
+        {
+            PianoHandler.handleInteraction(item.item, lastUsed);
         }
     }
 

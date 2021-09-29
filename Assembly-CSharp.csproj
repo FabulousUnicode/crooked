@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\General.cs" />
     <Compile Include="Assets\Dialogue System\Scripts\Selectable.cs" />
     <Compile Include="Assets\Inventory System\Scripts\Item.cs" />
+    <Compile Include="Assets\Scripts\WarpPlayerChurchRoof.cs" />
     <Compile Include="Assets\Inventory System\Scripts\InteractableItem.cs" />
     <Compile Include="Assets\Inventory System\Scripts\PanelManager.cs" />
     <Compile Include="Assets\Inventory System\Scripts\InventorySlotController.cs" />
@@ -90,7 +91,8 @@
     <Compile Include="Assets\Characters\Scripts\Flavia.cs" />
     <Compile Include="Assets\Scripts\SpeicherSystem.cs" />
     <Compile Include="Assets\Scripts\ScenenChange.cs" />
-    <Compile Include="Assets\Scripts\WarpPlayerChurchRoof.cs" />
+    <Compile Include="Assets\Scripts\AutomatHandler.cs" />
+    <Compile Include="Assets\Scripts\PianoHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

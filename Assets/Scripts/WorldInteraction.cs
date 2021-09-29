@@ -151,7 +151,7 @@ public class WorldInteraction : MonoBehaviour
                 // kommentartext.text = item.item.description;
                 //kanima.SetBool("IsOpen", true);
                 //StartCoroutine("kommanima");
-                FindObjectOfType<Dialog>().showText(item.item.description);
+                //FindObjectOfType<Dialog>().showText(item.item.description);
                 Destroy(gObject.gameObject);
                 ScenenChange.remove += (item.item.name + ",");
             }
