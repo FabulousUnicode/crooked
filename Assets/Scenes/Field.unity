@@ -483,8 +483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5cdd2e6e3d0314b9bd4544dcd8dde1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contextMenu: {fileID: 62102437}
-  worldInt: {fileID: 467499153}
 --- !u!114 &62102439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2874,7 +2872,6 @@ MonoBehaviour:
   inventory: {fileID: 808832719}
   kommentar: {fileID: 0}
   kanima: {fileID: 0}
-  contextMenu: {fileID: 62102438}
   hText: {fileID: 1166467819}
 --- !u!1 &498100467
 GameObject:
@@ -3475,6 +3472,7 @@ GameObject:
   - component: {fileID: 587299237}
   - component: {fileID: 587299236}
   - component: {fileID: 587299235}
+  - component: {fileID: 587299239}
   m_Layer: 0
   m_Name: PlayerPos
   m_TagString: Untagged
@@ -3575,13 +3573,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587299234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 78, y: -457, z: 0}
-  m_LocalScale: {x: 21.86179, y: -18.69083, z: 1}
+  m_LocalPosition: {x: 10, y: -367, z: 0}
+  m_LocalScale: {x: 25, y: -25, z: 1}
   m_Children:
   - {fileID: 1276063927}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &587299239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587299234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51cbbc30a21156e469148d44c48d6edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxScale_x: 25
+  maxScale_y: -25
+  minScale_x: 11
+  minScale_y: -11
+  scaleFactor: 0
+  maxAgentSpeed: 300
+  minAgentSpeed: 70
+  playerPos: {fileID: 587299234}
 --- !u!1 &599747040
 GameObject:
   m_ObjectHideFlags: 0

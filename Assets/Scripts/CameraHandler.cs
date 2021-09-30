@@ -11,7 +11,10 @@ public class CameraHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(General.getPreviousScene() == "Thorns")
+
+        GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
+
+        if (General.getPreviousScene() == "Thorns")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, -538, -10);
@@ -71,13 +74,12 @@ public class CameraHandler : MonoBehaviour
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
-            agent.Warp(new Vector3(530, 114, 0));
+            agent.Warp(new Vector3(497, 221, 0));
         }
 
         else if (General.getPreviousScene() == "Woods")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
-            GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             Debug.Log(agent);
             agent.Warp(new Vector3(-395, -7, 0));
         }

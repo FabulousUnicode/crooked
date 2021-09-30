@@ -1,3 +1,4 @@
+/*using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class ContextMenuHandler : MonoBehaviour, IPointerDownHandler, IPointerEn
     private static GameObject gObject;
     private static InteractableItem selectedItem;
     private static bool active;
+
+    private static InteractableHotspot hotspot;
 
     private Image inspect;
     private Image use;
@@ -29,8 +32,12 @@ public class ContextMenuHandler : MonoBehaviour, IPointerDownHandler, IPointerEn
 
     public void handleMenu(Vector3 pos, InteractableItem interactableItem, GameObject gObj, RaycastHit2D hitArg)
     {
+
         contextMenu.transform.position = new Vector3(pos.x + 150, pos.y - 80, 0);
-        setSelectedItem(interactableItem);
+        if(interactableItem != null)
+        {
+            setSelectedItem(interactableItem);
+        }
         gObject = gObj;
         hit = hitArg;
         contextMenu.SetActive(true);
@@ -47,9 +54,19 @@ public class ContextMenuHandler : MonoBehaviour, IPointerDownHandler, IPointerEn
     //wenn Sprites eingesetzt werden ändern zu Image und nicht Text
     public void OnPointerDown(PointerEventData eventData)
     {
+        
+
         if (eventData.pointerCurrentRaycast.gameObject.name == "Inspect")
         {
-            FindObjectOfType<Dialog>().showText(selectedItem.item.description);
+            if(selectedItem != null)
+            {
+                FindObjectOfType<Dialog>().showText(selectedItem.item.description);
+            }
+            else
+            {
+                FindObjectOfType<Dialog>().showText(hotspot.getInspectText());
+            }
+            
         }
         if(eventData.pointerCurrentRaycast.gameObject.name == "Use")
         {
@@ -83,7 +100,7 @@ public class ContextMenuHandler : MonoBehaviour, IPointerDownHandler, IPointerEn
     public void OnPointerUp(PointerEventData eventData)
     {
         throw new System.NotImplementedException();
-    }*/
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -92,7 +109,6 @@ public class ContextMenuHandler : MonoBehaviour, IPointerDownHandler, IPointerEn
         use = GameObject.Find("Use").GetComponentInChildren<Image>();
         pickUp = GameObject.Find("Pick Up").GetComponentInChildren<Image>();
         inspect = GameObject.Find("Inspect").GetComponentInChildren<Image>();
-        Debug.Log(inspect.name);
     }
 
     // Update is called once per frame
@@ -103,4 +119,14 @@ public class ContextMenuHandler : MonoBehaviour, IPointerDownHandler, IPointerEn
             contextMenu.SetActive(false);
         }
     }
+
+    public void handleMenuHotspot(Vector3 mousePos, GameObject gObject)
+    {
+        contextMenu.transform.position = new Vector3(mousePos.x + 150, mousePos.y - 80, 0);
+        hotspot = gObject.GetComponent<InteractableHotspot>();
+        contextMenu.SetActive(true);
+        active = true;
+    }
 }
+*/
+
