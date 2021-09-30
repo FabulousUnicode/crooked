@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Church Roof.unity
+- path: Assets/Scenes/Thorns.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -33,7 +33,7 @@ public class RopeHandler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(playerPos);
+        //Debug.Log(playerPos);
         if(functionCalled == true)
         {
             if(playerPos == 0)

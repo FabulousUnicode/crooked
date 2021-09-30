@@ -33,6 +33,7 @@ public class HookHandler : MonoBehaviour
     {
         if(lastUsed.itemName == "Enterhaken")
         {
+            GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(lastUsed);
             Debug.Log("setting rope active");
             ropeActive = true; 
         }

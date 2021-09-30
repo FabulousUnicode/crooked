@@ -18,63 +18,63 @@ public class CameraHandler : MonoBehaviour
             agent.Warp(new Vector3(525, -1000, 0));
         }
 
-        if (General.getPreviousScene() == "Thorns1")
+        else if (General.getPreviousScene() == "Thorns1")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             agent.Warp(new Vector3(91, -116, 0));
         }
 
-        if (General.getPreviousScene() == "Church")
+        else if (General.getPreviousScene() == "Church")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             agent.Warp(new Vector3(-27, -268, 0));
         }
 
-        if (General.getPreviousScene() == "Church Roof")
+        else if (General.getPreviousScene() == "Church Roof")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 329, -10);
             agent.Warp(new Vector3(539, 96, 0));
         }
 
-        if (General.getPreviousScene() == "Path")
+        else if (General.getPreviousScene() == "Path")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             agent.Warp(new Vector3(809, -489, 0));
         }
 
-        if (General.getPreviousScene() == "Path1")
+        else if (General.getPreviousScene() == "Path1")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             agent.Warp(new Vector3(-809, -489, 0));
         }
 
-        if (General.getPreviousScene() == "Farm")
+        else if (General.getPreviousScene() == "Farm")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             agent.Warp(new Vector3(259, -113, 0));
         }
 
-        if (General.getPreviousScene() == "Shipwreck")
+        else if (General.getPreviousScene() == "Shipwreck")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             agent.Warp(new Vector3(-834, -477, 0));
         }
 
-        if (General.getPreviousScene() == "Camp")
+        else if (General.getPreviousScene() == "Camp")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             agent.Warp(new Vector3(530, 114, 0));
         }
 
-        if (General.getPreviousScene() == "Woods")
+        else if (General.getPreviousScene() == "Woods")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
@@ -82,18 +82,25 @@ public class CameraHandler : MonoBehaviour
             agent.Warp(new Vector3(-395, -7, 0));
         }
 
-        if (General.getPreviousScene() == "Shop")
+        else if (General.getPreviousScene() == "Shop")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             agent.Warp(new Vector3(-395, -7, 0));
         }
 
-        if(General.getPreviousScene() == "Randy's Shack")
+        else if (General.getPreviousScene() == "Randy's Shack")
         {
             Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             agent.Warp(new Vector3(707, 199, 0));
+        }
+
+        else if (General.getPreviousScene() == "Tunnel")
+        {
+            Debug.Log("Previous Scene: " + General.getPreviousScene());
+            GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
+            agent.Warp(new Vector3(358, 259, 0));
         }
     }
 

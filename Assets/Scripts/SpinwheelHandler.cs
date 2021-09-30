@@ -21,8 +21,8 @@ public class SpinwheelHandler : MonoBehaviour
     {
         if(lastUsed.itemName == "Haarballen")
         {
-            Inventory.instance.removeItem(lastUsed);
-            Inventory.instance.addItem(ItemDatabaseInstance.getItemByName("string"));
+            GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(lastUsed);
+            GameObject.Find("Inventory").GetComponent<Inventory>().addItem(ItemDatabaseInstance.getItemByName("string"));
             FindObjectOfType<Dialog>().showText("Der Faden ist noch ein wenig nass.");
         }
     }
