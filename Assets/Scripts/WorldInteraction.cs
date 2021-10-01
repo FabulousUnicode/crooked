@@ -11,14 +11,8 @@ public class WorldInteraction : MonoBehaviour
     public Vector3 mousePos;
     public Vector3 mousePosWorld;
     public Camera mainCam;
-    //public ItemInstance itemInstance;
     public Inventory inventory;
     public RaycastHit2D hit;
-    public GameObject kommentar;
-    public Animator kanima;
-    //Text kommentartext;
-    //public ContextMenuHandler contextMenu;
-
     public GameObject hText;
 
 
@@ -26,16 +20,12 @@ public class WorldInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*
-        kommentartext = kommentar.transform.GetChild(0).GetComponent<Text>();
-        kommentartext.text = "Hallo"; */
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Pr�ft ob Canvas dr�ber liegt
+        //Prueft ob Canvas drueber liegt
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
         //ItemInteraction.setLastUsed(null);
@@ -47,9 +37,8 @@ public class WorldInteraction : MonoBehaviour
         if (hit)
         {
             GameObject gObject = hit.collider.gameObject;
-            //print(hit.collider.name);
 
-            
+            //Ausgabe HoverText
             if(gObject.name != "Background")
             {
                 string hoverInfo = "";
@@ -88,13 +77,10 @@ public class WorldInteraction : MonoBehaviour
             //linke Taste
             if (Input.GetMouseButtonUp(0))
             {
-                /*if (contextMenu.isActive())
-                {
-                    contextMenu.setStatus(false);
-                }*/
                 if (gObject.HasComponent<InteractableHotspot>())
                 {
-                    if (gObject.GetComponent<InteractableHotspot>().hotspot.walkTo) {
+                    if (gObject.GetComponent<InteractableHotspot>().hotspot.walkTo) 
+                    {
                         Player.agent.ResetPath();
                         Player.agent.SetDestination(hit.point);
                         StartCoroutine("waittl", gObject);
@@ -102,7 +88,6 @@ public class WorldInteraction : MonoBehaviour
                     else
                     {
                         left(gObject);
-    
                     }
                 }
                 else
@@ -111,14 +96,11 @@ public class WorldInteraction : MonoBehaviour
                     Player.agent.SetDestination(hit.point);
                     StartCoroutine("waittl", gObject);
                 }
-
             }
 
             //rechte Taste
             else if(Input.GetMouseButtonUp(1))
             {
-
-
                 if (gObject.HasComponent<InteractableHotspot>())
                 {
                     if (gObject.GetComponent<InteractableHotspot>().hotspot.walkTo)
@@ -130,7 +112,6 @@ public class WorldInteraction : MonoBehaviour
                     else
                     {
                         right(gObject);
-
                     }
                 }
                 else
@@ -139,42 +120,15 @@ public class WorldInteraction : MonoBehaviour
                     Player.agent.SetDestination(hit.point);
                     StartCoroutine("waittr", gObject);
                 }
-
-                /*
-                if (gObject.HasComponent<InteractableItem>())
-                {
-                    contextMenu.handleMenu(mousePos, gObject.GetComponent<InteractableItem>(), gObject, hit);
-                }
-                else if (gObject.HasComponent<CharacterInfo>())
-                {
-                    contextMenu.handleMenu(mousePos, gObject.GetComponent<InteractableItem>(), gObject, hit);
-                }
-                else if (gObject.HasComponent<InteractableHotspot>())
-                {
-                    contextMenu.handleMenuHotspot(mousePos, gObject);
-                }
-
-
-                /*
-                if(gObject.HasComponent<Anschauen>())
-                {
-                    gObject.GetComponent<Anschauen>().AnschauenStart();
-                }*/
             }
+
             //mittlere Taste
             else if(Input.GetMouseButtonUp(2))
             {
-                if (gObject.HasComponent<Anschauen>())
-                {
-                    gObject.GetComponent<Anschauen>().AnschauenEnde();
-                }
             }
             else
             {
-
             }
-
-            
         }
         else
         {
@@ -194,28 +148,28 @@ public class WorldInteraction : MonoBehaviour
                 if (inventory.searchItem(item.name)) { return; }
                 inventory.addItem(item.item);
 
-                // kommentartext.text = item.item.description;
-                //kanima.SetBool("IsOpen", true);
-                //StartCoroutine("kommanima");
                 //FindObjectOfType<Dialog>().showText(item.item.description);
+
                 Destroy(gObject.gameObject);
-                ScenenChange.remove += (item.item.name + ",");
+                ScenenChange.remove += (item.name + ",");
             }
 
             if (item.item.collectable == false)
             {
                 Debug.Log("item clicked: " + item.item.name);
                 ItemInteraction.useItemWithSelected(item);
-
             }
-
-
-            //print(ScenenChange.remove);
-
         }
         else if (gObject.HasComponent<CharacterInfo>())
         {
-            FindObjectOfType<Dialog>().StartDialogue(gObject.GetComponent<CharacterInfo>().character.inkFile, gObject.GetComponent<CharacterInfo>().character);
+            if (gObject.name == "flavia")
+            {
+                gObject.GetComponent<Flavia>().flavia_combine(ItemInteraction.getLastUsed());
+            }
+            else if (gObject.name == "mary")
+            {
+                gObject.GetComponent<Mary>().itemsAnbieten(ItemInteraction.getLastUsed());
+            }
         }
         else if (gObject.HasComponent<ScenenChange>())
         {
@@ -282,15 +236,9 @@ public class WorldInteraction : MonoBehaviour
         InventorySlotController.resetCurrentSelected();
     }
 
-    IEnumerator kommanima()
-    {
-        yield return new WaitForSeconds(3.0f);
-        kanima.SetBool("IsOpen", false);
-    }
 
     IEnumerator waittl(GameObject obj)
     {
-        //Debug.Log(Player.agent.remainingDistance);
         yield return new WaitUntil(() => Player.agent.pathPending == false);
         yield return new WaitUntil(() => Player.agent.remainingDistance <= 10);
 
@@ -303,7 +251,6 @@ public class WorldInteraction : MonoBehaviour
 
     IEnumerator waittr(GameObject obj)
     {
-        //Debug.Log(Player.agent.remainingDistance);
         yield return new WaitUntil(() => Player.agent.pathPending == false);
         yield return new WaitUntil(() => Player.agent.remainingDistance <= 10);
 
@@ -311,7 +258,6 @@ public class WorldInteraction : MonoBehaviour
         {
             right(obj);
         }
-
     }
 
 }

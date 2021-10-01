@@ -18,4 +18,4 @@ MonoBehaviour:
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}
-  collectable: 1
+  collectable: 0
