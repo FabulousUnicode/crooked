@@ -121,6 +121,12 @@ public class WorldInteraction : MonoBehaviour
                         right(gObject);
                     }
                 }
+                else if (gObject.HasComponent<InteractableItem>())
+                {
+                    Player.agent.ResetPath();
+                    Player.agent.SetDestination(gObject.GetComponent<InteractableItem>().item.interactionPos);
+                    StartCoroutine("waittr", gObject);
+                }
                 else
                 {
                     Player.agent.ResetPath();
@@ -200,12 +206,8 @@ public class WorldInteraction : MonoBehaviour
                     {
                         FindObjectOfType<Dialog>().showText(gObject.GetComponent<InteractableHotspot>().hotspot.specialInteractionStrings[i]);
                     }
-                }
-                    
-                       
-                
+                } 
             }
-
         }
         else
         {
@@ -258,9 +260,8 @@ public class WorldInteraction : MonoBehaviour
 
     IEnumerator waittl(GameObject obj)
     {
-        Debug.Log("path pending");
-        yield return new WaitUntil(() => Player.agent.pathPending == false);
         
+        yield return new WaitUntil(() => Player.agent.pathPending == false);
         yield return new WaitUntil(() => Player.agent.remainingDistance <= 10);
         Debug.Log("remaining distance < 10");
 
@@ -269,7 +270,7 @@ public class WorldInteraction : MonoBehaviour
             Debug.Log("methode");
             left(obj);
         }
-        else if (obj != null)
+        else if (obj != null && Player.agent.remainingDistance <= 10)
         {
             left(obj);
         }
@@ -284,12 +285,11 @@ public class WorldInteraction : MonoBehaviour
         {
             right(obj);
         }
-        else if(obj != null)
+        else if(obj != null && Player.agent.remainingDistance <= 10)
         {
             right(obj);
         }
     }
-
 }
 
 

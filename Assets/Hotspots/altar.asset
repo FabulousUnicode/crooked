@@ -22,3 +22,4 @@ MonoBehaviour:
   specialInteractionStrings:
   - Testtext
   - Ich habe meine Kirchensteuer schon bezahlt.
+  interactionSpot: {x: -163, y: -987, z: 0}

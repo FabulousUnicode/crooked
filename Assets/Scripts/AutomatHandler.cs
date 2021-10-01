@@ -24,6 +24,10 @@ public class AutomatHandler : MonoBehaviour
             GameObject.Find("Inventory").GetComponent<Inventory>().addItem(ItemDatabaseInstance.getItemByName("letter"));
             FindObjectOfType<Dialog>().showText("insert funny pun");
         }
+        else
+        {
+
+        }
 
     }
 }

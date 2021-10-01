@@ -104,6 +104,7 @@
     <Compile Include="Assets\Hotspots\InteractableHotspot.cs" />
     <Compile Include="Assets\Scripts\ScenenChange.cs" />
     <Compile Include="Assets\Scripts\SpinwheelHandler.cs" />
+    <Compile Include="Assets\Scripts\PlayerScaleWoods.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
