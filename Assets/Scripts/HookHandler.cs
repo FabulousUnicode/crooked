@@ -16,7 +16,7 @@ public class HookHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rope.GetComponentInChildren<OffMeshLink>().activated = false;
+        
     }
 
     // Update is called once per frame

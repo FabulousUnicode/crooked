@@ -13,4 +13,7 @@ public class Item : ScriptableObject
     public Item combinableWith;
     public Item combineResult;
     public bool collectable;
+
+    public Vector3 interactionPos;
+
 }

@@ -19,7 +19,7 @@ public class Hotspot : ScriptableObject
     [TextArea(4, 2)]
     public List<string> specialInteractionStrings;
 
-
+    public Vector3 interactionSpot;
 
 
 }

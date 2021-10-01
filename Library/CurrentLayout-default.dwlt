@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1307
-  m_MinSize: {x: 679, y: 492}
+  m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 58
+  controlID: 132
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 2005
     height: 1307
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 59
@@ -169,8 +169,8 @@ MonoBehaviour:
     y: 0
     width: 2005
     height: 837
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
   controlID: 60
 --- !u!114 &8
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 424
     height: 837
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -322,22 +322,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\crooked
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 30520000
-    m_LastClickedID: 21040
-    m_ExpandedIDs: 00000000ba510000be510000c0510000c2510000c4510000f65100000e53000000ca9a3b
+    m_SelectedIDs: 764f0000
+    m_LastClickedID: 20342
+    m_ExpandedIDs: 000000006c4f00006e4f0000704f0000724f0000744f0000764f0000784f0000bc4f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -365,7 +365,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 906}
     m_SelectedIDs: 0cf10100
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba510000bc510000be510000c0510000c2510000c4510000c6510000
+    m_ExpandedIDs: 000000006c4f00006e4f0000704f0000724f0000744f0000764f0000784f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000fc3f0000644b0000049a0000144b0000645a00003a4d00007a4d0000ee4d0000ba500000ae500000165200000a520000ce500000c04f00006a5f000078730000c6500000f4730000e8730000c8730000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -449,9 +449,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d8af0000
-      m_LastClickedID: 45016
-      m_ExpandedIDs: 3ec6ffffd4c6ffff62c7ffffd0d1ffffdcf2fffffcf8fffff4ffffff20b00000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 1a90ffffdefaffff624b0000924b0000424c0000c44c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -511,9 +511,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 190.92679, y: -381.02176, z: -2814.2712}
+    m_Target: {x: -44.759815, y: -222.8557, z: 43.55929}
     speed: 2
-    m_Value: {x: 190.92679, y: -381.02176, z: -2814.2712}
+    m_Value: {x: -44.759815, y: -222.8557, z: 43.55929}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -564,9 +564,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 695.6791
+    m_Target: 959.61646
     speed: 2
-    m_Value: 695.6791
+    m_Value: 959.61646
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -584,7 +584,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0.19002981, y: -0.4752115, z: 0.105922095, w: 0.8525544}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 45000
+  m_LastSelectedObjectID: 19290
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -936,7 +936,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 57
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_MipLevel: 0
   m_Zoom: 0.3178125
   m_ScrollPosition: {x: 3.0646362, y: 97.87177}
-  m_SelectedAssetPath: Assets/resources/gfx/bg/bg_randysShack.png
+  m_SelectedAssetPath: Assets/resources/gfx/environment/hook.png
   m_SelectedObject: {fileID: 0}
   m_SelectedSpriteRectGUID: 5e97eb03825dee720800000000000000
   m_LastUsedModuleTypeName: 

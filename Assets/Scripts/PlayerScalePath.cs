@@ -48,9 +48,9 @@ public class PlayerScalePath : MonoBehaviour
         if (playerPosAbs > 330)
         {
 
-            playerPos.transform.localScale = new Vector3((float) Math.Pow((330 / playerPosAbs), 1.5f) * 19 , - ((float)Math.Pow((330 / playerPosAbs), 1.5f) * 19), 1);
+            playerPos.transform.localScale = new Vector3((float) Math.Pow((330 / playerPosAbs), 1.4f) * 19 , - ((float)Math.Pow((330 / playerPosAbs), 1.4f) * 19), 1);
             //playerPos.transform.localScale = new Vector3((float)(Math.Log(1.5f) * (330 / playerPosAbs)) * 19  , - (float)(Math.Log(1.5f) * (330 / playerPosAbs)) * 19, 1);
-            Player.agent.speed = (float) Math.Pow(playerPos.transform.localScale.x / 19, 1.5f) * 300;
+            Player.agent.speed = (float) Math.Pow(playerPos.transform.localScale.x / 19, 1.4f) * 300;
             
         }
     }

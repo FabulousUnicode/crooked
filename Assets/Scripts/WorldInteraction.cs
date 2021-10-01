@@ -82,7 +82,7 @@ public class WorldInteraction : MonoBehaviour
                     if (gObject.GetComponent<InteractableHotspot>().hotspot.walkTo) 
                     {
                         Player.agent.ResetPath();
-                        Player.agent.SetDestination(hit.point);
+                        Player.agent.SetDestination(gObject.GetComponent<InteractableHotspot>().hotspot.interactionSpot);
                         StartCoroutine("waittl", gObject);
                     }
                     else
@@ -90,6 +90,13 @@ public class WorldInteraction : MonoBehaviour
                         left(gObject);
                     }
                 }
+                else if (gObject.HasComponent<InteractableItem>())
+                {
+                    Player.agent.ResetPath();
+                    Player.agent.SetDestination(gObject.GetComponent<InteractableItem>().item.interactionPos);
+                    StartCoroutine("waittl", gObject);
+                }
+
                 else
                 {
                     Player.agent.ResetPath();
@@ -106,7 +113,7 @@ public class WorldInteraction : MonoBehaviour
                     if (gObject.GetComponent<InteractableHotspot>().hotspot.walkTo)
                     {
                         Player.agent.ResetPath();
-                        Player.agent.SetDestination(hit.point);
+                        Player.agent.SetDestination(gObject.GetComponent<InteractableHotspot>().hotspot.interactionSpot);
                         StartCoroutine("waittr", gObject);
                     }
                     else
@@ -204,15 +211,8 @@ public class WorldInteraction : MonoBehaviour
         {
 
         }
-    
-
-
         ItemInteraction.resetLastUsed();
         InventorySlotController.resetCurrentSelected();
-
-
-
-
     }
 
     public void setDestination(GameObject gameObject, RaycastHit2D hit)
@@ -258,14 +258,21 @@ public class WorldInteraction : MonoBehaviour
 
     IEnumerator waittl(GameObject obj)
     {
+        Debug.Log("path pending");
         yield return new WaitUntil(() => Player.agent.pathPending == false);
+        
         yield return new WaitUntil(() => Player.agent.remainingDistance <= 10);
+        Debug.Log("remaining distance < 10");
 
         if (obj != null && Player.agent.hasPath)
         {
+            Debug.Log("methode");
             left(obj);
         }
-        
+        else if (obj != null)
+        {
+            left(obj);
+        }
     }
 
     IEnumerator waittr(GameObject obj)
@@ -274,6 +281,10 @@ public class WorldInteraction : MonoBehaviour
         yield return new WaitUntil(() => Player.agent.remainingDistance <= 10);
 
         if (obj != null && Player.agent.hasPath)
+        {
+            right(obj);
+        }
+        else if(obj != null)
         {
             right(obj);
         }
