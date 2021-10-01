@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
+using UnityEngine.AI;
 
 public class Dialog : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class Dialog : MonoBehaviour
     List<string> m_tags;
 
     static Choice m_selectedChoice;
+
+    public static bool kuchen = false;
 
 
     void Start()
@@ -74,6 +77,22 @@ public class Dialog : MonoBehaviour
                     Combine(remove);
                 });
             }
+
+
+            m_story.BindExternalFunction("BeineAnbringen", (string remove) => {
+                BeineAnbringen(remove);
+            });
+
+            m_story.BindExternalFunction("HuetteVerlassen", (string susp) => {
+                HuetteVerlassen(susp);
+            });
+            m_story.BindExternalFunction("ZelleVerlassen", () => {
+                ZelleVerlassen();
+            });
+            m_story.BindExternalFunction("KuchenGeben", (string remove) => {
+                KuchenGeben(remove);
+            });
+
 
 
             //Dialogue Feld zeigen
@@ -352,5 +371,65 @@ public class Dialog : MonoBehaviour
         return m_isTalking;
     }
 
+    private void BeineAnbringen(string remove)
+    {
+        GameObject.Find("Inventory").GetComponent<Inventory>().addItem(m_character.list[0]);
 
+        GameObject player = GameObject.Find("Inventory");
+        for (int i = 0; i < remove.Split(',').Length; i++)
+        {
+            string variable = remove.Split(',')[i];
+            bool vorhanden = player.GetComponent<Inventory>().searchItem(variable);
+            if (vorhanden)
+            {
+                Item item = ItemDatabaseInstance.getItemByName(variable);
+                GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(item);
+            }
+        }
+
+
+        FindObjectOfType<RandyStatus>().beinedran();
+    }
+
+    private void HuetteVerlassen(string susp)
+    {
+        if (susp == "sonst")
+        {
+            FindObjectOfType<RandyStatus>().anzeige();
+            GameObject.Find("key").transform.position += new Vector3(2000.0f, 0.0f, 0.0f);
+        }
+        else if (susp == "mary" && !RandyStatus.mary_weg)
+        {
+            if (Mary.recordet)
+            {
+                FindObjectOfType<RandyStatus>().anzeige();
+                FindObjectOfType<RandyStatus>().maryweg();
+                ScenenChange.remove += ("mary" + ",");
+            }
+            else
+            {
+                FindObjectOfType<RandyStatus>().anzeige();
+            }
+
+            GameObject.Find("key").transform.position += new Vector3(2000.0f, 0.0f, 0.0f);
+        }
+        else if (susp == "spieler")
+        {
+            GameObject.Find("PlayerPos").GetComponent<NavMeshAgent>().Warp(new Vector3(-500.0f, -420.0f, 0.0f));
+        }
+    }
+
+
+    private void ZelleVerlassen()
+    {
+        GameObject.Find("PlayerPos").GetComponent<NavMeshAgent>().Warp(new Vector3(100.0f, -420.0f, 0.0f));
+    }
+
+    private void KuchenGeben(string remove)
+    {
+        Item item = ItemDatabaseInstance.getItemByName(remove);
+        GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(item);
+
+        kuchen = true;
+    }
 }

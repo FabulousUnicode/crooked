@@ -64,6 +64,18 @@ public class ItemInteraction : MonoBehaviour
         {
             SpinwheelHandler.handleInteraction(item.item, lastUsed);
         }
+        if(item.item.itemName == "Infiziertes_Korn")
+        {
+            FindObjectOfType<GrainHandler>().handleInteraction(item.item, lastUsed);
+        }
+        if(item.item.itemName == "Schublade")
+        {
+            SchubladenHandler.handleInteraction(item.item, lastUsed);
+        }
+        if (item.item.itemName == "Microwelle")
+        {
+            FindObjectOfType<MicrowaveHandler>().handleInteraction(item.item, lastUsed);
+        }
     }
 
     public static void combineItems(Item item)

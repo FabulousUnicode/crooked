@@ -19,6 +19,6 @@ public class Characters : ScriptableObject, ISerializationCallbackReceiver
 
     public void OnAfterDeserialize()
     {
-        aktiv = true;
+        
     }
 }
