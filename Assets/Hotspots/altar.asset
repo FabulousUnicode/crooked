@@ -16,3 +16,9 @@ MonoBehaviour:
   walkTo: 1
   use: aiwzudgvaw
   inspect: awdiuazwfduawzfd
+  specialInteraction:
+  - {fileID: 11400000, guid: 03b169617d83b264d9e90b7fe1ce1a89, type: 2}
+  - {fileID: 11400000, guid: f7a15f14675b063489e38fda65bd5723, type: 2}
+  specialInteractionStrings:
+  - Testtext
+  - Ich habe meine Kirchensteuer schon bezahlt.

@@ -12,7 +12,7 @@ public class CameraHandler : MonoBehaviour
     void Start()
     {
 
-        GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
+        
 
         if (General.getPreviousScene() == "Thorns")
         {

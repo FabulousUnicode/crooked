@@ -181,12 +181,31 @@ public class WorldInteraction : MonoBehaviour
         }
         else if (gObject.HasComponent<InteractableHotspot>())
         {
-            FindObjectOfType<Dialog>().showText(gObject.GetComponent<InteractableHotspot>().hotspot.use);
+            if(ItemInteraction.getLastUsed() == null)
+            {
+                FindObjectOfType<Dialog>().showText(gObject.GetComponent<InteractableHotspot>().hotspot.use);
+            }
+            else
+            {
+                for(int i = 0; i < gObject.GetComponent<InteractableHotspot>().hotspot.specialInteraction.Count; i++)
+                {
+                    if (ItemInteraction.getLastUsed() == gObject.GetComponent<InteractableHotspot>().hotspot.specialInteraction[i])
+                    {
+                        FindObjectOfType<Dialog>().showText(gObject.GetComponent<InteractableHotspot>().hotspot.specialInteractionStrings[i]);
+                    }
+                }
+                    
+                       
+                
+            }
+
         }
         else
         {
 
         }
+    
+
 
         ItemInteraction.resetLastUsed();
         InventorySlotController.resetCurrentSelected();

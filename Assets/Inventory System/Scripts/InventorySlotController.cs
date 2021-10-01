@@ -22,8 +22,6 @@ public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPoin
             currentSelected.GetComponent<Image>().color = standardColor;
             currentSelected = null;
         }
-
-       
     }
 
    

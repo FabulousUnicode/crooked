@@ -8,10 +8,18 @@ public class Hotspot : ScriptableObject
 
     public bool walkTo;
 
-    [TextArea(10, 10)]
+    [TextArea(4, 2)]
     public string use;
 
-    [TextArea(10, 10)]
+    [TextArea(4, 2)]
     public string inspect;
+
+    public List<Item> specialInteraction;
+
+    [TextArea(4, 2)]
+    public List<string> specialInteractionStrings;
+
+
+
 
 }

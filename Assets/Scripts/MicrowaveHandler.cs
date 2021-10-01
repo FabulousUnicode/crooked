@@ -31,20 +31,24 @@ public class MicrowaveHandler : MonoBehaviour
             GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(lastUsed);
             i1 = true;
         }
-        if(lastUsed.itemName == "Ei")
+        else if(lastUsed.itemName == "Ei")
         {
             GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(lastUsed);
             i2 = true;
         }
-        if(lastUsed.itemName == "Mutterkorn")
+        else if(lastUsed.itemName == "Mutterkorn")
         {
             GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(lastUsed);
             i3 = true;
         }
-        if(lastUsed.itemName == "Sojamilch")
+        else if(lastUsed.itemName == "Sojamilch")
         {
             GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(lastUsed);
             i4 = true;
+        }
+        else
+        {
+            FindObjectOfType<Dialog>().showText("Das ist nicht Mikrowellenfest.");
         }
 
 

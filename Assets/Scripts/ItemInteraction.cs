@@ -94,7 +94,7 @@ public class ItemInteraction : MonoBehaviour
         else
         {
             resetLastUsed();
-            //return funny line
+            FindObjectOfType<Dialog>().showText("Das mach keinen Sinn!");
         }
     }
 }
