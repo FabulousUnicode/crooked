@@ -106,7 +106,7 @@ public class ItemInteraction : MonoBehaviour
                 FindObjectOfType<BirdHandler>().handleInteractionNoItem();
             }
         }
-        if (item.item.itemName == "Gl�hw�rmchen")
+        if (item.item.itemName == "Glühwürmchen")
         {
             if (lastUsed != null)
             {
@@ -118,7 +118,7 @@ public class ItemInteraction : MonoBehaviour
             }
         }
 
-        if (item.item.itemName == "Gitterst�be")
+        if (item.item.itemName == "Gitterstäbe")
         {
             if (lastUsed != null)
             {
@@ -130,7 +130,7 @@ public class ItemInteraction : MonoBehaviour
             }
         }
         
-        if (item.item.itemName == "Sch�ssel")
+        if (item.item.itemName == "Schüssel")
         {
             if (lastUsed != null)
             {
@@ -140,6 +140,11 @@ public class ItemInteraction : MonoBehaviour
             {
                 FindObjectOfType<BowlHandler>().handleInteractionNoItem();
             }
+        }
+
+        if (item.item.itemName == "Laterne")
+        {
+            FindObjectOfType<Licht>().aktivieren(lastUsed);
         }
     }
 
@@ -153,7 +158,7 @@ public class ItemInteraction : MonoBehaviour
             Inventory.instance.removeItem(lastUsed);
             Inventory.instance.addItem(combinedItem);
             Debug.Log(lastUsed.name);
-            if (item.itemName == "N�hnadel" || lastUsed.itemName == "N�hnadel")
+            if (item.itemName == "Nähnadel" || lastUsed.itemName == "Nähnadel")
             {
                 Inventory.instance.addItem(ItemDatabaseInstance.getItemByName("needle"));
             }
