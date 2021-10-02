@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: hairball
   m_EditorClassIdentifier: 
   itemName: Haarballen
-  icon: {fileID: 21300000, guid: a4deb59d53d8ffd40b98167c3a745bed, type: 3}
+  icon: {fileID: 21300000, guid: b5da6ec3e1128fa4aba05ef5b2971cdc, type: 3}
   description: "Ich will das wirklich nicht mit mir herum tragen, doch es ist f\xFCr
     einen guten Zweck."
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}
   collectable: 1
+  interactionPos: {x: 110.4, y: -109.7, z: 0}

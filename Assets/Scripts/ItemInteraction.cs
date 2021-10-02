@@ -25,7 +25,15 @@ public class ItemInteraction : MonoBehaviour
 
     public static void inspectItem(Item item)
     {
-        FindObjectOfType<Dialog>().showText(item.description);
+        if(item.itemName == "Schatzkarte")
+        {
+            FindObjectOfType<MapHandler>().handleInteraction();
+        }
+        else
+        {
+            FindObjectOfType<Dialog>().showText(item.description);
+        }
+        
     }
 
     public static void useItem(Item item)
@@ -119,6 +127,18 @@ public class ItemInteraction : MonoBehaviour
             else
             {
                 FindObjectOfType<BarsHandler>().handleInteractionNoItem();
+            }
+        }
+        
+        if (item.item.itemName == "Schüssel")
+        {
+            if (lastUsed != null)
+            {
+                FindObjectOfType<BowlHandler>().handleInteraction(item.item, lastUsed);
+            }
+            else
+            {
+                FindObjectOfType<BowlHandler>().handleInteractionNoItem();
             }
         }
     }

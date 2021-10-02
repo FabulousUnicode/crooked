@@ -12,6 +12,7 @@ public class ScenenChange : MonoBehaviour
 
     public string currentScene;
 
+    public static bool triggerHairball = false; 
 
 
     public void Start()
@@ -32,7 +33,7 @@ public class ScenenChange : MonoBehaviour
         add += "";
         string[] adds = add.Split(',');
 
-        print(add);
+        //print(add);
 
         foreach(var a in adds)
         {
@@ -54,5 +55,16 @@ public class ScenenChange : MonoBehaviour
         
         GameObject.Find("DialogFeld").transform.GetChild(1).gameObject.SetActive(false);
         SceneManager.LoadScene(scene);
+
+        /*
+        if(scene == "Camp")
+        {
+            if (BowlHandler.getBirdActive())
+            {
+                BowlHandler.setTrigger();
+            }
+        }*/
     }
+
+
 }

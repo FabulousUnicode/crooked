@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
-  m_Name: randys_legs
+  m_Name: bowl
   m_EditorClassIdentifier: 
-  itemName: Randys Beine?
-  icon: {fileID: 21300000, guid: ece4570eb86631c45afac58024c55537, type: 3}
-  description: "Nicht das merkw\xFCrdigste, was ich je nachts an einem Bahn\xFCbergang
-    aufgesammelt habe..."
+  itemName: "Sch\xFCssel"
+  icon: {fileID: 0}
+  description: "Sch\xFCssel... Sch\xFCssel... Je \xF6fter man das sagt desto seltsamer
+    klingts...        Sch\xFC\xFC\xFCssselll."
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}
-  collectable: 1
-  interactionPos: {x: -5, y: -136, z: 0}
+  collectable: 0
+  interactionPos: {x: 51, y: -121, z: 0}

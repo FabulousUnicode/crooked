@@ -276,11 +276,9 @@ public class WorldInteraction : MonoBehaviour
         
         yield return new WaitUntil(() => Player.agent.pathPending == false);
         yield return new WaitUntil(() => Player.agent.remainingDistance <= 10);
-        Debug.Log("remaining distance < 10");
 
         if (obj != null && Player.agent.hasPath)
         {
-            Debug.Log("methode");
             left(obj);
         }
         else if (obj != null && Player.agent.remainingDistance <= 10)

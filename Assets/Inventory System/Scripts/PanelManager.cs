@@ -19,7 +19,7 @@ public class PanelManager : MonoBehaviour, IPointerExitHandler
         closePanel();
     }
 
-    private void closePanel()
+    public void closePanel()
     {
         IPanel.SetActive(false);
     }
