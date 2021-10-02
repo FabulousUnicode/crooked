@@ -87,8 +87,8 @@ public class Dialog : MonoBehaviour
             m_story.BindExternalFunction("HuetteVerlassen", (string susp) => {
                 HuetteVerlassen(susp);
             });
-            m_story.BindExternalFunction("ZelleVerlassen", () => {
-                ZelleVerlassen();
+            m_story.BindExternalFunction("ZelleVerlassen", (string t) => {
+                ZelleVerlassen(t);
             });
             m_story.BindExternalFunction("KuchenGeben", (string remove) => {
                 KuchenGeben(remove);
@@ -424,13 +424,28 @@ public class Dialog : MonoBehaviour
         else if (susp == "spieler")
         {
             GameObject.Find("PlayerPos").GetComponent<NavMeshAgent>().Warp(new Vector3(-500.0f, -420.0f, 0.0f));
+            GameObject.Find("ZelleCollider").transform.position += new Vector3(-3000.0f, 0.0f, 0.0f);
+            GameObject.Find("ShackCollider").transform.position += new Vector3(-3000.0f, 0.0f, 0.0f);
         }
     }
 
 
-    private void ZelleVerlassen()
+    private void ZelleVerlassen(string t)
     {
-        GameObject.Find("PlayerPos").GetComponent<NavMeshAgent>().Warp(new Vector3(100.0f, -420.0f, 0.0f));
+        if (t == "trueA")
+        {
+            GameObject.Find("PlayerPos").GetComponent<NavMeshAgent>().Warp(new Vector3(100.0f, -420.0f, 0.0f));
+            GameObject.Find("ZelleCollider").transform.position += new Vector3(3000.0f, 0.0f, 0.0f);
+            GameObject.Find("ShackCollider").transform.position += new Vector3(3000.0f, 0.0f, 0.0f);
+
+            FindObjectOfType<prisonHandler>().closeGitter();
+        }
+        else
+        {
+            FindObjectOfType<prisonHandler>().closeGitter();
+        }
+
+        
     }
 
     private void KuchenGeben(string remove)

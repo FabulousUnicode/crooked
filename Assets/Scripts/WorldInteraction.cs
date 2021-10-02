@@ -247,10 +247,14 @@ public class WorldInteraction : MonoBehaviour
         if (gObject.HasComponent<InteractableItem>())
         {
             FindObjectOfType<Dialog>().showText(gObject.GetComponent<InteractableItem>().item.description);
-
         }
         else if (gObject.HasComponent<CharacterInfo>())
         {
+            if (gObject.name == "Gittertuer")
+            {
+                gObject.GetComponent<prisonHandler>().handleInteraction();
+            }
+
             FindObjectOfType<Dialog>().StartDialogue(gObject.GetComponent<CharacterInfo>().character.inkFile, gObject.GetComponent<CharacterInfo>().character);
         }
         else if (gObject.HasComponent<ScenenChange>())
