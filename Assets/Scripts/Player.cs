@@ -90,6 +90,16 @@ public class Player : MonoBehaviour
         Debug.Log(agent.destination.x);
         Debug.Log(agent.nextPosition.x);
         */
+
+        if (agent.isOnOffMeshLink)
+        {
+            agent.speed = 100;
+        }
+        else
+        {
+            agent.speed = 300;
+        }
+
     }
 
 }

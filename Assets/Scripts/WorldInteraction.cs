@@ -81,6 +81,9 @@ public class WorldInteraction : MonoBehaviour
                 {
                     if (gObject.GetComponent<InteractableHotspot>().hotspot.walkTo) 
                     {
+
+                        StopCoroutine("waittl");
+                        StopCoroutine("waittr");
                         Player.agent.ResetPath();
                         Player.agent.SetDestination(gObject.GetComponent<InteractableHotspot>().hotspot.interactionSpot);
                         StartCoroutine("waittl", gObject);
@@ -92,6 +95,8 @@ public class WorldInteraction : MonoBehaviour
                 }
                 else if (gObject.HasComponent<InteractableItem>())
                 {
+                    StopCoroutine("waittl");
+                    StopCoroutine("waittr");
                     Player.agent.ResetPath();
                     Player.agent.SetDestination(gObject.GetComponent<InteractableItem>().item.interactionPos);
                     StartCoroutine("waittl", gObject);
@@ -99,6 +104,8 @@ public class WorldInteraction : MonoBehaviour
 
                 else
                 {
+                    StopCoroutine("waittl");
+                    StopCoroutine("waittr");
                     Player.agent.ResetPath();
                     Player.agent.SetDestination(hit.point);
                     StartCoroutine("waittl", gObject);
@@ -112,6 +119,8 @@ public class WorldInteraction : MonoBehaviour
                 {
                     if (gObject.GetComponent<InteractableHotspot>().hotspot.walkTo)
                     {
+                        StopCoroutine("waittl");
+                        StopCoroutine("waittr");
                         Player.agent.ResetPath();
                         Player.agent.SetDestination(gObject.GetComponent<InteractableHotspot>().hotspot.interactionSpot);
                         StartCoroutine("waittr", gObject);
@@ -123,12 +132,16 @@ public class WorldInteraction : MonoBehaviour
                 }
                 else if (gObject.HasComponent<InteractableItem>())
                 {
+                    StopCoroutine("waittl");
+                    StopCoroutine("waittr");
                     Player.agent.ResetPath();
                     Player.agent.SetDestination(gObject.GetComponent<InteractableItem>().item.interactionPos);
                     StartCoroutine("waittr", gObject);
                 }
                 else
                 {
+                    StopCoroutine("waittl");
+                    StopCoroutine("waittr");
                     Player.agent.ResetPath();
                     Player.agent.SetDestination(hit.point);
                     StartCoroutine("waittr", gObject);

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
-  m_Name: egg
+  m_Name: jar_with_holes
   m_EditorClassIdentifier: 
-  itemName: Ei
-  icon: {fileID: 21300000, guid: 173c42ce011d76a45a85be6028037bf7, type: 3}
-  description: "Ok, jetzt f\xFChle ich mich etwas schlecht."
+  itemName: "Glass mit L\xF6chern"
+  icon: {fileID: 21300000, guid: 3a469e9034f0b6e418ecf1c4064b0a1d, type: 3}
+  description: Ich glaube es ist undicht.
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}
   collectable: 1
-  interactionPos: {x: 283, y: 116, z: 0}
+  interactionPos: {x: 0, y: 0, z: 0}

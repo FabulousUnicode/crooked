@@ -33,8 +33,6 @@ public class PlayerScaleField : MonoBehaviour
         float playerPosAbs = playerPos.transform.position.y + 540;
         float playerSpeed = Player.agent.speed;
 
-        Debug.Log(playerPosAbs);
-
         if (playerPosAbs > 260)
         {
 

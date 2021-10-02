@@ -76,6 +76,51 @@ public class ItemInteraction : MonoBehaviour
         {
             FindObjectOfType<MicrowaveHandler>().handleInteraction(item.item, lastUsed);
         }
+        if(item.item.itemName == "Grab")
+        {
+            if(lastUsed != null)
+            {
+                FindObjectOfType<GraveHandler>().handleInteraction(item.item, lastUsed);
+            }
+            else
+            {
+                FindObjectOfType<GraveHandler>().handleInteractionNoItem();
+            }
+        }
+        if (item.item.name == "bird")
+        {
+            if (lastUsed != null)
+            {
+                FindObjectOfType<BirdHandler>().handleInteraction(item.item, lastUsed);
+            }
+            else
+            {
+                FindObjectOfType<BirdHandler>().handleInteractionNoItem();
+            }
+        }
+        if (item.item.itemName == "Glühwürmchen")
+        {
+            if (lastUsed != null)
+            {
+                FindObjectOfType<FirefliesHandler>().handleInteraction(item.item, lastUsed);
+            }
+            else
+            {
+                FindObjectOfType<FirefliesHandler>().handleInteractionNoItem();
+            }
+        }
+
+        if (item.item.itemName == "Gitterstäbe")
+        {
+            if (lastUsed != null)
+            {
+                FindObjectOfType<BarsHandler>().handleInteraction(item.item, lastUsed);
+            }
+            else
+            {
+                FindObjectOfType<BarsHandler>().handleInteractionNoItem();
+            }
+        }
     }
 
     public static void combineItems(Item item)
@@ -88,6 +133,10 @@ public class ItemInteraction : MonoBehaviour
             Inventory.instance.removeItem(lastUsed);
             Inventory.instance.addItem(combinedItem);
             Debug.Log(lastUsed.name);
+            if (item.itemName == "Nähnadel" || lastUsed.itemName == "Nähnadel")
+            {
+                Inventory.instance.addItem(ItemDatabaseInstance.getItemByName("needle"));
+            }
             resetLastUsed();
 
         }
