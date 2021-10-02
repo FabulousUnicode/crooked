@@ -27,8 +27,17 @@ public class RandyStatus : MonoBehaviour
         feld = false;
         feld_beine = true;
 
+        StartCoroutine(schwarz());
+
         cara[0].aktiv = feld;
         cara[1].aktiv = feld_beine;
+    }
+
+    IEnumerator schwarz()
+    {
+        GameObject.Find("Schwarzblende").transform.position = new Vector3(0, 0, 0);
+        yield return new WaitForSeconds(1.0f);
+        GameObject.Find("Schwarzblende").transform.position = new Vector3(3000, 0, 0);
     }
 
     public void korngesammelt()
@@ -45,12 +54,15 @@ public class RandyStatus : MonoBehaviour
     {
         yield return new WaitForSeconds(30.0f);
 
+        StartCoroutine(schwarz());
+
         cara[1].aktiv = feld_beine;
         cara[2].aktiv = huette;
     }
 
     public void anzeige()
     {
+        StartCoroutine(schwarz());
         GameObject.Find("randy_shack").SetActive(false);
     }
 
@@ -67,5 +79,6 @@ public class RandyStatus : MonoBehaviour
     public void ausbruch()
     {
         knast = false;
+        StartCoroutine(schwarz());
     }
 }

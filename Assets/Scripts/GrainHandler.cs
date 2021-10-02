@@ -7,7 +7,19 @@ public class GrainHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GameObject obj = GameObject.Find("infected_grain_2");
+        if(RandyStatus.huette)
+        {
+            
+            if (obj != null)
+            {
+                gameObject.transform.position = new Vector3(-456.0f, -72.0f, -0.1f);
+            }
+        }
+        else if(obj != null)
+        {
+            gameObject.transform.position = new Vector3(-2456.0f, -72.0f, -0.1f);
+        }
     }
 
     // Update is called once per frame
@@ -33,6 +45,7 @@ public class GrainHandler : MonoBehaviour
                 GameObject.Find("Inventory").GetComponent<Inventory>().addItem(ItemDatabaseInstance.getItemByName("flour"));
                 GameObject.Find("Inventory").GetComponent<Inventory>().addItem(ItemDatabaseInstance.getItemByName("mutterkorn"));
                 Destroy(gameObject);
+                ScenenChange.remove += ("infected_grain_2" + ",");
             }
             else
             {

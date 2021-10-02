@@ -25,6 +25,12 @@ public class WorldInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Dialog.dialog_aktive)
+        {
+            return;
+        }
+
+
         //Prueft ob Canvas drueber liegt
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
@@ -39,7 +45,7 @@ public class WorldInteraction : MonoBehaviour
             GameObject gObject = hit.collider.gameObject;
 
             //Ausgabe HoverText
-            if(gObject.name != "Background")
+            if(gObject.name != "Background" && gObject.name != "ZelleCollider" && gObject.name != "ShackCollider")
             {
                 string hoverInfo = "";
 

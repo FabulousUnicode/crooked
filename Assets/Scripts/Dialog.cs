@@ -17,6 +17,8 @@ public class Dialog : MonoBehaviour
     bool m_isTalking;
     bool m_isDeciding;
 
+    public static bool dialog_aktive = false;
+
     Text m_Name;
     Text m_DialogText;
     Text m_Text;
@@ -57,6 +59,8 @@ public class Dialog : MonoBehaviour
 
     public void StartDialogue(TextAsset inkFile, Characters character)
     {
+        dialog_aktive = true;
+
         if (!m_isTalking)
         {
             m_Banner.GetComponent<Animator>().SetBool("IsOpen", false);
@@ -201,6 +205,8 @@ public class Dialog : MonoBehaviour
         m_isTalking = false;
         m_Dialogue.SetActive(false);
         m_story = null;
+
+        dialog_aktive = false;
     }
 
     void AdvanceDialogue()
