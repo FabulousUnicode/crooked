@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Klavier
   icon: {fileID: 0}
-  description: plin plin plon
+  description: Anyway here's Wonderwall...
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}

@@ -31,6 +31,7 @@ public class Dialog : MonoBehaviour
     static Choice m_selectedChoice;
 
     public static bool kuchen = false;
+    public static bool glas = false;
 
 
     void Start()
@@ -92,6 +93,9 @@ public class Dialog : MonoBehaviour
             m_story.BindExternalFunction("KuchenGeben", (string remove) => {
                 KuchenGeben(remove);
             });
+            m_story.BindExternalFunction("ItemBekommen", (string remove) => {
+                ItemBekommen(remove);
+            });
 
 
 
@@ -129,6 +133,10 @@ public class Dialog : MonoBehaviour
                         bool vorhanden = player.GetComponent<Inventory>().searchItem(variable);
                         m_story.variablesState[variable] = vorhanden;
                     }
+                    break;
+                case "Variable":
+                    m_story.variablesState["glas"] = glas;
+                    m_story.variablesState["kuchen"] = kuchen;
                     break;
                 case null:
                     break;
@@ -220,9 +228,9 @@ public class Dialog : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             m_DialogText.text += letter;
-            yield return new WaitForSeconds(0.08f);
+            yield return new WaitForSeconds(0.065f);
         }
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.3f);
 
         m_Dialogue.SetActive(false);
 
@@ -358,9 +366,9 @@ public class Dialog : MonoBehaviour
         foreach (char letter in text.ToCharArray())
         {
             m_Text.text += letter;
-            yield return new WaitForSeconds(0.08f);
+            yield return new WaitForSeconds(0.065f);
         }
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.3f);
 
         m_TextField.SetActive(false);
         m_isTalking = false;
@@ -432,4 +440,20 @@ public class Dialog : MonoBehaviour
 
         kuchen = true;
     }
+
+    private void ItemBekommen(string itemadd)
+    {
+        Item item = ItemDatabaseInstance.getItemByName(itemadd);
+        if(item.name == "mutterkorn")
+        {
+            GameObject.Find("Inventory").GetComponent<Inventory>().addItem(item);
+            kuchen = false;
+        }
+        if(item.name == "jar")
+        {
+            GameObject.Find("Inventory").GetComponent<Inventory>().addItem(item);
+            glas = true;
+        }
+    }
+
 }

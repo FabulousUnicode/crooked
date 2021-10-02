@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Ablass-O-Mat
   icon: {fileID: 0}
-  description: 'Der nimmt nur '
+  description: Wie praktisch!
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}
