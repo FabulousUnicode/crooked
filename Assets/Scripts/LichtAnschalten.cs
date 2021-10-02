@@ -5,7 +5,7 @@ using UnityEngine;
 public class LichtAnschalten : MonoBehaviour
 {
     public static int lichter = 0;
-    public static bool aktiviert = false;
+    public static bool aktiviert = true;
 
     public static bool[] lampen = new bool[4] {false, false, false, false};
 
@@ -14,7 +14,7 @@ public class LichtAnschalten : MonoBehaviour
     {
         if (!aktiviert)
         {
-            if (lichter >= 3)
+            if (lichter >= 4)
             {
                 ScenenChange.add += ("lantern" + ",");
                 GameObject asd = GameObject.Find("Laterne").transform.GetChild(0).gameObject;
@@ -36,20 +36,33 @@ public class LichtAnschalten : MonoBehaviour
 
     void Start()
     {
-        if(aktiviert)
+        /*if(aktiviert)
         {
             GameObject asd = GameObject.Find("Laterne").transform.GetChild(0).gameObject;
 
-            asd.SetActive(true);
 
-            GameObject.Find("Laterne").GetComponent<Licht>().aktivieren();
-        }
+
+            //GameObject.Find("Laterne").GetComponent<Licht>().aktivieren();
+
+            print(lampen[GameObject.Find("Laterne").GetComponent<Licht>().nummer]);
+
+            if(lampen[GameObject.Find("Laterne").GetComponent<Licht>().nummer])
+            {
+                asd.SetActive(true);
+            }
+        }*/
         
     }
 
     void Update()
     {
-        //print (lichter);
+        if (lichter >= 4)
+        {
+            ScenenChange.add += ("fireflyLaterne" + ",");
+            print("Hallo");
+        }
+
+        print(lichter);
     }
         
 }

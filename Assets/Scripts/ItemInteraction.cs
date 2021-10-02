@@ -106,7 +106,7 @@ public class ItemInteraction : MonoBehaviour
                 FindObjectOfType<BirdHandler>().handleInteractionNoItem();
             }
         }
-        if (item.item.itemName == "Glühwürmchen")
+        if (item.item.itemName == "Glï¿½hwï¿½rmchen")
         {
             if (lastUsed != null)
             {
@@ -118,7 +118,7 @@ public class ItemInteraction : MonoBehaviour
             }
         }
 
-        if (item.item.itemName == "Gitterstäbe")
+        if (item.item.itemName == "Gitterstï¿½be")
         {
             if (lastUsed != null)
             {
@@ -130,7 +130,7 @@ public class ItemInteraction : MonoBehaviour
             }
         }
         
-        if (item.item.itemName == "Schüssel")
+        if (item.item.itemName == "Schï¿½ssel")
         {
             if (lastUsed != null)
             {
@@ -153,9 +153,13 @@ public class ItemInteraction : MonoBehaviour
             Inventory.instance.removeItem(lastUsed);
             Inventory.instance.addItem(combinedItem);
             Debug.Log(lastUsed.name);
-            if (item.itemName == "Nähnadel" || lastUsed.itemName == "Nähnadel")
+            if (item.itemName == "Nï¿½hnadel" || lastUsed.itemName == "Nï¿½hnadel")
             {
                 Inventory.instance.addItem(ItemDatabaseInstance.getItemByName("needle"));
+            }
+            else if (item.name == "coffee_grinder" || lastUsed.name == "coffee_grinder")
+            {
+                Inventory.instance.addItem(ItemDatabaseInstance.getItemByName("coffee_grinder"));
             }
             resetLastUsed();
 

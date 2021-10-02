@@ -203,7 +203,7 @@ public class WorldInteraction : MonoBehaviour
         }
         else if (gObject.HasComponent<Licht>())
         {
-            gObject.GetComponent<Licht>().aktivieren();
+            //gObject.GetComponent<Licht>().aktivieren();
         }
         else if (gObject.HasComponent<InteractableHotspot>())
         {
@@ -255,7 +255,7 @@ public class WorldInteraction : MonoBehaviour
         }
         else if (gObject.HasComponent<Licht>())
         {
-            gObject.GetComponent<Licht>().aktivieren();  
+            //gObject.GetComponent<Licht>().aktivieren();  
         }
         else if(gObject.HasComponent<InteractableHotspot>())
         {

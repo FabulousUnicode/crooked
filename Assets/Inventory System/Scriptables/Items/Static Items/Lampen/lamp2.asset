@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
-  m_Name: stagelight
+  m_Name: lamp2
   m_EditorClassIdentifier: 
-  itemName: "B\xFChnenlicht"
-  icon: {fileID: 21300000, guid: 2c8775a4fb5207848a0395210e6e3e1d, type: 3}
-  description: Ahhh... ich habe reingeschaut.
+  itemName: Laterne
+  icon: {fileID: 0}
+  description: "Die Lampe sieht nach einem guten Treffpunkt f\xFCr Monds\xFCchtige
+    aus."
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}
-  collectable: 1
-  interactionPos: {x: -299, y: 117, z: 0}
+  collectable: 0
+  interactionPos: {x: 444, y: -214, z: 0}

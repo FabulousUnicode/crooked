@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
-  m_Name: stagelight
+  m_Name: mothballs
   m_EditorClassIdentifier: 
-  itemName: "B\xFChnenlicht"
-  icon: {fileID: 21300000, guid: 2c8775a4fb5207848a0395210e6e3e1d, type: 3}
-  description: Ahhh... ich habe reingeschaut.
+  itemName: Mottenkugeln
+  icon: {fileID: 21300000, guid: 0427d87ab63df8449ab2d909c350120f, type: 3}
+  description: Mottenkugeln
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}
   collectable: 1
-  interactionPos: {x: -299, y: 117, z: 0}
+  interactionPos: {x: -632, y: -446, z: 0}

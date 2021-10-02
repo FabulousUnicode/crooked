@@ -4,28 +4,29 @@ using UnityEngine;
 
 public class Licht : MonoBehaviour
 {
-    public Sprite standard;
-    public Sprite aktiv;
     public int nummer;
-
     public Item item;
     public string lampName;
 
-    private SpriteRenderer spriteRenderer;
 
-    public void aktivieren()
+    public void aktivieren(Item lastUsed)
     {
         if (!LichtAnschalten.lampen[nummer])
         {
             GameObject inven = GameObject.Find("Inventory");
 
-            if(inven.GetComponent<Inventory>().searchItem(item.name))
+            if(inven.GetComponent<Inventory>().searchItem(item.name) && lastUsed == item)
             {
-                spriteRenderer = GetComponent<SpriteRenderer>();
-                spriteRenderer.sprite = aktiv;
+                gameObject.transform.GetChild(0).gameObject.SetActive(true);
+
                 LichtAnschalten.lampen[nummer] = true;
 
                 inven.GetComponent<Inventory>().removeItem(item);
+
+                if(item.name == "uranium_rods")
+                {
+                    inven.GetComponent<Inventory>().addItem(item);
+                }
 
                 FindObjectOfType<Dialog>().showText("Ok das scheint zu passen.");
 
@@ -46,23 +47,11 @@ public class Licht : MonoBehaviour
 
     void Start()
     {
-        if(LichtAnschalten.aktiviert)
+        if (LichtAnschalten.lampen[nummer])
         {
             GameObject asd = gameObject.transform.GetChild(0).gameObject;
 
             asd.SetActive(true);
-
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = aktiv; 
-        }
-        else if (LichtAnschalten.lampen[nummer])
-        {
-            //GameObject asd = gameObject.transform.GetChild(0).gameObject;
-
-            //asd.SetActive(true);
-
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = aktiv;
         }
     }
 }
