@@ -56,13 +56,6 @@ public class LichtAnschalten : MonoBehaviour
 
     void Update()
     {
-        if (lichter >= 4)
-        {
-            ScenenChange.add += ("fireflyLaterne" + ",");
-            print("Hallo");
-        }
-
-        print(lichter);
     }
         
 }

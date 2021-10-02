@@ -196,6 +196,10 @@ public class WorldInteraction : MonoBehaviour
             {
                 gObject.GetComponent<Mary>().itemsAnbieten(ItemInteraction.getLastUsed());
             }
+            else if (gObject.name == "Robbe")
+            {
+                gObject.GetComponent<Robbe>().rumAnbieten(ItemInteraction.getLastUsed());
+            }
         }
         else if (gObject.HasComponent<ScenenChange>())
         {
