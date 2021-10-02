@@ -1,2 +1,0 @@
-C:\Users\chris\crooked\obj\Debug\NavMeshComponentsEditor.csprojAssemblyReference.cache
-C:\Users\chris\crooked\obj\Debug\NavMeshComponentsEditor.csproj.CoreCompileInputs.cache
