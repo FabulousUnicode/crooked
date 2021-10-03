@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
         
         instance = this;
         updateInventorySlots();
-        toggleInventory();
+        //toggleInventory();
     }
 
     public void updateInventorySlots()
@@ -42,19 +42,6 @@ public class Inventory : MonoBehaviour
             }
             slot.UpdateUI();
             index++;
-        }
-    }
-
-    public void toggleInventory()
-    {
-        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-        if(CameraController.getInventoryOpen() == false)
-        {
-            CameraController.setInventoryOpen(true);
-        }
-        else
-        {
-            CameraController.setInventoryOpen(false);
         }
     }
 

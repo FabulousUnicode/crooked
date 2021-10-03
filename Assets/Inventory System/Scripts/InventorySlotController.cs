@@ -6,14 +6,20 @@ using UnityEngine.EventSystems;
 
 public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
 {
+    public Sprite defaultSprite;
+    public Vector2 hotSpot = new Vector2(0,0);
+    public CursorMode cursorMode = CursorMode.Auto;
+
     public Item item;
-    public static Color standardColor = Color.black;
-    public Color onHoverColor = Color.green;
+    public static Color standardColor = Color.white;
+    public Color onHoverColor = Color.gray;
     public Color onUseColor = Color.blue;
     public Color currentSelectedColor = Color.yellow;
     public GameObject hText;
     
     public static GameObject currentSelected;
+
+
 
     public static void resetCurrentSelected()
     {
@@ -24,10 +30,14 @@ public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPoin
         }
     }
 
-   
+    public static GameObject getCurrentSelected()
+    {
+        return currentSelected;
+    }
 
     public void Awake()
     {
+
         gameObject.GetComponent<Image>().color = standardColor;
     }
 

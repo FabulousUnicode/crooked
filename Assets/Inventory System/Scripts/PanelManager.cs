@@ -1,26 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class PanelManager : MonoBehaviour, IPointerExitHandler
+
+
+public class PanelManager : MonoBehaviour
 {
 
-    [SerializeField] private GameObject IPanel;
+    public GameObject inventoryPanel;
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void Start()
     {
-        StartCoroutine(closeDelay());
+        inventoryPanel.SetActive(false);
     }
 
-    IEnumerator closeDelay()
+    public void Update()
     {
-        yield return new WaitForSeconds(0.5f);
-        closePanel();
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            inventoryPanel.SetActive(true);
+
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) 
+        {
+            inventoryPanel.SetActive(false);
+        }
     }
 
     public void closePanel()
     {
-        IPanel.SetActive(false);
+        inventoryPanel.SetActive(false);
     }
 }
