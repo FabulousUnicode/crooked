@@ -30,7 +30,6 @@ public class WorldInteraction : MonoBehaviour
             return;
         }
 
-
         //Prueft ob Canvas drueber liegt
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
