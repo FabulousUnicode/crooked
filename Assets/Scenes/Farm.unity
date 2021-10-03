@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
-  defaultCursor: {fileID: 21300000, guid: 706bfb711bbac9047848a44ba3ce4568, type: 3}
+  defaultCursor: {fileID: 21300000, guid: f16d8e23cd75778459a6234b4081ff55, type: 3}
 --- !u!1 &449670135
 GameObject:
   m_ObjectHideFlags: 0
