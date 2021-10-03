@@ -8,7 +8,7 @@ public class RandyStatus : MonoBehaviour
     public static bool feld_beine = false;
     public static bool huette = false;
 
-    public static bool mary_weg = false;
+    public static bool mary_weg = true;
 
     public static bool knast = false;
 

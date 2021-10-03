@@ -158,6 +158,11 @@ public class ItemInteraction : MonoBehaviour
         {
             FindObjectOfType<scheuneHandler>().handleInteraction(lastUsed);
         }
+        if (item.item.name == "bugs")
+        {
+            FindObjectOfType<BugsHandler>().handleInteraction(item.item,lastUsed);
+        }
+
     }
 
     public static void combineItems(Item item)

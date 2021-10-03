@@ -163,7 +163,7 @@ public class Dialog : MonoBehaviour
                     m_story.variablesState["mary_weg"] = RandyStatus.mary_weg;
                     break;
                 case "Variable3":
-                    m_story.variablesState["insekten_besiegt"] = true;
+                    m_story.variablesState["insekten_besiegt"] = BugsHandler.aktiviert;
                     break;
                 case null:
                     break;
@@ -242,7 +242,7 @@ public class Dialog : MonoBehaviour
 
         if(currentMessage == "")                        //Ungetestet möglicherweise fehlerhaft.
         {
-            EndDialogue();
+            ContinueDialogue();
             return;
         }
 
@@ -263,9 +263,9 @@ public class Dialog : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             m_DialogText.text += letter;
-            yield return new WaitForSeconds(0.0f);   //0.065
+            yield return new WaitForSeconds(0.065f);   //0.065
         }
-        yield return new WaitForSeconds(0f);         ///2.3
+        yield return new WaitForSeconds(2.3f);         //2.3
 
         m_Dialogue.SetActive(false);
 
@@ -512,8 +512,16 @@ public class Dialog : MonoBehaviour
     }
     private void Jeffrey_weg()
     {
-        GameObject.Find("camera").transform.position = new Vector3(339.0f, 7.0f, 0.0f);
-        GameObject.Find("key_barn").transform.position = new Vector3(51.0f, 127.0f, 0.0f); //muss geändert werden
+        try
+        {
+            GameObject.Find("cameraJ").transform.position = new Vector3(338.0f, -66.0f, -0.1f);
+            GameObject.Find("barn_key").transform.position = new Vector3(38.0f, 124.0f, -0.1f);
+        }
+        catch (System.Exception e)
+        {
+
+        }
+        
 
         StartCoroutine(schwarz());
         GameObject.Find("jeffrey").SetActive(false);
