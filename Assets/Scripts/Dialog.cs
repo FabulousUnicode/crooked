@@ -100,6 +100,10 @@ public class Dialog : MonoBehaviour
             m_story.BindExternalFunction("ItemBekommen", (string remove) => {
                 ItemBekommen(remove);
             });
+            m_story.BindExternalFunction("TakePicture", () => {
+                TakePicture();
+            });
+
 
 
 
@@ -477,4 +481,29 @@ public class Dialog : MonoBehaviour
         }
     }
 
+    private void BildAnschauen()
+    {
+        FindObjectOfType<FarmStartDialog>().bildzeigen(0);
+    }
+    private void Jeffrey_weg()
+    {
+        GameObject.Find("camera").transform.position = new Vector3(339.0f, 7.0f, 0.0f);
+        GameObject.Find("key_barn").transform.position = new Vector3(51.0f, 127.0f, 0.0f); //muss geändert werden
+
+        StartCoroutine(schwarz());
+        GameObject.Find("jeffrey").SetActive(false);
+    }
+
+    IEnumerator schwarz()
+    {
+        GameObject.Find("Schwarzblende").transform.position = new Vector3(0, 0, 0);
+        yield return new WaitForSeconds(1.0f);
+        GameObject.Find("Schwarzblende").transform.position = new Vector3(3000, 0, 0);
+    }
+
+
+    private void TakePicture()
+    {
+        FindObjectOfType<FarmStartDialog>().bildzeigen(6.0f);
+    }
 }
