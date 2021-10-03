@@ -142,16 +142,9 @@ public class ItemInteraction : MonoBehaviour
             }
         }
 
-        if (item.item.itemName == "Insektenarmee")
+        if (item.item.itemName == "Laterne")
         {
-            if (lastUsed != null)
-            {
-                FindObjectOfType<BugsHandler>().handleInteraction(item.item, lastUsed);
-            }
-            else
-            {
-                FindObjectOfType<BugsHandler>().handleInteractionNoItem();
-            }
+            FindObjectOfType<Licht>().aktivieren(lastUsed);
         }
     }
 
@@ -165,7 +158,7 @@ public class ItemInteraction : MonoBehaviour
             Inventory.instance.removeItem(lastUsed);
             Inventory.instance.addItem(combinedItem);
             Debug.Log(lastUsed.name);
-            if (item.itemName == "N�hnadel" || lastUsed.itemName == "N�hnadel")
+            if (item.itemName == "Nähnadel" || lastUsed.itemName == "Nähnadel")
             {
                 Inventory.instance.addItem(ItemDatabaseInstance.getItemByName("needle"));
             }

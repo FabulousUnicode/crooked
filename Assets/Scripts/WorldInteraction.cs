@@ -25,6 +25,12 @@ public class WorldInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Dialog.dialog_aktive)
+        {
+            return;
+        }
+
+
         //Prueft ob Canvas drueber liegt
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
@@ -39,7 +45,7 @@ public class WorldInteraction : MonoBehaviour
             GameObject gObject = hit.collider.gameObject;
 
             //Ausgabe HoverText
-            if(gObject.name != "Background")
+            if(gObject.name != "Background" && gObject.name != "ZelleCollider" && gObject.name != "ShackCollider")
             {
                 string hoverInfo = "";
 
@@ -196,6 +202,10 @@ public class WorldInteraction : MonoBehaviour
             {
                 gObject.GetComponent<Mary>().itemsAnbieten(ItemInteraction.getLastUsed());
             }
+            else if (gObject.name == "Robbe")
+            {
+                gObject.GetComponent<Robbe>().rumAnbieten(ItemInteraction.getLastUsed());
+            }
         }
         else if (gObject.HasComponent<ScenenChange>())
         {
@@ -243,10 +253,14 @@ public class WorldInteraction : MonoBehaviour
         if (gObject.HasComponent<InteractableItem>())
         {
             FindObjectOfType<Dialog>().showText(gObject.GetComponent<InteractableItem>().item.description);
-
         }
         else if (gObject.HasComponent<CharacterInfo>())
         {
+            if (gObject.name == "Gittertuer")
+            {
+                gObject.GetComponent<prisonHandler>().handleInteraction();
+            }
+
             FindObjectOfType<Dialog>().StartDialogue(gObject.GetComponent<CharacterInfo>().character.inkFile, gObject.GetComponent<CharacterInfo>().character);
         }
         else if (gObject.HasComponent<ScenenChange>())
