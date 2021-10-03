@@ -106,7 +106,7 @@ public class ItemInteraction : MonoBehaviour
                 FindObjectOfType<BirdHandler>().handleInteractionNoItem();
             }
         }
-        if (item.item.itemName == "Gl�hw�rmchen")
+        if (item.item.itemName == "Glühwürmchen")
         {
             if (lastUsed != null)
             {
@@ -118,7 +118,7 @@ public class ItemInteraction : MonoBehaviour
             }
         }
 
-        if (item.item.itemName == "Gitterst�be")
+        if (item.item.itemName == "Gitterstäbe")
         {
             if (lastUsed != null)
             {
@@ -130,7 +130,7 @@ public class ItemInteraction : MonoBehaviour
             }
         }
         
-        if (item.item.itemName == "Sch�ssel")
+        if (item.item.itemName == "Schüssel")
         {
             if (lastUsed != null)
             {
@@ -139,6 +139,18 @@ public class ItemInteraction : MonoBehaviour
             else
             {
                 FindObjectOfType<BowlHandler>().handleInteractionNoItem();
+            }
+        }
+
+        if (item.item.itemName == "Insektenarmee")
+        {
+            if (lastUsed != null)
+            {
+                FindObjectOfType<BugsHandler>().handleInteraction(item.item, lastUsed);
+            }
+            else
+            {
+                FindObjectOfType<BugsHandler>().handleInteractionNoItem();
             }
         }
     }
