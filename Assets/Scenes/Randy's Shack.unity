@@ -14419,8 +14419,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2485c224ec58313499209fd5dcd64064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorOnHover: {fileID: 0}
   scene: Path
-  destinationName: '>>Weggabelung<<'
+  destinationName: Nach Draussen
   currentScene: Randy's Shack
 --- !u!4 &1517398063
 Transform:

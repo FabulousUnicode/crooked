@@ -26,6 +26,11 @@ public class PanelManager : MonoBehaviour
         }
     }
 
+    public bool getInventoryState()
+    {
+        return inventoryPanel.activeSelf;
+    }
+
     public void closePanel()
     {
         inventoryPanel.SetActive(false);

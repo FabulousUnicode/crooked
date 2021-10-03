@@ -6637,8 +6637,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2485c224ec58313499209fd5dcd64064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorOnHover: {fileID: 21300000, guid: c60ae9c9b6400e645bc848cb0853d0b7, type: 3}
   scene: Field
-  destinationName: '>>Feld<<'
+  destinationName: Zum Feld
   currentScene: Shipwreck
 --- !u!60 &1524610199
 PolygonCollider2D:
@@ -6665,11 +6666,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 548.1328, y: -432.7702}
-      - {x: 173.3863, y: -463.3787}
+    - - {x: 626.4161, y: -463.61792}
+      - {x: 631.68884, y: -425.92136}
+      - {x: 122.70479, y: -459.26938}
+      - {x: 102.41792, y: -541.2619}
       - {x: 135.58694, y: -542.41547}
       - {x: 575.8539, y: -540.6035}
-      - {x: 573.89557, y: -467.06308}
+      - {x: 625.9469, y: -495.82828}
 --- !u!4 &1524610200
 Transform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MouseManager : MonoBehaviour
 {
@@ -8,16 +10,34 @@ public class MouseManager : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto;
     public Sprite defaultCursor;
 
+    public static bool updateActive = true;
+
     void Update()
     {
-        if(ItemInteraction.getLastUsed() != null)
+        if (updateActive)
         {
-            Cursor.SetCursor(ItemInteraction.getLastUsed().icon.texture, hotSpot, cursorMode);
+            if (ItemInteraction.getLastUsed() != null)
+            {
+                Cursor.SetCursor(ItemInteraction.getLastUsed().icon.texture, hotSpot, cursorMode);
+            }
+            else
+            {
+                Cursor.SetCursor(defaultCursor.texture, hotSpot, cursorMode);
+            }
         }
-        else
+    }
+
+    internal static void disableUpdate()
+    {
+        if(ItemInteraction.getLastUsed() == null)
         {
-            Cursor.SetCursor(defaultCursor.texture, hotSpot, cursorMode);
+            updateActive = false;
         }
 
+    }
+
+    internal static void enableUpdate()
+    {
+        updateActive = true;
     }
 }

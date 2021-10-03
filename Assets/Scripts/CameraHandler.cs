@@ -67,7 +67,7 @@ public class CameraHandler : MonoBehaviour
         {
             //Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
-            agent.Warp(new Vector3(-834, -477, 0));
+            agent.Warp(new Vector3(79, -121, 0));
         }
 
         else if (General.getPreviousScene() == "Camp")

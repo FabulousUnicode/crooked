@@ -22,6 +22,23 @@ public class WorldInteraction : MonoBehaviour
     {
     }
 
+
+    Vector3 KeepFullyOnScreen(GameObject panel, Vector3 newPos)
+    {
+        RectTransform rect = panel.GetComponent<RectTransform>();
+        RectTransform CanvasRect = FindObjectOfType<Canvas>().GetComponent<RectTransform>();
+
+        float minX = (CanvasRect.sizeDelta.x - rect.sizeDelta.x) * -0.5f;
+        float maxX = (CanvasRect.sizeDelta.x - rect.sizeDelta.x) * 0.5f;
+        float minY = (CanvasRect.sizeDelta.y - rect.sizeDelta.y) * -0.5f;
+        float maxY = (CanvasRect.sizeDelta.y - rect.sizeDelta.y) * 0.5f;
+
+        newPos.x = Mathf.Clamp(newPos.x, minX, maxX);
+        newPos.y = Mathf.Clamp(newPos.y, minY, maxY);
+
+        return newPos;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -72,6 +89,7 @@ public class WorldInteraction : MonoBehaviour
                 hText.SetActive(true);
                 hText.transform.GetChild(0).GetComponent<Text>().text = hoverInfo;
                 hText.transform.position = new Vector3(mousePos.x, mousePos.y + 75, 0);
+                
             }
             else
             {

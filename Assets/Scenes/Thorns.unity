@@ -1313,8 +1313,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2485c224ec58313499209fd5dcd64064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorOnHover: {fileID: 21300000, guid: e502c9243b0cbb9408138418adc8c325, type: 3}
   scene: Church
-  destinationName: '>>Kircheninneres<<'
+  destinationName: In den Turm
   currentScene: Thorns
 --- !u!60 &487136521
 PolygonCollider2D:
@@ -2340,8 +2341,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2485c224ec58313499209fd5dcd64064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorOnHover: {fileID: 21300000, guid: c60ae9c9b6400e645bc848cb0853d0b7, type: 3}
   scene: Field
-  destinationName: '>>Feld<<'
+  destinationName: Zum Feld
   currentScene: Thorns1
 --- !u!60 &766145343
 PolygonCollider2D:
@@ -2368,7 +2370,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -36.7295, y: -492.1407}
+    - - {x: -31.533867, y: -470.31903}
       - {x: -263.6814, y: -460.85223}
       - {x: -285.05914, y: -537.36273}
       - {x: 209.52542, y: -538.0771}

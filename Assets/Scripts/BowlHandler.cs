@@ -43,6 +43,6 @@ public class BowlHandler : MonoBehaviour
 
     internal void handleInteractionNoItem()
     {
-        throw new NotImplementedException();
+        FindObjectOfType<Dialog>().showText("ich habe mein müsli vergessen");
     }
 }

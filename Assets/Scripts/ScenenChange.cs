@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ScenenChange : MonoBehaviour
 {
+
+    public Sprite cursorOnHover;
+
     public string scene;
     public static string remove;
     public string destinationName;
@@ -12,8 +15,22 @@ public class ScenenChange : MonoBehaviour
 
     public string currentScene;
 
-    public static bool triggerHairball = false; 
+    public static bool triggerHairball = false;
 
+    private void OnMouseOver()
+    {
+        if (!FindObjectOfType<PanelManager>().getInventoryState())
+        {
+            Debug.Log("hovering");
+            MouseManager.disableUpdate();
+            Cursor.SetCursor(cursorOnHover.texture, Vector2.zero, CursorMode.Auto);
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        MouseManager.enableUpdate();
+    }
 
     public void Start()
     {
@@ -54,6 +71,7 @@ public class ScenenChange : MonoBehaviour
         }
         
         GameObject.Find("DialogFeld").transform.GetChild(1).gameObject.SetActive(false);
+        MouseManager.enableUpdate();
         SceneManager.LoadScene(scene);
 
         /*

@@ -10,7 +10,7 @@ public class BugsHandler : MonoBehaviour
     {
         if(lastUsed.itemName == "Mottenkugeln")
         {
-            bugs.SetActive(false);
+            Destroy(bugs);
             FindObjectOfType<Inventory>().removeItem(lastUsed);
         }
     }

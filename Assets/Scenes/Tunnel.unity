@@ -2460,7 +2460,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 323.44492, y: -48.60309}
+  m_Offset: {x: 316.171, y: -48.60309}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2471,7 +2471,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1083.4165, y: 118.214966}
+  m_Size: {x: 765.44415, y: 118.214966}
   m_EdgeRadius: 0
 --- !u!114 &799758237
 MonoBehaviour:
@@ -2485,8 +2485,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2485c224ec58313499209fd5dcd64064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorOnHover: {fileID: 21300000, guid: c60ae9c9b6400e645bc848cb0853d0b7, type: 3}
   scene: Woods
-  destinationName: '>>Wald<<'
+  destinationName: In den Wald
   currentScene: Tunnel
 --- !u!4 &799758238
 Transform:
@@ -3644,7 +3645,7 @@ MonoBehaviour:
   m_Color: {r: 0.25314426, g: 1, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000e174db31a7a824ea274a2662b586f3898b2f0921
+  m_ApplyToSortingLayers: 00000000e174db31a7a824eab586f3898b2f0921
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
