@@ -103,7 +103,12 @@ public class Dialog : MonoBehaviour
             m_story.BindExternalFunction("TakePicture", () => {
                 TakePicture();
             });
-
+            m_story.BindExternalFunction("BildAnschauen", () => {
+                BildAnschauen();
+            });
+            m_story.BindExternalFunction("Jeffrey_weg", () => {
+                Jeffrey_weg();
+            });
 
 
 
@@ -145,6 +150,10 @@ public class Dialog : MonoBehaviour
                 case "Variable":
                     m_story.variablesState["glas"] = glas;
                     m_story.variablesState["kuchen"] = kuchen;
+                    break;
+                case "Variable2":
+                    m_story.variablesState["tipp_Matt"] = Matthaeus.tipp_Matt;
+                    m_story.variablesState["mary_weg"] = RandyStatus.mary_weg;
                     break;
                 case null:
                     break;

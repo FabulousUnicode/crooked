@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
-  m_Name: scythe
+  m_Name: signed_scythe
   m_EditorClassIdentifier: 
   itemName: Sense
   icon: {fileID: 21300000, guid: e6fd6c6e68197c4479783690d0ff0925, type: 3}
-  description: Eine Sense mit der man Sensen kann.
+  description: Da steht jetzt mein Name drauf. Muhahaha.
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}

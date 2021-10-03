@@ -141,10 +141,17 @@ public class ItemInteraction : MonoBehaviour
                 FindObjectOfType<BowlHandler>().handleInteractionNoItem();
             }
         }
-
         if (item.item.itemName == "Laterne")
         {
             FindObjectOfType<Licht>().aktivieren(lastUsed);
+        }
+        if (item.item.itemName == "Sense")
+        {
+            FindObjectOfType<senseHandler>().handleInteraction(lastUsed);
+        }
+        if (item.item.itemName == "Duftbaum")
+        {
+            FindObjectOfType<duftbaumHandler>().handleInteraction(lastUsed);
         }
     }
 

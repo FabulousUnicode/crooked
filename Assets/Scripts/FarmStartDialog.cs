@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class FarmStartDialog : MonoBehaviour
 {
     public static bool trigger = false;
+    public static bool namebekannt = false;
     public TextAsset story;
     public Item coin;
     public Characters ca;
     public GameObject bild;
 
     public Sprite selfie;
-    public Sprite name;
+    public Sprite nameS;
     public Image myIMGcomponent;
     private bool bstatus = true;
     private static bool drehen = false;
@@ -56,8 +57,9 @@ public class FarmStartDialog : MonoBehaviour
         {
             if(bstatus)
             {
-                myIMGcomponent.sprite = name;
+                myIMGcomponent.sprite = nameS;
                 bstatus = false;
+                namebekannt = true;
             }
             else
             {
