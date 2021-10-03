@@ -153,6 +153,11 @@ public class ItemInteraction : MonoBehaviour
         {
             FindObjectOfType<duftbaumHandler>().handleInteraction(lastUsed);
         }
+
+        if (item.item.itemName == "Scheunentor")
+        {
+            FindObjectOfType<scheuneHandler>().handleInteraction(lastUsed);
+        }
     }
 
     public static void combineItems(Item item)

@@ -109,6 +109,13 @@ public class Dialog : MonoBehaviour
             m_story.BindExternalFunction("Jeffrey_weg", () => {
                 Jeffrey_weg();
             });
+            m_story.BindExternalFunction("Tipp_gegeben", () => {
+                Tipp_gegeben();
+            });
+            m_story.BindExternalFunction("Start_boss", () => {
+                Start_boss();
+            });
+
 
 
 
@@ -154,6 +161,9 @@ public class Dialog : MonoBehaviour
                 case "Variable2":
                     m_story.variablesState["tipp_Matt"] = Matthaeus.tipp_Matt;
                     m_story.variablesState["mary_weg"] = RandyStatus.mary_weg;
+                    break;
+                case "Variable3":
+                    m_story.variablesState["insekten_besiegt"] = true;
                     break;
                 case null:
                     break;
@@ -230,6 +240,12 @@ public class Dialog : MonoBehaviour
 
         string currentMessage = m_story.Continue();
 
+        if(currentMessage == "")                        //Ungetestet möglicherweise fehlerhaft.
+        {
+            EndDialogue();
+            return;
+        }
+
         ParseTags();
 
         StopAllCoroutines();
@@ -247,9 +263,9 @@ public class Dialog : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             m_DialogText.text += letter;
-            yield return new WaitForSeconds(0.065f);
+            yield return new WaitForSeconds(0.0f);   //0.065
         }
-        yield return new WaitForSeconds(2.3f);
+        yield return new WaitForSeconds(0f);         ///2.3
 
         m_Dialogue.SetActive(false);
 
@@ -514,5 +530,18 @@ public class Dialog : MonoBehaviour
     private void TakePicture()
     {
         FindObjectOfType<FarmStartDialog>().bildzeigen(6.0f);
+    }
+
+
+    private void Start_boss()
+    {
+        Matthaeus.boss_start();
+        Destroy(GameObject.Find("matthew_dark"));
+        StartCoroutine(schwarz());
+    }
+
+    private void Tipp_gegeben()
+    {
+        Matthaeus.tipp_Matt = true;
     }
 }

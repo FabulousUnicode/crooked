@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class Matthaeus : MonoBehaviour
 {
-    public static bool tipp_Matt = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static bool tipp_Matt = false;
 
-    // Update is called once per frame
-    void Update()
+    public static void boss_start()
     {
-        
+
     }
 }

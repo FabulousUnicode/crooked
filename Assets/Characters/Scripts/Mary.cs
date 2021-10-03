@@ -24,10 +24,10 @@ public class Mary : MonoBehaviour
         {
             FindObjectOfType<Dialog>().showText("Ich vertraue niemandem einfach so. Gib mir einen Grund dazu, dann sprechen wir über Geschäftliches. ");
         }
-        else if(schatz_ab && item == mutterkorn)
+        else if(schatz_ab && item == mutterkorn && !sus)
         {
             FindObjectOfType<Dialog>().showText("Gute Ware. Ich gebe dir gleich morgen deine Bezahlung. Vielleicht auch Übermorgen, da muss ich mal sehen...");
-            GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(mutterkorn);
+            //GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(mutterkorn);
             sus = true;
         }
         else if(sus && item == Recorder)
