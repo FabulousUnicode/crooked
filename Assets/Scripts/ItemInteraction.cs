@@ -25,7 +25,15 @@ public class ItemInteraction : MonoBehaviour
 
     public static void inspectItem(Item item)
     {
-        FindObjectOfType<Dialog>().showText(item.description);
+        if(item.itemName == "Schatzkarte")
+        {
+            FindObjectOfType<MapHandler>().handleInteraction();
+        }
+        else
+        {
+            FindObjectOfType<Dialog>().showText(item.description);
+        }
+        
     }
 
     public static void useItem(Item item)
@@ -98,7 +106,7 @@ public class ItemInteraction : MonoBehaviour
                 FindObjectOfType<BirdHandler>().handleInteractionNoItem();
             }
         }
-        if (item.item.itemName == "Glühwürmchen")
+        if (item.item.itemName == "GlÃ¼hwÃ¼rmchen")
         {
             if (lastUsed != null)
             {
@@ -110,7 +118,7 @@ public class ItemInteraction : MonoBehaviour
             }
         }
 
-        if (item.item.itemName == "Gitterstäbe")
+        if (item.item.itemName == "GitterstÃ¤be")
         {
             if (lastUsed != null)
             {
@@ -120,6 +128,23 @@ public class ItemInteraction : MonoBehaviour
             {
                 FindObjectOfType<BarsHandler>().handleInteractionNoItem();
             }
+        }
+        
+        if (item.item.itemName == "SchÃ¼ssel")
+        {
+            if (lastUsed != null)
+            {
+                FindObjectOfType<BowlHandler>().handleInteraction(item.item, lastUsed);
+            }
+            else
+            {
+                FindObjectOfType<BowlHandler>().handleInteractionNoItem();
+            }
+        }
+
+        if (item.item.itemName == "Laterne")
+        {
+            FindObjectOfType<Licht>().aktivieren(lastUsed);
         }
     }
 
@@ -133,9 +158,13 @@ public class ItemInteraction : MonoBehaviour
             Inventory.instance.removeItem(lastUsed);
             Inventory.instance.addItem(combinedItem);
             Debug.Log(lastUsed.name);
-            if (item.itemName == "Nähnadel" || lastUsed.itemName == "Nähnadel")
+            if (item.itemName == "NÃ¤hnadel" || lastUsed.itemName == "NÃ¤hnadel")
             {
                 Inventory.instance.addItem(ItemDatabaseInstance.getItemByName("needle"));
+            }
+            else if (item.name == "coffee_grinder" || lastUsed.name == "coffee_grinder")
+            {
+                Inventory.instance.addItem(ItemDatabaseInstance.getItemByName("coffee_grinder"));
             }
             resetLastUsed();
 

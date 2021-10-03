@@ -22,7 +22,8 @@ public class Flavia : MonoBehaviour
             GameObject.Find("Inventory").GetComponent<Inventory>().addItem(gameObject.GetComponent<CharacterInfo>().character.list[0]);
             foreach(var v in items)
             {
-                GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(v);
+                if (v.name != "needle")
+                    GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(v);
             }
         }
         else if(items.Contains(item))

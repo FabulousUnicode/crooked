@@ -8,7 +8,7 @@ public class GraveHandler : MonoBehaviour
  
     public void handleInteraction(Item item, Item lastUsed)
     {
-        if(lastUsed.itemName == "Schaufel")
+        if (lastUsed.itemName == "Schaufel" && FindObjectOfType<Inventory>().searchItem("foot_bones") == false)
         {
             FindObjectOfType<Inventory>().addItem(ItemDatabaseInstance.getItemByName("foot_bones"));
         }
