@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "Gl\xFChw\xFCrmchen"
   icon: {fileID: 0}
-  description: "gl\xFChweinchen"
+  description: Es scheint Paarungszeit zu sein...
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}
   collectable: 0
-  interactionPos: {x: 621, y: -86, z: 0}
+  interactionPos: {x: 550, y: 200, z: 0}

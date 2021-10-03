@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edccf2cae955f4c4d9468df739acc465, type: 3}
+  m_Name: article
+  m_EditorClassIdentifier: 
+  h_name: Zeitungsausschnitt
+  walkTo: 1
+  use: Ich kann ihn auch so lesen.
+  inspect: "\"Sheriff rettet den Tag. Nach einer nervenaufreibenden Verfolgungsjagd
+    konnte der ber\xFCchtigte El Ladr\xF3n de Ma\xEDz gefasst werden. Ein lokaler
+    Officer konnte dem Schwerverbrecher mit einem gezielten Nackenschuss das Handwerk
+    legen. Die Bev\xF6lkerung atmet auf. Der zust\xE4ndige Sheriff wurde mit einem
+    Verdienstorden ausgezeichnet.\""
+  specialInteraction: []
+  specialInteractionStrings: []
+  interactionSpot: {x: 0, y: 0, z: 0}

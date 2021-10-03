@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edccf2cae955f4c4d9468df739acc465, type: 3}
+  m_Name: puppet
+  m_EditorClassIdentifier: 
+  h_name: Voodoopuppe?
+  walkTo: 1
+  use: Davon lasse ich lieber die Finger.
+  inspect: Die sieht unheimlich aus.
+  specialInteraction:
+  - {fileID: 11400000, guid: 84e5c89728c62dc40a8be0735084566a, type: 2}
+  - {fileID: 11400000, guid: a071ab2ed3a133149be50544c5c54b28, type: 2}
+  - {fileID: 11400000, guid: f73f00a3a231147499a2cc26705e6cb6, type: 2}
+  - {fileID: 11400000, guid: 8d4def7b33d0aa543b87e0f0ec723926, type: 2}
+  specialInteractionStrings:
+  - Die braucht keine Frisur. Die Glatze steht ihr!
+  - "Es k\xF6nnte jeden treffen!"
+  - "Es k\xF6nnte jeden treffen!"
+  - "Es k\xF6nnte jeden treffen!"
+  interactionSpot: {x: 0, y: 0, z: 0}

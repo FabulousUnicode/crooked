@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edccf2cae955f4c4d9468df739acc465, type: 3}
+  m_Name: cabinet
+  m_EditorClassIdentifier: 
+  h_name: Schrank
+  walkTo: 1
+  use: Verschlossen.
+  inspect: Ich nehme an, hier verwahrt Flavia Pestizide.
+  specialInteraction:
+  - {fileID: 11400000, guid: f73f00a3a231147499a2cc26705e6cb6, type: 2}
+  - {fileID: 11400000, guid: 2cbd5eaa9568367438132b4b8faa926e, type: 2}
+  specialInteractionStrings:
+  - "Ich kann die S\xE4ge nirgendwo ansetzen."
+  - "Ich komme damit nicht in die Zwischenr\xE4ume."
+  interactionSpot: {x: 0, y: 0, z: 0}
