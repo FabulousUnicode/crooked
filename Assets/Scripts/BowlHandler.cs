@@ -43,6 +43,6 @@ public class BowlHandler : MonoBehaviour
 
     internal void handleInteractionNoItem()
     {
-        FindObjectOfType<Dialog>().showText("ich habe mein müsli vergessen");
+        FindObjectOfType<Dialog>().showText("Ich will garnicht wissen wann die zuletzt gespült wurde.");
     }
 }
