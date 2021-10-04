@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edccf2cae955f4c4d9468df739acc465, type: 3}
-  m_Name: deed
+  m_Name: window
   m_EditorClassIdentifier: 
-  h_name: Ehrenurkunde
+  h_name: Fenster
   walkTo: 1
-  use: Damit will ich nichts zu tun haben.
-  inspect: "F\xFCr hervorragende Leistungen bei den Bundesjugendspielen '78 mit 245
-    Punkten verleihe ich Randall Thomas als Anerkennung diese Urkunde. Der Bundespr\xE4sident."
+  use: "Wenn ich hier einbreche lande ich im Gef\xE4ngnis."
+  inspect: "Wer hat denn Fenster auf Bodenh\xF6he?"
   specialInteraction: []
   specialInteractionStrings: []
-  interactionSpot: {x: -56, y: -394, z: 0}
+  interactionSpot: {x: -536.4, y: -153, z: 0}

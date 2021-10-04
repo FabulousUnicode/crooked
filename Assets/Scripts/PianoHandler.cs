@@ -21,7 +21,6 @@ public class PianoHandler : MonoBehaviour
         {
             GameObject.Find("stagelight").GetComponent<InteractableItem>().item.collectable = stagelight_collectable;
         }
-       
     }
 
     public static void handleInteraction(Item item, Item lastUsed)
@@ -29,7 +28,7 @@ public class PianoHandler : MonoBehaviour
         if(lastUsed.itemName == "Ablassbrief")
         {
             GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(lastUsed);
-            FindObjectOfType<Dialog>().showText("der geist ist weg");
+            FindObjectOfType<Dialog>().showText("Das wird die arme Seele besänftigen");
             stagelight_collectable = true;
         }
     }

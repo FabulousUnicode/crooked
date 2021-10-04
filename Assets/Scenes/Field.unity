@@ -993,6 +993,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208345677}
   m_CullTransparentMesh: 1
+--- !u!1 &210622590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210622592}
+  - component: {fileID: 210622591}
+  - component: {fileID: 210622594}
+  - component: {fileID: 210622593}
+  m_Layer: 0
+  m_Name: TreasureBush
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &210622591
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210622590}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 34.392334, y: 97.14542}
+      - {x: -62.98578, y: 120.40332}
+      - {x: -178.89972, y: 297.8403}
+      - {x: -179.05347, y: -95.07529}
+      - {x: 149.03845, y: -96.37396}
+      - {x: 213.54205, y: -95.42441}
+      - {x: 212.33617, y: -60.051815}
+      - {x: 180.39772, y: 9.042454}
+      - {x: 128.02264, y: 57.56042}
+--- !u!4 &210622592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210622590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -781, y: -445, z: -9.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &210622593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210622590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085cd8642317b9242957d54091fdd6be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &210622594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210622590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b87c51759e474f42ba2110c6300905f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 1e2ac8e4f6758064495da5a9bace99a1, type: 2}
 --- !u!1 &256804304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,7 +2554,7 @@ MonoBehaviour:
   cursorOnHover: {fileID: 21300000, guid: 67abaf46357e8c14d88708377c817eaf, type: 3}
   scene: Farm
   destinationName: Zur Farm
-  currentScene: 
+  currentScene: field3
 --- !u!1 &460167950
 GameObject:
   m_ObjectHideFlags: 0
@@ -2920,7 +3012,7 @@ SpriteRenderer:
   m_SortingLayerID: 1646676519
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5261992394389525642, guid: 4e9cfca675d52514784e86a73e97f654, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2928,7 +3020,7 @@ SpriteRenderer:
   m_Size: {x: 8.22, y: 2.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &587299238
@@ -2939,7 +3031,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587299234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 817, y: -492, z: 0}
+  m_LocalPosition: {x: -431, y: -460, z: 0}
   m_LocalScale: {x: 25, y: -25, z: 1}
   m_Children:
   - {fileID: 1276063927}
@@ -4354,7 +4446,6 @@ GameObject:
   m_Component:
   - component: {fileID: 819749605}
   - component: {fileID: 819749604}
-  - component: {fileID: 819749606}
   m_Layer: 0
   m_Name: moon
   m_TagString: Untagged
@@ -4428,22 +4519,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &819749606
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819749603}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.30521393, y: 0}
-  serializedVersion: 2
-  m_Radius: 75.957726
 --- !u!1 &852634278
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class MapHandler : MonoBehaviour
     public void handleInteraction()
     {
         map.SetActive(true);
+        TreasureHandler.setTrigger();        
         FindObjectOfType<PanelManager>().closePanel();
     }
 

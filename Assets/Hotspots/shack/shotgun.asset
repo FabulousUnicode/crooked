@@ -18,4 +18,4 @@ MonoBehaviour:
   inspect: Damit kann man bestimmt eine Menge Schabernack treiben.
   specialInteraction: []
   specialInteractionStrings: []
-  interactionSpot: {x: 0, y: 0, z: 0}
+  interactionSpot: {x: 224, y: -386, z: 0}

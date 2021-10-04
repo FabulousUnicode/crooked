@@ -11,6 +11,7 @@ public class GraveHandler : MonoBehaviour
         if (lastUsed.itemName == "Schaufel" && FindObjectOfType<Inventory>().searchItem("foot_bones") == false)
         {
             FindObjectOfType<Inventory>().addItem(ItemDatabaseInstance.getItemByName("foot_bones"));
+            FindObjectOfType<Dialog>().showText("Wem gehört der denn?");
         }
     }
 

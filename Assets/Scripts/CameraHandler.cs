@@ -104,6 +104,12 @@ public class CameraHandler : MonoBehaviour
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
             agent.Warp(new Vector3(358, 259, 0));
         }
+        else if (General.getPreviousScene() == "field3")
+        {
+            //Debug.Log("Previous Scene: " + General.getPreviousScene());
+            GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
+            agent.Warp(new Vector3(-618, -137, 0));
+        }
     }
 
     // Update is called once per frame

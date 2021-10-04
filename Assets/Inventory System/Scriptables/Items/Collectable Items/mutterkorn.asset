@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: mutterkorn
   m_EditorClassIdentifier: 
   itemName: Mutterkorn
-  icon: {fileID: 21300000, guid: 1b6dc15819a5d6445b14915c8bfae825, type: 3}
+  icon: {fileID: 21300000, guid: 8fb53b1fe6131b94aaab3b7ef39589be, type: 3}
   description: Mutterkorn
   combinable: 0
   combinableWith: {fileID: 0}

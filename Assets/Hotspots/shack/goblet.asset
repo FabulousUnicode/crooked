@@ -19,4 +19,4 @@ MonoBehaviour:
   inspect: Er ist aus Plastik und lechtet im Dunkeln.
   specialInteraction: []
   specialInteractionStrings: []
-  interactionSpot: {x: 0, y: 0, z: 0}
+  interactionSpot: {x: -56, y: -394, z: 0}

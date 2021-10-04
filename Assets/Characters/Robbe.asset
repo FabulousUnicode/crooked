@@ -18,4 +18,5 @@ MonoBehaviour:
   combine: 0
   list:
   - {fileID: 11400000, guid: 195d7fa4838eb064485e7c7753855497, type: 2}
+  interactionPos: {x: 185, y: -231, z: 0}
   aktiv: 1

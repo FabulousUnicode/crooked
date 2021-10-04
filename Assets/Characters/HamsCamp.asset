@@ -17,4 +17,5 @@ MonoBehaviour:
   inkFile: {fileID: 4900000, guid: 436a66b057f154542b350541a95ea21c, type: 3}
   combine: 0
   list: []
+  interactionPos: {x: 128, y: -130, z: 0}
   aktiv: 1

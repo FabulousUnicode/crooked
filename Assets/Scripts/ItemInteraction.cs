@@ -62,7 +62,14 @@ public class ItemInteraction : MonoBehaviour
         }
         if(item.item.itemName == "Ablass-O-Mat")
         {
-            AutomatHandler.handleInteraction(item.item, lastUsed);
+            if (lastUsed != null)
+            {
+                AutomatHandler.handleInteraction(item.item, lastUsed);
+            }
+            else
+            {
+                AutomatHandler.handleInteractionNoItem(item.item);
+            } 
         }
         if(item.item.itemName == "Klavier")
         {
@@ -72,7 +79,7 @@ public class ItemInteraction : MonoBehaviour
         {
             SpinwheelHandler.handleInteraction(item.item, lastUsed);
         }
-        if(item.item.itemName == "Infiziertes_Korn")
+        if(item.item.itemName == "Infiziertes Korn")
         {
             FindObjectOfType<GrainHandler>().handleInteraction(item.item, lastUsed);
         }
@@ -141,7 +148,7 @@ public class ItemInteraction : MonoBehaviour
                 FindObjectOfType<BowlHandler>().handleInteractionNoItem();
             }
         }
-        if (item.item.itemName == "Laterne")
+        if (item.item.name == "lamp0" || item.item.name == "lamp1" || item.item.name == "lamp2" || item.item.name == "lamp3")
         {
             FindObjectOfType<Licht>().aktivieren(lastUsed);
         }
@@ -161,6 +168,18 @@ public class ItemInteraction : MonoBehaviour
         if (item.item.name == "bugs")
         {
             FindObjectOfType<BugsHandler>().handleInteraction(item.item,lastUsed);
+        }
+
+        if (item.item.itemName == "Gestrüpp")
+        {
+            if (lastUsed != null)
+            {
+                FindObjectOfType<TreasureHandler>().handleInteraction(item.item, lastUsed);
+            }
+            else
+            {
+                FindObjectOfType<TreasureHandler>().handleInteractionNoItem();
+            }
         }
 
     }

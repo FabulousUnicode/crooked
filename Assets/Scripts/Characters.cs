@@ -11,6 +11,8 @@ public class Characters : ScriptableObject, ISerializationCallbackReceiver
     public bool combine;
     public List<Item> list;
 
+    public Vector3 interactionPos;
+
     public bool aktiv;
 
     public void OnBeforeSerialize()

@@ -9,7 +9,7 @@ public class BugsHandler : MonoBehaviour
 
     public static bool aktiviert;
 
-    internal void handleInteraction(Item item, Item lastUsed)
+    public void handleInteraction(Item item, Item lastUsed)
     {
         if(lastUsed.itemName == "Mottenkugeln")
         {
@@ -19,7 +19,7 @@ public class BugsHandler : MonoBehaviour
         }
     }
 
-    internal void handleInteractionNoItem()
+    public void handleInteractionNoItem()
     {
         throw new NotImplementedException();
     }

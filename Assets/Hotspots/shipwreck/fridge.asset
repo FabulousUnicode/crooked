@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: fridge
   m_EditorClassIdentifier: 
   h_name: "K\xFChlschrank"
-  walkTo: 0
+  walkTo: 1
   use: "Ich schlie\xDFe die T\xFCr, das ist Stromverschwendung... Nanu? Sie klemmt."
   inspect: Der ist ja ganz leer! Saftladen!
   specialInteraction:
@@ -22,4 +22,4 @@ MonoBehaviour:
   specialInteractionStrings:
   - Ich bin doch nicht die Tresenkraft!
   - Ich bin doch nicht die Tresenkraft!
-  interactionSpot: {x: 0, y: 0, z: 0}
+  interactionSpot: {x: 496, y: -197, z: 0}

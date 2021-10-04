@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: fire
   m_EditorClassIdentifier: 
   h_name: Feuer
-  walkTo: 0
+  walkTo: 1
   use: "Autsch, hei\xDF!"
-  inspect: "Gem\xFCtlich"
+  inspect: "Gem\xFCtlich."
   specialInteraction: []
   specialInteractionStrings: []
-  interactionSpot: {x: 0, y: 0, z: 0}
+  interactionSpot: {x: 224, y: -386, z: 0}

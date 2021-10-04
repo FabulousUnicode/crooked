@@ -19,3 +19,4 @@ MonoBehaviour:
   combinableWith: {fileID: 11400000, guid: 34b06fdea45b2094485a839977ec7e3f, type: 2}
   combineResult: {fileID: 11400000, guid: d2262a1d09995aa499fd4f1e1becb573, type: 2}
   collectable: 1
+  interactionPos: {x: 204, y: -200, z: 0}

@@ -23,7 +23,7 @@ public class SpinwheelHandler : MonoBehaviour
         {
             GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(lastUsed);
             GameObject.Find("Inventory").GetComponent<Inventory>().addItem(ItemDatabaseInstance.getItemByName("string"));
-            FindObjectOfType<Dialog>().showText("Der Faden ist noch ein wenig nass.");
+            FindObjectOfType<Dialog>().showText("Der Faden ist noch ein wenig feucht.");
         }
     }
 }

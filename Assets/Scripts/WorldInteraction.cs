@@ -125,6 +125,15 @@ public class WorldInteraction : MonoBehaviour
                     StartCoroutine("waittl", gObject);
                 }
 
+                else if(gObject.HasComponent<CharacterInfo>())
+                {
+                    StopCoroutine("waittl");
+                    StopCoroutine("waittr");
+                    Player.agent.ResetPath();
+                    Player.agent.SetDestination(gObject.GetComponent<CharacterInfo>().character.interactionPos);
+                    StartCoroutine("waittl", gObject);
+                }
+
                 else
                 {
                     StopCoroutine("waittl");
@@ -161,6 +170,16 @@ public class WorldInteraction : MonoBehaviour
                     Player.agent.SetDestination(gObject.GetComponent<InteractableItem>().item.interactionPos);
                     StartCoroutine("waittr", gObject);
                 }
+
+                else if (gObject.HasComponent<CharacterInfo>())
+                {
+                    StopCoroutine("waittl");
+                    StopCoroutine("waittr");
+                    Player.agent.ResetPath();
+                    Player.agent.SetDestination(gObject.GetComponent<CharacterInfo>().character.interactionPos);
+                    StartCoroutine("waittr", gObject);
+                }
+
                 else
                 {
                     StopCoroutine("waittl");

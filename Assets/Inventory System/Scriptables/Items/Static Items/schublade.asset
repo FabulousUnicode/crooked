@@ -19,3 +19,4 @@ MonoBehaviour:
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}
   collectable: 0
+  interactionPos: {x: -25, y: -415, z: 0}

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: cactus
   m_EditorClassIdentifier: 
   h_name: Kaktus
-  walkTo: 0
-  use: SCRIPT
+  walkTo: 1
+  use: Autsch!
   inspect: "In der Erde steckt ein Schl\xFCssel, was f\xFCr ein dummes Versteck..."
   specialInteraction: []
   specialInteractionStrings: []
-  interactionSpot: {x: 0, y: 0, z: 0}
+  interactionSpot: {x: -46, y: -389, z: 0}
