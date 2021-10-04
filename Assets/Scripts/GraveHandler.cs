@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class GraveHandler : MonoBehaviour
 {
- 
+    public GameObject hole;
     public void handleInteraction(Item item, Item lastUsed)
     {
         if (lastUsed.itemName == "Schaufel" && FindObjectOfType<Inventory>().searchItem("foot_bones") == false)
         {
             FindObjectOfType<Inventory>().addItem(ItemDatabaseInstance.getItemByName("foot_bones"));
-            FindObjectOfType<Dialog>().showText("Wem gehört der denn?");
+            hole.SetActive(true);
         }
     }
 

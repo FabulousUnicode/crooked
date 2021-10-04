@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358f16ea44eb77d4fb0529128daf6ff0, type: 3}
   m_Name: Robbe
   m_EditorClassIdentifier: 
-  cName: Rob der Kartengott
-  description: Der Beste Spieler in der Stadt
+  cName: "Jane die Karteng\xF6ttin"
+  description: Die beste Spielerin auf diesem Platz
   inkFile: {fileID: 4900000, guid: ae777a29a32597f43accf89257cafa31, type: 3}
   combine: 0
   list:
