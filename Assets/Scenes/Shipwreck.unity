@@ -4161,7 +4161,7 @@ GameObject:
   - component: {fileID: 875129609}
   - component: {fileID: 875129608}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: garden_eels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6637,7 +6637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2485c224ec58313499209fd5dcd64064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorOnHover: {fileID: 21300000, guid: c60ae9c9b6400e645bc848cb0853d0b7, type: 3}
+  cursorOnHover: {fileID: 21300000, guid: c95004adba5293d4c9c0c6494e28cab9, type: 3}
   scene: Field
   destinationName: Zum Feld
   currentScene: Shipwreck
@@ -6666,13 +6666,17 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 958.7288, y: -344.2434}
-      - {x: 959.16205, y: -103.2876}
-      - {x: 903.4784, y: -143.08829}
-      - {x: 899.48846, y: -177.59224}
-      - {x: 899.1788, y: -231.93413}
-      - {x: 900.31384, y: -301.29144}
-      - {x: 914.77515, y: -334.7921}
+    - - {x: 965.25757, y: -278.9565}
+      - {x: 962.6726, y: -265.50058}
+      - {x: 959.16205, y: -74.975845}
+      - {x: 971.8514, y: 3.3119202}
+      - {x: 970.26373, y: 547.16095}
+      - {x: 864.37836, y: 545.5841}
+      - {x: 875.5698, y: 82.12822}
+      - {x: 865.3343, y: -258.28595}
+      - {x: 875.80536, y: -272.3379}
+      - {x: 906.3262, y: -269.7147}
+      - {x: 932.39636, y: -272.56848}
 --- !u!4 &1524610200
 Transform:
   m_ObjectHideFlags: 0

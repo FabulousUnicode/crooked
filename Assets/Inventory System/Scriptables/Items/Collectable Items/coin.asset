@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
   m_Name: coin
   m_EditorClassIdentifier: 
-  itemName: "M\xFCnze"
-  icon: {fileID: 21300000, guid: ddb277fac94088641b5953dac785a8d6, type: 3}
+  itemName: Obolus
+  icon: {fileID: 21300000, guid: b55e2eec87e7fa841aa14466e3051a8f, type: 3}
   description: "Ein Schokotaler. Sieht einem echten zum verwechseln \xE4hnlich."
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}
   collectable: 1
+  interactionPos: {x: 0, y: 0, z: 0}
