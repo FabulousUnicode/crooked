@@ -2058,8 +2058,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823495058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 892.4, y: -318.4, z: -0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 896.0037, y: -156, z: -0.1}
+  m_LocalScale: {x: 0.6188636, y: 0.5925861, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -2696,7 +2696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919908928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -466, y: -476, z: 0}
+  m_LocalPosition: {x: -498, y: -494, z: 0}
   m_LocalScale: {x: 19, y: -19, z: 1}
   m_Children:
   - {fileID: 1435116474}
@@ -3479,7 +3479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorOnHover: {fileID: 21300000, guid: e502c9243b0cbb9408138418adc8c325, type: 3}
-  scene: Randy's Shack
+  scene: Shack
   destinationName: "Zur H\xFCtte"
   currentScene: 
 --- !u!4 &1126700421
@@ -9543,7 +9543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 317364b794e055a459cded12252cec22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotspot: {fileID: 0}
+  hotspot: {fileID: 11400000, guid: 2b2e1d0187163014cb939596de441cb9, type: 2}
 --- !u!70 &1743224706
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9568,7 +9568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743224704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 436.7, y: 15, z: -1138.362}
+  m_LocalPosition: {x: 436.7, y: 15, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

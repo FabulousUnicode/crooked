@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class BossHandler : MonoBehaviour
 {
+    public GameObject boss_base;
+    public static bool boss_active = false;
+
     public GameObject bossEye;
     public GameObject bossPupil;
     public GameObject bossMouth;
@@ -21,10 +24,19 @@ public class BossHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bossEye.SetActive(eyeActive);
-        bossPupil.SetActive(pupilActive);
-        bossCross.SetActive(crossActive);
-        bossMouth.SetActive(mouthActive);
+
+        if (boss_active == true)
+        {
+            bossEye.SetActive(eyeActive);
+            bossPupil.SetActive(pupilActive);
+            bossCross.SetActive(crossActive);
+            bossMouth.SetActive(mouthActive);
+        }
+        else
+        {
+            boss_base.SetActive(false);
+        }
+
     }
 
     // Start is called before the first frame update
