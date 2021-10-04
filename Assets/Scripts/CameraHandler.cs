@@ -88,7 +88,7 @@ public class CameraHandler : MonoBehaviour
         {
             //Debug.Log("Previous Scene: " + General.getPreviousScene());
             GameObject.Find("Camera").transform.position = new Vector3(0, 0, -10);
-            agent.Warp(new Vector3(-395, -7, 0));
+            agent.Warp(new Vector3(-233, 45, 0));
         }
 
         else if (General.getPreviousScene() == "Randy's Shack")

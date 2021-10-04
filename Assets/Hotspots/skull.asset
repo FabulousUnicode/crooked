@@ -20,4 +20,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 685a2f6d5b17d6e47a58c6eaa7345962, type: 2}
   specialInteractionStrings:
   - "Ich glaube nicht, dass die zusammengeh\xF6ren..."
-  interactionSpot: {x: 0, y: 0, z: 0}
+  interactionSpot: {x: 540, y: -204, z: 0}

@@ -20,4 +20,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cbd5eaa9568367438132b4b8faa926e, type: 2}
   specialInteractionStrings:
   - "Daf\xFCr werde ich nicht bezahlt."
-  interactionSpot: {x: 0, y: 0, z: 0}
+  interactionSpot: {x: 18, y: -53, z: 0}

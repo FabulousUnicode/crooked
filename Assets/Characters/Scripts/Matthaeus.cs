@@ -9,6 +9,6 @@ public class Matthaeus : MonoBehaviour
 
     public static void boss_start()
     {
-        SceneManager.LoadScene("EndScreen"); //ruft den Endscreen auf, kann hier gelöscht werden
+        BossHandler.boss_active = true;
     }
 }
