@@ -19,7 +19,7 @@ public class AutomatHandler : MonoBehaviour
 
     public static void handleInteraction(Item item, Item lastUsed)
     {
-        if (lastUsed.itemName == "Münze") {
+        if (lastUsed.itemName == "Obolus") {
             GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(lastUsed);
             GameObject.Find("Inventory").GetComponent<Inventory>().addItem(ItemDatabaseInstance.getItemByName("letter"));
             FindObjectOfType<Dialog>().showText("insert funny pun");
