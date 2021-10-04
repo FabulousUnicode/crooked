@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
   m_Name: jar_with_holes
   m_EditorClassIdentifier: 
-  itemName: "Glass mit L\xF6chern"
+  itemName: "Glas mit L\xF6chern"
   icon: {fileID: 21300000, guid: 3a469e9034f0b6e418ecf1c4064b0a1d, type: 3}
   description: Ich glaube es ist undicht.
   combinable: 0

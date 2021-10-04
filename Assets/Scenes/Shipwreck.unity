@@ -2430,7 +2430,7 @@ Transform:
   m_LocalScale: {x: 0.5841, y: 0.5918, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419606499
 GameObject:
@@ -5109,7 +5109,7 @@ Transform:
   m_LocalScale: {x: 1.4178406, y: 0.92060703, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122460145
 GameObject:
@@ -6666,13 +6666,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 626.4161, y: -463.61792}
-      - {x: 631.68884, y: -425.92136}
-      - {x: 122.70479, y: -459.26938}
-      - {x: 102.41792, y: -541.2619}
-      - {x: 135.58694, y: -542.41547}
-      - {x: 575.8539, y: -540.6035}
-      - {x: 625.9469, y: -495.82828}
+    - - {x: 958.7288, y: -344.2434}
+      - {x: 959.16205, y: -103.2876}
+      - {x: 903.4784, y: -143.08829}
+      - {x: 899.48846, y: -177.59224}
+      - {x: 899.1788, y: -231.93413}
+      - {x: 900.31384, y: -301.29144}
+      - {x: 914.77515, y: -334.7921}
 --- !u!4 &1524610200
 Transform:
   m_ObjectHideFlags: 0
@@ -6685,7 +6685,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1535552946
 GameObject:

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
   m_Name: lamp3
   m_EditorClassIdentifier: 
-  itemName: Laterne
+  itemName: Ablage
   icon: {fileID: 0}
-  description: "An diesm Platz w\xE4re ein Licht f\xFCr Flavia passend."
+  description: "Eine sch\xF6ne Ablage."
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}

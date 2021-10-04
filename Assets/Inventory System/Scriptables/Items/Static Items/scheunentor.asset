@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Scheunentor
   icon: {fileID: 0}
-  description: Irgenwie muss man doch hier rein kommen.
+  description: Es ist fest verschlossen.
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}

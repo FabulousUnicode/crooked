@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
   m_Name: lamp1
   m_EditorClassIdentifier: 
-  itemName: Laterne
+  itemName: Wildpflanze
   icon: {fileID: 0}
-  description: "Das perfekte zuhause f\xFCr Insekten."
+  description: Eine fleischfressende Pflanze.
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}

@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorOnHover: {fileID: 21300000, guid: c95004adba5293d4c9c0c6494e28cab9, type: 3}
   scene: Church Roof
-  destinationName: Auf's Dach
+  destinationName: Zur Turmspitze
   currentScene: Church
 --- !u!4 &270200094
 Transform:

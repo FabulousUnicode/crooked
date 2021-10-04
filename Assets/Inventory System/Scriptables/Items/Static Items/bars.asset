@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "Gitterst\xE4be"
   icon: {fileID: 0}
-  description: "gitterst\xE4be"
+  description: "Der Tunnel hinter dem Gitter ist in gr\xFCnliches Licht getaucht."
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}

@@ -34,7 +34,7 @@ public class Licht : MonoBehaviour
             }
             else
             {
-                FindObjectOfType<Dialog>().showText("Hier scheinen " + lampName + " zu fehlen.");
+                FindObjectOfType<Dialog>().showText("Das funktioniert nicht, ich brauche eine andere Lichtquelle.");
             }
 
         }
