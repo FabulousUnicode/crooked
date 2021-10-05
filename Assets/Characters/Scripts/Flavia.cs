@@ -38,7 +38,6 @@ public class Flavia : MonoBehaviour
         {
             i2 = true;
             FindObjectOfType<Dialog>().showText("Ja, das müsste gehen... ");
-            GameObject.Find("Inventory").GetComponent<Inventory>().removeItem(item);
         }
         else if (item == items[2] && !i3)   //uran
         {
