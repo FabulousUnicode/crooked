@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
 using UnityEngine.AI;
-using System
+using System;
 
 public class Dialog : MonoBehaviour
 {
