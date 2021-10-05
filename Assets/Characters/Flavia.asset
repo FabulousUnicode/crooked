@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cName: Flavia
   description: Ich brau dir alles was du brauchst.
-  inkFile: {fileID: 4900000, guid: d88b9e94ad4fba3478e3b387a0c80778, type: 3}
+  inkFile: {fileID: 4900000, guid: 67456f9492e09054cacd585a4b3b71d8, type: 3}
   combine: 1
   list:
   - {fileID: 11400000, guid: 34b06fdea45b2094485a839977ec7e3f, type: 2}

@@ -242,6 +242,10 @@ public class WorldInteraction : MonoBehaviour
             {
                 gObject.GetComponent<Robbe>().rumAnbieten(ItemInteraction.getLastUsed());
             }
+            else if(gObject.name == "randy_shack")
+            {
+                gObject.GetComponent<Randy>().verhaften(ItemInteraction.getLastUsed());
+            }
         }
         else if (gObject.HasComponent<ScenenChange>())
         {

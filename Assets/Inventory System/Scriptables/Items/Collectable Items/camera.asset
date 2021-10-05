@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497e341122753eb45b10560c47e9cbf6, type: 3}
   m_Name: camera
   m_EditorClassIdentifier: 
-  itemName: camera
+  itemName: Kamera
   icon: {fileID: 21300000, guid: 198c5043b49e1d542a53fbd214a28e1f, type: 3}
-  description: Die Kamera hat er sehr hellen Blitz.
+  description: Die Kamera hat einen sehr hellen Blitz.
   combinable: 0
   combinableWith: {fileID: 0}
   combineResult: {fileID: 0}

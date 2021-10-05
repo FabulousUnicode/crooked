@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cName: Hams
   description: Er scheunt ein Messi zu sein
-  inkFile: {fileID: 4900000, guid: 436a66b057f154542b350541a95ea21c, type: 3}
+  inkFile: {fileID: 4900000, guid: 2bbf8637727aa8148bb6afa82c44ff6b, type: 3}
   combine: 0
   list: []
   interactionPos: {x: 128, y: -130, z: 0}

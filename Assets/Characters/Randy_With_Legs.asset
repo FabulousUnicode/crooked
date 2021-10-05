@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cName: Randy
   description: Randy der Sheriff
-  inkFile: {fileID: 4900000, guid: 49a4a66d76575a348ac5cd106a2a0643, type: 3}
+  inkFile: {fileID: 4900000, guid: b152d0f07d35fe843bbee371c3614100, type: 3}
   combine: 0
   list: []
   interactionPos: {x: -33, y: -406, z: 0}

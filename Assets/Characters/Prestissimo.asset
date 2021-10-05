@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cName: Prestissimo
   description: Der beste Musiker weit und breit.
-  inkFile: {fileID: 4900000, guid: 6ddf17e3c3127914daddc06045462c38, type: 3}
+  inkFile: {fileID: 4900000, guid: a5a6653957b2020419155112edf9e7ff, type: 3}
   combine: 0
   list: []
   interactionPos: {x: -12, y: 76, z: 0}

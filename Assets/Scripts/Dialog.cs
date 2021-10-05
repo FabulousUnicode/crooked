@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
 using UnityEngine.AI;
+using System;
 
 public class Dialog : MonoBehaviour
 {
@@ -436,31 +437,38 @@ public class Dialog : MonoBehaviour
 
     private void HuetteVerlassen(string susp)
     {
-        if (susp == "sonst")
+        try
         {
-            FindObjectOfType<RandyStatus>().anzeige();
-            GameObject.Find("key").transform.position += new Vector3(2000.0f, 0.0f, 0.0f);
-        }
-        else if (susp == "mary" && !RandyStatus.mary_weg)
-        {
-            if (Mary.recordet)
+            if (susp == "sonst")
             {
                 FindObjectOfType<RandyStatus>().anzeige();
-                FindObjectOfType<RandyStatus>().maryweg();
-                ScenenChange.remove += ("mary" + ",");
+                GameObject.Find("key").transform.position += new Vector3(2000.0f, 0.0f, 0.0f);
             }
-            else
+            else if (susp == "mary" && !RandyStatus.mary_weg)
             {
-                FindObjectOfType<RandyStatus>().anzeige();
-            }
+                /*if (Mary.recordet)
+                {
+                    FindObjectOfType<RandyStatus>().anzeige();
+                    FindObjectOfType<RandyStatus>().maryweg();
+                    ScenenChange.remove += ("mary" + ",");
+                }
+                else*/
+                {
+                    FindObjectOfType<RandyStatus>().anzeige();
+                }
 
-            GameObject.Find("key").transform.position += new Vector3(2000.0f, 0.0f, 0.0f);
+                GameObject.Find("key").transform.position += new Vector3(2000.0f, 0.0f, 0.0f);
+            }
+            else if (susp == "spieler")
+            {
+                GameObject.Find("PlayerPos").GetComponent<NavMeshAgent>().Warp(new Vector3(-500.0f, -420.0f, 0.0f));
+                GameObject.Find("ZelleCollider").transform.position += new Vector3(-3000.0f, 0.0f, 0.0f);
+                GameObject.Find("ShackCollider").transform.position += new Vector3(-3000.0f, 0.0f, 0.0f);
+            }
         }
-        else if (susp == "spieler")
+        catch(Exception e)
         {
-            GameObject.Find("PlayerPos").GetComponent<NavMeshAgent>().Warp(new Vector3(-500.0f, -420.0f, 0.0f));
-            GameObject.Find("ZelleCollider").transform.position += new Vector3(-3000.0f, 0.0f, 0.0f);
-            GameObject.Find("ShackCollider").transform.position += new Vector3(-3000.0f, 0.0f, 0.0f);
+
         }
     }
 

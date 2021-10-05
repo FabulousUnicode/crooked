@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cName: Hams
   description: Er guckt durchs Fenster
-  inkFile: {fileID: 4900000, guid: d8ec19dd65a502641a7c62a70487763a, type: 3}
+  inkFile: {fileID: 4900000, guid: 27494c218ecf1f34d9b8919bd86d5fb0, type: 3}
   combine: 0
   list: []
   interactionPos: {x: -527, y: -471, z: 0}
