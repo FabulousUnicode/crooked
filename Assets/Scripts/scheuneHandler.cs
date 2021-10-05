@@ -33,7 +33,7 @@ public class scheuneHandler : MonoBehaviour
             {
                 kamera = true;
                 fertig = true;
-                FindObjectOfType<Dialog>().showText("Ich hätte nicht versuchen sollen, mit 1000 Heliumballons an einem Lehnstuhl, zu fliegen");
+                //FindObjectOfType<Dialog>().showText("Ich hätte nicht versuchen sollen, mit 1000 Heliumballons an einem Lehnstuhl, zu fliegen");
 
                 SceneManager.LoadScene("Barn");
             }
@@ -63,7 +63,7 @@ public class scheuneHandler : MonoBehaviour
     IEnumerator schwarz()
     {
         GameObject.Find("Schwarzblende").transform.position = new Vector3(0, 0, 0);
-        yield return new WaitForSeconds(8.0f);
+        yield return new WaitForSeconds(1.0f);
         GameObject.Find("Schwarzblende").transform.position = new Vector3(3000, 0, 0);
         yield return new WaitForSeconds(1.0f);
 
