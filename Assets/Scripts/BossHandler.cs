@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHandler : MonoBehaviour
 {
@@ -117,7 +118,7 @@ public class BossHandler : MonoBehaviour
 
     private static void defeated()
     {
-        Debug.Log("Yeah Baby");
+        SceneManager.LoadScene("EndScreen");
     }
 
 
