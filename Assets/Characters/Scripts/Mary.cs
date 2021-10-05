@@ -32,7 +32,7 @@ public class Mary : MonoBehaviour
         }
         else if(sus && item == Recorder)
         {
-            FindObjectOfType<Dialog>().showText("Jemanden wie dich könnten wir in unserer unserer kriminellen Regenbogeneinhorngang gut gebrauchen. <<click>> ... das hört sich nach einem Recorder an. Komm später wieder dann erklär ich alles.");
+            FindObjectOfType<Dialog>().showText("<<click>> Jemanden wie dich könnten wir in unserer kriminellen Regenbogeneinhorngang gut gebrauchen... Komm später wieder dann erklär ich alles. <<click>>");
             recordet = true;
         }
     }
