@@ -12,7 +12,7 @@ public class FirefliesHandler : MonoBehaviour
         {
             FindObjectOfType<Inventory>().removeItem(lastUsed);
             FindObjectOfType<Inventory>().addItem(ItemDatabaseInstance.getItemByName("jar_with_fireflies"));
-            FindObjectOfType<Dialog>().showText("ab ins glass");
+            FindObjectOfType<Dialog>().showText("Ab ins Glas!");
         }
         else
         {
