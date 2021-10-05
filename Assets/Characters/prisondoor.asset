@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cName: "Gef\xE4ngnist\xFCr"
   description: "Die T\xFCr scheint offen zu sein."
-  inkFile: {fileID: 4900000, guid: 733c4a8d32b412b48bf6742c0b9e764d, type: 3}
+  inkFile: {fileID: 4900000, guid: 9fdde0668a3e46246a095b46c9b445aa, type: 3}
   combine: 0
   list: []
+  interactionPos: {x: 0, y: 0, z: 0}
   aktiv: 1

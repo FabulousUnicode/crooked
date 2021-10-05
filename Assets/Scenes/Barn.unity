@@ -3249,7 +3249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b52dfd62b0ac746b7b12bf5d0cb7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  story: {fileID: 4900000, guid: b5f6cfce81562f44a842222cb5cf192a, type: 3}
+  story: {fileID: 4900000, guid: 82345d0eef3320e4d8634806b1fc455d, type: 3}
   ca: {fileID: 11400000, guid: 41e03bc7921df584abad8ba3a2ada42e, type: 2}
 --- !u!1 &1124304513
 GameObject:

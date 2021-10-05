@@ -1978,7 +1978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d4e31866b43f64483410a2c868acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  story: {fileID: 4900000, guid: 1bd773401b27b204aab601a7fabd4f5c, type: 3}
+  story: {fileID: 4900000, guid: 5945ab8998304754d89f81fe8b11ddf6, type: 3}
   coin: {fileID: 11400000, guid: f7a15f14675b063489e38fda65bd5723, type: 2}
   ca: {fileID: 11400000, guid: 6f37aeac61377a240aff4f39e7b555d2, type: 2}
   bild: {fileID: 1094636185}

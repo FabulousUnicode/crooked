@@ -52,5 +52,9 @@ public class GrainHandler : MonoBehaviour
                 FindObjectOfType<Dialog>().showText("Mit einer Mühle könnte ich das mahlen");
             }
         }
+        else
+        {
+            print("passt");
+        }
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cName: "Jane die Karteng\xF6ttin"
   description: Die beste Spielerin auf diesem Platz
-  inkFile: {fileID: 4900000, guid: ae777a29a32597f43accf89257cafa31, type: 3}
+  inkFile: {fileID: 4900000, guid: 751f68204c1d89241bf5db094aa2b219, type: 3}
   combine: 0
   list:
   - {fileID: 11400000, guid: 195d7fa4838eb064485e7c7753855497, type: 2}
