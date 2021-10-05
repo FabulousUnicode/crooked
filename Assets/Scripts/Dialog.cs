@@ -446,13 +446,13 @@ public class Dialog : MonoBehaviour
             }
             else if (susp == "mary" && !RandyStatus.mary_weg)
             {
-                if (Mary.recordet)
+                /*if (Mary.recordet)
                 {
                     FindObjectOfType<RandyStatus>().anzeige();
                     FindObjectOfType<RandyStatus>().maryweg();
                     ScenenChange.remove += ("mary" + ",");
                 }
-                else
+                else*/
                 {
                     FindObjectOfType<RandyStatus>().anzeige();
                 }
