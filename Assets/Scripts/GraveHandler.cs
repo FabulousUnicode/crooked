@@ -6,7 +6,7 @@ using UnityEngine;
 public class GraveHandler : MonoBehaviour
 {
     public GameObject hole;
-    public static void aktiv = false;
+    public static bool aktiv = false;
 
 
     public void handleInteraction(Item item, Item lastUsed)
