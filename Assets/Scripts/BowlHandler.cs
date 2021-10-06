@@ -31,9 +31,11 @@ public class BowlHandler : MonoBehaviour
     {
         if (lastUsed.itemName == "Antiker Vogel")
         {
+            FindObjectOfType<Inventory>().removeItem(lastUsed);
             bird.SetActive(true);
             //bowl.SetActive(false);
             trigger = true;
+
         }
         else
         {
