@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edccf2cae955f4c4d9468df739acc465, type: 3}
   m_Name: black_hole
   m_EditorClassIdentifier: 
-  h_name: Schwarzes Loch im Glas
+  h_name: Schwarzes Loch
   walkTo: 1
   use: Wir wissen beide, dass das keine gute Idee iist.
   inspect: "Zum Gl\xFCck h\xE4lt das Glas es in Schach."

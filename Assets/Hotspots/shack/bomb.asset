@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edccf2cae955f4c4d9468df739acc465, type: 3}
   m_Name: bomb
   m_EditorClassIdentifier: 
-  h_name: Massenvernichtungswaffe
+  h_name: H-Bombe
   walkTo: 0
   use: "Was soll schon passieren, ich bin doch schon tot. ... Schade, ein Blindg\xE4nger."
   inspect: "\"Eigentum von S.J.Petrow\" Merkw\xFCrdig."

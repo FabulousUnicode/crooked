@@ -15,7 +15,7 @@ MonoBehaviour:
   h_name: Kaktus
   walkTo: 1
   use: Autsch!
-  inspect: "In der Erde steckt ein Schl\xFCssel, was f\xFCr ein dummes Versteck..."
+  inspect: "Leute die Kakteen in ihrer Wohnung haben, sind blo\xDF zu faul zum Gie\xDFen."
   specialInteraction: []
   specialInteractionStrings: []
   interactionSpot: {x: -46, y: -389, z: 0}
