@@ -12838,6 +12838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1944152061}
   - component: {fileID: 1944152060}
+  - component: {fileID: 1944152062}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -12938,6 +12939,15 @@ AudioSource:
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.37625974
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -12955,6 +12965,26 @@ Transform:
   m_Father: {fileID: 29737580}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944152062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944152059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6abeb6ff669a44f8a5179928d648a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tracks:
+  - {fileID: 8300000, guid: e4c2b78d247de5b41b9125aab7a5fbaf, type: 3}
+  - {fileID: 8300000, guid: 93a0481479bbb9a4ab042c01fa164995, type: 3}
+  - {fileID: 8300000, guid: 13c3585fbbde8734bbd74a72c1d60763, type: 3}
+  - {fileID: 8300000, guid: 2b3c1415a2c32164a838b9150157332c, type: 3}
+  - {fileID: 8300000, guid: ab3a1da5bdf1e3e4db45b55ba171dc5a, type: 3}
+  - {fileID: 8300000, guid: c13dfd3616397ea4fab75e58e17b2725, type: 3}
+  - {fileID: 8300000, guid: c9ce5f7bd643708479205fc224b33f4d, type: 3}
 --- !u!1 &1944894111
 GameObject:
   m_ObjectHideFlags: 0
