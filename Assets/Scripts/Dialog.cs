@@ -264,9 +264,9 @@ public class Dialog : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             m_DialogText.text += letter;
-            yield return new WaitForSeconds(0.0f);   //0.065
+            yield return new WaitForSeconds(0.065f);   //0.065
         }
-        yield return new WaitForSeconds(1.5f);         //2.3
+        yield return new WaitForSeconds(2.3f);         //2.3
 
         m_Dialogue.SetActive(false);
 
