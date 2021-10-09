@@ -8,6 +8,7 @@ public class MusicHandler : MonoBehaviour
     [SerializeField] private AudioClip[] tracks;
     private AudioSource MusicManager;
     private AudioClip currentTrack, nextTrack;
+    public static bool boss_active = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class MusicHandler : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
+
 
         switch (SceneManager.GetActiveScene().name) 
         {
@@ -74,7 +76,17 @@ public class MusicHandler : MonoBehaviour
                 break;
         } 
 
+        if (boss_active == true)
+        {
 
+            nextTrack = tracks[5];
+
+            if (SceneManager.GetActiveScene().name == "Church Roof")
+            {
+                nextTrack = tracks[0];
+            }
+        }
+        
         if (nextTrack != currentTrack)
         {
             currentTrack = nextTrack;
@@ -82,7 +94,5 @@ public class MusicHandler : MonoBehaviour
             MusicManager.Play();
             
         }
-
-        
     }
 }

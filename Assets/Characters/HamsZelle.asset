@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HamsZelle
   m_EditorClassIdentifier: 
   cName: Hams
-  description: Er guckt durchs Fenster
+  description: Sie guckt durchs Fenster
   inkFile: {fileID: 4900000, guid: 27494c218ecf1f34d9b8919bd86d5fb0, type: 3}
   combine: 0
   list: []

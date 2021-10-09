@@ -56,6 +56,7 @@ public class MicrowaveHandler : MonoBehaviour
         {
             FindObjectOfType<Dialog>().showText("Alle Zutaten sind da. Der Kuchen ist fertig.");
             GameObject.Find("Inventory").GetComponent<Inventory>().addItem(ItemDatabaseInstance.getItemByName("cake"));
+            FaceHandler.updateFace = true;
         }
 
 

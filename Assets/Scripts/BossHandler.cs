@@ -13,6 +13,7 @@ public class BossHandler : MonoBehaviour
     public GameObject bossPupil;
     public GameObject bossMouth;
     public GameObject bossCross;
+    public GameObject Music;
 
 
     public static bool eyeActive;
@@ -32,6 +33,7 @@ public class BossHandler : MonoBehaviour
             bossPupil.SetActive(pupilActive);
             bossCross.SetActive(crossActive);
             bossMouth.SetActive(mouthActive);
+            Music.SetActive(true);
         }
         else
         {

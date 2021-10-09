@@ -1,1 +1,52 @@
-﻿{"inkVersion":20,"root":[[{"#":"Sprecher:Spieler"},"^Ich hätte nicht versuchen sollen, mit 1000 Heliumballons an einem Lehnstuhl, zu fliegen","\n",{"#":"Sprecher:Matthäus"},"^Guten Abend!","\n",{"#":"Sprecher:Spieler"},"^Pater! Hier sind die Körper, aber...","\n",{"#":"Sprecher:Matthäus"},"^Ich weiß. Ich muss dir danken. Du hast die Scheuen geöffnet.","\n",{"#":"Sprecher:Spieler"},"^Das ist nicht deine wahre Gestalt, nicht wahr?","\n",{"#":"Sprecher:Matthäus"},"^Sehr gut, du scheinst zu begreifen, haha. Dieser Ort sollte jedem eine zweite Chance bieten. Doch glaubst du eine gute Tat reicht aus, um all die schlechten Entscheidungen wiedergutzumachen, die ein jeder von uns während seines Lebens getroffen hat?","\n",{"#":"Sprecher:Spieler"},"^Was hast du vor?","\n",{"#":"Sprecher:Matthäus"},"^Das Bindeglied zerstören, natürlich! Wenn du mich nun entschuldigst, große Ereignisse werfen ihren Schatten voraus!","\n",{"#":"Sprecher:Spieler"},"^Das ist Wahnsinn! Ich muss zum Turm zurück!","\n","ev",{"x()":"Start_boss"},"pop","/ev","\n","end",["done",{"#f":5,"#n":"g-0"}],null],"done",{"#f":1}],"listDefs":{}}
+﻿{
+  "inkVersion": 20,
+  "root": [
+    [
+      { "#": "Sprecher:Spieler" },
+      "^Was zum...",
+      "\n",
+      { "#": "Sprecher:Matthäus" },
+      "^Guten Abend!",
+      "\n",
+      { "#": "Sprecher:Spieler" },
+      
+      "^Pater! Hier sind die Körper, aber...",
+      "\n",
+      { "#": "Sprecher:Matthäus" },
+      "^Ich weiß. Ich muss dir danken. Du hast die Scheune geöffnet.",
+      "\n",
+      { "#": "Sprecher:Spieler" },
+      "^Das ist nicht deine wahre Gestalt, nicht wahr?",
+      "\n",
+      { "#": "Sprecher:Matthäus" },
+      "^Sehr gut, du scheinst zu begreifen, haha. Dieser Ort sollte jedem eine zweite Chance bieten. Doch glaubst du eine gute Tat reicht aus, um all die schlechten Entscheidungen wiedergutzumachen, die ein jeder von uns während seines Lebens getroffen hat?",
+      "\n",
+      { "#": "Sprecher:Spieler" },
+      "^Was hast du vor?",
+      "\n",
+      { "#": "Sprecher:Matthäus" },
+      "^Das Bindeglied zerstören, natürlich! Wenn du mich nun entschuldigst, große Ereignisse werfen ihren Schatten voraus!",
+      "\n",
+      { "#": "Sprecher:Spieler" },
+      "^Das ist Wahnsinn! Ich muss zum Turm zurück!",
+      "\n",
+      "ev",
+      { "x()": "Start_boss" },
+      "pop",
+      "/ev",
+      "\n",
+      "end",
+      [
+        "done",
+        {
+          "#f": 5,
+          "#n": "g-0"
+        }
+      ],
+      null
+    ],
+    "done",
+    { "#f": 1 }
+  ],
+  "listDefs": {}
+}

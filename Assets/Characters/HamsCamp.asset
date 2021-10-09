@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HamsCamp
   m_EditorClassIdentifier: 
   cName: Hams
-  description: Er scheunt ein Messi zu sein
+  description: Sie scheint ein Messie zu sein
   inkFile: {fileID: 4900000, guid: 2bbf8637727aa8148bb6afa82c44ff6b, type: 3}
   combine: 0
   list: []

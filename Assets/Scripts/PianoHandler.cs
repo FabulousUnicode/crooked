@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class PianoHandler : MonoBehaviour
 {
-
+    [SerializeField] private GameObject music;
+    private bool keys = false;
     public static bool stagelight_collectable = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,12 @@ public class PianoHandler : MonoBehaviour
         if(GameObject.Find("stagelight") != null)
         {
             GameObject.Find("stagelight").GetComponent<InteractableItem>().item.collectable = stagelight_collectable;
+        }
+
+        if (stagelight_collectable == true && keys == false)
+        {
+            music.SetActive(true);
+            keys = true;
         }
     }
 
