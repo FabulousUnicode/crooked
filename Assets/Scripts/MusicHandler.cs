@@ -56,7 +56,7 @@ public class MusicHandler : MonoBehaviour
                 break;
 
             case "Shipwreck":
-                nextTrack = null;
+                nextTrack = tracks[8];
                 break;
 
             case "Shop":
