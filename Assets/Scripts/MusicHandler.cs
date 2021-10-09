@@ -14,7 +14,9 @@ public class MusicHandler : MonoBehaviour
     void Start()
     {
         MusicManager = GetComponent<AudioSource>();
-        currentTrack = tracks[0];
+       currentTrack = tracks[0];
+        
+
 }
 
     private void OnLevelWasLoaded(int level)
@@ -83,7 +85,7 @@ public class MusicHandler : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name == "Church Roof")
             {
-                nextTrack = tracks[0];
+                nextTrack = null;
             }
         }
         

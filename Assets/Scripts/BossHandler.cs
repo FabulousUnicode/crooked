@@ -46,7 +46,7 @@ public class BossHandler : MonoBehaviour
     void Start()
     {
         eyeActive = true;
-        mouthActive = true;
+        mouthActive = false;
     }
 
 
