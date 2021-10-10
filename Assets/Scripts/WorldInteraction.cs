@@ -89,7 +89,7 @@ public class WorldInteraction : MonoBehaviour
 
                 hText.SetActive(true);
                 hText.transform.GetChild(0).GetComponent<Text>().text = hoverInfo;
-                hText.transform.position = new Vector3(mousePosWorld.x, mousePosWorld.y + 35, 0);
+                hText.transform.position = new Vector3(mousePos.x, mousePos.y + 35, 0);
                 
             }
             else
