@@ -1892,10 +1892,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1980, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1912,8 +1912,8 @@ Canvas:
   m_GameObject: {fileID: 448858926}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1101568284}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1921,7 +1921,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 554250123
   m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &448858931
@@ -2021,7 +2021,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 114.9, y: -233.9}
+  m_AnchoredPosition: {x: 114.899994, y: -233.9}
   m_SizeDelta: {x: 115.8, y: 119.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &449670137
@@ -11207,7 +11207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 114.9, y: -593.30005}
+  m_AnchoredPosition: {x: 114.899994, y: -593.30005}
   m_SizeDelta: {x: 115.8, y: 119.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1676808773
@@ -12670,7 +12670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 114.9, y: -473.5}
+  m_AnchoredPosition: {x: 114.899994, y: -473.5}
   m_SizeDelta: {x: 115.8, y: 119.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913543776
@@ -12767,7 +12767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 114.9, y: -353.69998}
+  m_AnchoredPosition: {x: 114.899994, y: -353.69998}
   m_SizeDelta: {x: 115.8, y: 119.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938491266

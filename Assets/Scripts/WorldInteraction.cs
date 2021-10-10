@@ -20,6 +20,7 @@ public class WorldInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
 
@@ -88,7 +89,7 @@ public class WorldInteraction : MonoBehaviour
 
                 hText.SetActive(true);
                 hText.transform.GetChild(0).GetComponent<Text>().text = hoverInfo;
-                hText.transform.position = new Vector3(mousePos.x, mousePos.y + 75, 0);
+                hText.transform.position = new Vector3(mousePosWorld.x, mousePosWorld.y + 35, 0);
                 
             }
             else
@@ -278,6 +279,12 @@ public class WorldInteraction : MonoBehaviour
         }
         ItemInteraction.resetLastUsed();
         InventorySlotController.resetCurrentSelected();
+
+
+
+
+        
+
     }
 
     public void setDestination(GameObject gameObject, RaycastHit2D hit)

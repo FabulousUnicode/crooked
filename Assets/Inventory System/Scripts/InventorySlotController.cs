@@ -122,7 +122,7 @@ public class InventorySlotController : MonoBehaviour, IPointerDownHandler, IPoin
         {
             hText.SetActive(true);
             hText.transform.GetChild(0).GetComponent<Text>().text = item.itemName;
-            hText.transform.position = gameObject.transform.position + new Vector3(0, 100, 0);
+            hText.transform.position = gameObject.transform.position + new Vector3(0, 80, 0);
         }
         
     }
